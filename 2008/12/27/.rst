@@ -1,0 +1,19 @@
+public: yes
+tags: [Uncategorized]
+
+RL v2.0?
+========
+
+Ist das Reallife nicht manchmal scheisse? Jedenfalls wenns um Ordnung
+geht... Ich bin ein heilloser Chaot. Häufig hab ich das Gefühl,
+control+f drücken zu wollen. Wieso gibts im RL keine Volltextsuche? :(
+
+Mein Vorschlag für das RL v2.0. Features:
+
+-  Volltextsuche in Printmedien
+-  Tag-System für Gegenstände. Dann kann ich alle Gegenstände im Zimmer
+   taggen und dann je nach Situation anders sortieren lassen, oder in
+   einer Tag-Cloud ausgeben.
+
+Na dann Prost auf das RL v2.0 ;)
+

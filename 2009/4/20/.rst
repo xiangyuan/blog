@@ -1,0 +1,19 @@
+public: yes
+tags: [Uncategorized]
+
+IIS Tips
+========
+
+Ein paar meiner Erfahrungen, die ich während dem Upgrade PHP4->PHP5 auf
+einem IIS gesammelt habe:
+
+php.ini sollte ins Windows-Verzeichnis
+
+Die php.ini durcharbeiten, Dinge wie gdlib und mysql-Support aktivieren
+
+Berechtigungen auf dem PHP-Verzeichnis für den User IUSR\_ nicht
+vergessen
+
+Um ein ISAPI-Modul neu zu laden, den DefaultAppPool stoppen und wieder
+starten
+
