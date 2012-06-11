@@ -1,0 +1,7 @@
+---
+active_modules: [pygments, tags, blog, latex]
+author: Danilo Bargen
+canonical_url: http://w00t.ws
+modules:
+    pygments:
+        style: friendly

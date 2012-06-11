@@ -1,0 +1,2 @@
+-e git://github.com/mitsuhiko/rstblog.git@12e310592b14ffeafeac6aac973942947638c303#egg=rstblog-dev
+Pygments==1.5
