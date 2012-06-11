@@ -1,7 +1,9 @@
 ---
-active_modules: [pygments, tags, blog, latex]
+active_modules: [pygments, tags, blog, disqus, latex, videos]
 author: Danilo Bargen
 canonical_url: http://w00t.ws
 modules:
     pygments:
-        style: friendly
+        style: tango
+    disqus:
+        shortname: dbrgn

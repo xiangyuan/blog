@@ -1,13 +1,17 @@
 body {
-    font-family: 'Linden Hill', serif;
-    font-size: 16px;
+    font-family: 'Linden Hill', Georgia, serif;
+    font-size: 19px;
 }
 
 #wrapper {
     width: 900px;
-    margin: 0px auto;
+    margin: 10px auto 0;
 }
 
+#blogtitle {
+    float: left;
+    font-size: 3em;
+}
 #mainnav {
     margin: 0;
     padding: 0;
@@ -32,16 +36,20 @@ body {
     margin-top: 40px;
 }
 
-div.highlight {
+div.highlight, pre.literal-block {
     background-color: #f4f4f4;
     border: 1px solid #ddd;
     margin-bottom: 10px;
 }
 
-div.highlight pre {
+div.highlight pre, pre.literal-block {
     margin: 5px;
     font-family: 'Consolas', 'Menlo', 'Deja Vu Sans Mono', 'Bitstream Vera Sans Mono', monospace;
     font-size: 14px;
+}
+
+pre.literal-block {
+    padding: 5px;
 }
 
 tt.literal {
@@ -49,8 +57,29 @@ tt.literal {
     padding: 2px 5px;
 }
 
-p.tags {
+cite {
+    font-family: 'Consolas', 'Menlo', 'Deja Vu Sans Mono', 'Bitstream Vera Sans Mono', monospace;
+    font-size: 13px;
+    font-style: normal;
+}
+
+.figure .caption {
+    font-style: italic;
+}
+
+h1 cite {
+    font-size: 26px;
+    margin: 0 2px;
+}
+
+div.date {
+    color: #777;
+    display: block;
+}
+
+div.tags p {
     float: right;
+    clear: both;
 }
 
 .field-list .field-name {
@@ -70,11 +99,50 @@ a, a:visited {
     color: #2669AD;
 }
 
-p.date {
-    color: #666;
-    font-style: italic;
+.entry-overview {
+    margin-bottom: 35px;
+}
+
+.entry-overview h1 {
+    font-size: 1.5em;
+    margin: 0;
+}
+
+.entry-overview .summary p {
+    margin: 0;
+}
+
+.tags {
+    margin-top: 20px;
+}
+
+.tags:after {
+    content: " ";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+
+#disqus_thread {
+    margin-top: 30px;
 }
 
 .clearboth {
     clear: both;
+}
+
+.align-center {
+    display: block;
+    margin: 0 auto;
+}
+
+.align-right {
+    float: right;
+    margin-left: 10px;
+}
+
+.align-left {
+    float: left;
+    margin-right: 10px;
 }

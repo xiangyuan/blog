@@ -1,13 +1,20 @@
 public: true
+disqus: no
 
 About me
 ========
 
+.. image:: /static/img/me.jpg
+    :alt: Picture of me sitting at a lake
+    :align: right
+    :width: 144
+    :height: 205
+
 Hi. I'm Danilo Bargen. I'm 21 years old, live in Switzerland and study computer
-science at `HSR Rapperswil`_. Besides that, I currently work
-part-time as a web developer. I grew up in Peru. I'm a member of the `Swiss
-Pirate Party`_. I like `Python`_, `Django`_, `ArchLinux`_, `Vim`_, `Git`_,
-`Github`_ and `Free Software`_.
+science at `HSR Rapperswil`_. Besides that, I currently work part-time as a web
+developer. I'm `a third culture kid </2009/4/14/third-culture-kids/>`_ from
+Peru. I'm a member of the `Swiss Pirate Party`_. I like `Python`_, `Django`_,
+`ArchLinux`_, `Vim`_, `Git`_, `Github`_ and `Free Software`_.
 
 Contact
 -------

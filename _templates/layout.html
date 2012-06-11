@@ -3,6 +3,9 @@
     <head>
         <meta charset=utf-8>
         <title>{% block title %}{% endblock %}</title>
+        {% if ctx and ctx.summary %}
+            <meta name="description" content="{{ ctx.summary }}">
+        {% endif %}
         <link href="/feed.atom" rel="alternate" title="Feed" type="application/atom+xml">
         <link href="http://fonts.googleapis.com/css?family=Linden+Hill:400,400italic" rel="stylesheet" type="text/css">
         <link rel="stylesheet" href="/static/style.css" type="text/css">
@@ -12,6 +15,7 @@
     </head>
     <body>
         <div id="wrapper">
+            <div id="blogtitle">blog.dbrgn.ch</div>
             <ul id="mainnav">
                 <li><a href="/">home</a></li>
                 <li><a href="/archive/">archive</a></li>
