@@ -1,5 +1,5 @@
 ---
-active_modules: [pygments, tags, blog, latex]
+active_modules: [pygments, tags, blog, latex, videos]
 author: Danilo Bargen
 canonical_url: http://w00t.ws
 modules:
