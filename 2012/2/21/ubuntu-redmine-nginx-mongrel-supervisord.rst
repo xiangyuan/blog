@@ -1,73 +1,66 @@
 public: yes
-tags: [Ubuntu,Serveradministration,Debian,Linux]
+tags: [Ubuntu, System Administration, Debian, Linux, Nginx]
 
 Ubuntu / Redmine / Nginx / Mongrel / Supervisord
 ================================================
 
-This is a howto to install Redmine on Ubuntu Natty (probably works on
-Debian too) with Nginx, Mongrel and Supervisord. The listed commands
-usually assume root permissions.
+This is a howto to install Redmine on Ubuntu Natty (probably works on Debian too) with Nginx,
+Mongrel and Supervisord. The listed commands usually assume root permissions.
 
 Involved software:
 
-Redmine
-    Duh, the software you want to install :)
-Nginx
-    A fast webserver/proxy from Russia
-Mongrel
-    The software used to serve redmine
-Supervisor
-    A supervisor daemon written in Python, it automatically restarts the
-    Mongrel process in case it dies.
+:Redmine: Duh, the software you want to install :)
+:Nginx: A fast webserver/proxy from Russia
+:Mongrel: The software used to serve redmine
+:Supervisor: A supervisor daemon written in Python, it automatically restarts the Mongrel process in case it dies.
 
-First, add the PPA for the currently stable Nginx version (the Ubuntu
-version is outdated).
+First, add the PPA for the currently stable Nginx version (the Ubuntu version is outdated).
 
-::
+.. sourcecode:: bash
 
-    add-apt-repository ppa:nginx/stable
+    $ add-apt-repository ppa:nginx/stable
 
-Then install redmine using your desired backend (e.g. redmine-sqlite),
-and the supervisor and nginx packages.
+Then install redmine using your desired backend (e.g. ``redmine-sqlite``), and the supervisor and nginx
+packages.
 
-::
+.. sourcecode:: bash
 
-    aptitude install redmine redmine-sqlite nginx supervisor
+    $ aptitude install redmine redmine-sqlite nginx supervisor
 
 Install the mongrel gem.
 
-::
+.. sourcecode:: bash
 
-    gem install mongrel
+    $ gem install mongrel
 
 Set up redmine...
 
-::
+.. sourcecode:: bash
 
-    cd /usr/share/redmine
-    touch log/production.log
-    chmod 777 log log/production.log
+    $ cd /usr/share/redmine
+    $ touch log/production.log
+    $ chmod 777 log log/production.log
 
-Then add the mongrel initializer to redmine (see `this
-bug <http://www.redmine.org/boards/2/topics/24305>`_):
+Then add the mongrel initializer to redmine (see `this bug
+<http://www.redmine.org/boards/2/topics/24305>`_):
 
-::
+.. sourcecode:: bash
 
-    cd config/initializers
-    wget 'https://gist.github.com/raw/826692/cb0dcf784c30e6a6d00c631f350de99ab99e389d/mongrel.rb'
+    $ cd config/initializers
+    $ wget 'https://gist.github.com/raw/826692/cb0dcf784c30e6a6d00c631f350de99ab99e389d/mongrel.rb'
 
 Configure nginx:
 
-::
+.. sourcecode:: bash
 
-    cd /etc/nginx/sites-enabled
-    touch ../sites-available/redmine
-    ln -s ../sites-available/redmine
-    vim redmine
+    $ cd /etc/nginx/sites-enabled
+    $ touch ../sites-available/redmine
+    $ ln -s ../sites-available/redmine
+    $ vim redmine
 
 Add the following configuration (adjust to your likings):
 
-::
+.. sourcecode:: nginx
 
     upstream redmine_server {
             server localhost:3000 fail_timeout=0;
@@ -100,7 +93,7 @@ Add the following configuration (adjust to your likings):
 Then edit /etc/supervisord/supervisord.conf and add the following
 program definition at the end:
 
-::
+.. sourcecode:: ini
 
     [program:redmine]
     command=ruby /usr/share/redmine/script/server -e production
@@ -112,15 +105,14 @@ program definition at the end:
 
 Now restart nginx and supervisord:
 
-::
+.. sourcecode:: bash
 
-    /etc/init.d/supervisord stop
-    /etc/init.d/supervisord start
-    /etc/init.d/nginx restart
+    $ /etc/init.d/supervisord stop
+    $ /etc/init.d/supervisord start
+    $ /etc/init.d/nginx restart
 
 (The supervisord restart command is broken in current Ubuntu and Debian
 versions)
 
 That's it, now your redmine installation should be up and running. In
 case of questions, feel free to comment.
-
