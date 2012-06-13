@@ -4,4 +4,4 @@ author: Danilo Bargen
 canonical_url: http://w00t.ws
 modules:
     pygments:
-        style: friendly
+        style: tango
