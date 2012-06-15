@@ -1,5 +1,5 @@
 public: yes
-tags: [Webdesign,Arbeitsalltag,Serveradministration]
+tags: [Mysql]
 
 Show MySQL Database Encoding
 ============================
@@ -7,8 +7,6 @@ Show MySQL Database Encoding
 To get the current mysql database encoding, issue the following sql
 query:
 
-::
+.. sourcecode:: mysql
 
-    show variables like "character_set_database";
-
-
+    SHOW VARIABLES LIKE "character_set_database";

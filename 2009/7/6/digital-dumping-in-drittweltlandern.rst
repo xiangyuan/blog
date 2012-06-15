@@ -1,17 +1,11 @@
 public: yes
-tags: [Youtube,Politik,Datenschutz]
+tags: [Politics, Society, Technology]
 
-Digital Dumping in Drittweltländern
-===================================
+Ghana: Digital Dumping Ground
+=============================
 
-Jetzt weiss ich warum wir in der Schweiz
-`Recyclinggebühren <http://www.swicorecycling.ch/d/entsorgen_privatkunden_altgeraete.asp>`_
-bezahlen... Ich glaub ich reise mal nach Ghana und such mir ein paar
-nette Kreditkartennummern raus - Datenforensik zahlt sich anscheinend
-aus ;)
+The effects of e-waste on the third world.
 
-[youtube]http://www.youtube.com/watch?v=OkpBcFDjk7Y[/youtube]
-[youtube]http://www.youtube.com/watch?v=ACXwo6MntpA[/youtube]
+.. youtube:: OkpBcFDjk7Y
 
-(Via `rouge <http://www.rouge.ch/blog/digital-dumping-ground-ghana/>`_)
-
+.. youtube:: ACXwo6MntpA

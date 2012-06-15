@@ -1,13 +1,17 @@
 public: yes
-tags: [Kurioses,Youtube,Natur]
+tags: [Movies]
 
-Timelapse
-=========
+Slow Motion vs Timelapse
+========================
 
-Was `hosae in seinem slo-mo
-Post <http://www.hosae.ch/wordpress/slomo/>`_ gefunden hat, das muss
-doch auch schneller gehn... Und das tut es, in diesem Zeitraffer-Video!
-Genial.
+Slow...
 
-[vimeo]http://vimeo.com/3744985[/vimeo]
+.. vimeo:: 4167288
+    :width: 900
+    :height: 506
 
+And fast...
+
+.. vimeo:: 3744985
+    :width: 900
+    :height: 506

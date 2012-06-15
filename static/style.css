@@ -49,8 +49,25 @@ tt.literal {
     padding: 2px 5px;
 }
 
-p.tags {
+cite {
+    font-family: 'Consolas', 'Menlo', 'Deja Vu Sans Mono', 'Bitstream Vera Sans Mono', monospace;
+    font-size: 13px;
+    font-style: normal;
+}
+
+h1 cite {
+    font-size: 26px;
+    margin: 0 2px;
+}
+
+div.date {
+    color: #777;
+    display: block;
+}
+
+div.tags p {
     float: right;
+    clear: both;
 }
 
 .field-list .field-name {
@@ -68,10 +85,6 @@ a:hover {
 
 a, a:visited {
     color: #2669AD;
-}
-
-p.date {
-    color: #777;
 }
 
 .clearboth {
