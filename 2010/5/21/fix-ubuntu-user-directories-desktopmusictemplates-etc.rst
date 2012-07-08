@@ -1,18 +1,13 @@
 public: yes
-tags: [Linux]
+tags: [Ubuntu]
 
 Fix Ubuntu user directories (Desktop/Music/Templates etc)
 =========================================================
 
-If you deleted or otherwise "destroyed" one of your Ubuntu user
-directories (like *Desktop*, *Music*, *Pictures*, *Templates* etc), you
-can fix them by editing the file *~/.config/user-dirs.dirs*.
+If you accidentally deleted one of your Ubuntu user directories (like *Desktop*, *Music*,
+*Pictures*, *Templates* etc), you can fix them by editing the file `~/.config/user-dirs.dirs`.
 
-::
-
-    vim ~/.config/user-dirs.dirs
-
-::
+.. sourcecode:: bash
 
     # This file is written by xdg-user-dirs-update
     # If you want to change or add directories, just edit the line you're
@@ -31,5 +26,5 @@ can fix them by editing the file *~/.config/user-dirs.dirs*.
     XDG_VIDEOS_DIR="$HOME/Videos"
 
 For more information about those "xdg user dirs", see
-`http://www.freedesktop.org/wiki/Software/xdg-user-dirs <http://www.freedesktop.org/wiki/Software/xdg-user-dirs>`_.
-
+`http://www.freedesktop.org/wiki/Software/xdg-user-dirs
+<http://www.freedesktop.org/wiki/Software/xdg-user-dirs>`_.

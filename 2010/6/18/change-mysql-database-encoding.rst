@@ -4,13 +4,9 @@ tags: [Webdesign,Serveradministration,Programmieren]
 Change MySQL Database Encoding
 ==============================
 
-After `getting the MySQL Database
-encoding </2009/08/show-mysql-database-encoding/>`_, you might want to
-change it.
+To change MySQL table column encoding:
 
-To change table column encoding:
-
-::
+.. sourcecode:: mysql
 
     ALTER TABLE artists
     CHANGE [fieldname] [fieldname] [fieldtype]
@@ -19,7 +15,7 @@ To change table column encoding:
 
 To change table encoding:
 
-::
+.. sourcecode:: mysql
 
     ALTER TABLE [tablename]
     CONVERT TO CHARACTER SET [encoding]
@@ -27,10 +23,8 @@ To change table encoding:
 
 To change database encoding:
 
-::
+.. sourcecode:: mysql
 
     ALTER DATABASE [dbname]
     CHARACTER SET [encoding]
     COLLATE [collation];
-
-

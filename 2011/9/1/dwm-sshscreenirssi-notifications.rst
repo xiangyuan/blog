@@ -1,7 +1,7 @@
 public: yes
-tags: [Linux]
+tags: [Linux, dwm]
 
-DWM ssh/screen/irssi notifications 
+dwm ssh/screen/irssi notifications 
 ===================================
 
 I always keep an irssi session open inside a screen session on my server
@@ -10,7 +10,7 @@ setup. But they are.
 
 1. In your irssi session, issue the following commands:
 
-::
+.. sourcecode:: plain
 
     /set beep_msg_level NOTICE MSGS HILIGHT
     /set bell_beeps OFF
@@ -19,7 +19,7 @@ You can save this configuration permanently by issueing ``/save``.
 
 2. In your ~/.screenrc, add the following lines:
 
-::
+.. sourcecode:: plain
 
     vbell off
     bell_msg 'Bell in window %n^G'
@@ -27,7 +27,7 @@ You can save this configuration permanently by issueing ``/save``.
 3. Tell your terminal to set the URGENT flag when beeping. Add one of
 the following lines to your .Xresources:
 
-::
+.. sourcecode:: plain
 
     # For UXterm users:
     UXTerm*bellIsUrgent: true

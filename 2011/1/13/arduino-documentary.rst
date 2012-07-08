@@ -1,12 +1,13 @@
 public: yes
-tags: [Hacking,Youtube]
+tags: [Hacking, Movies]
 
 Arduino Documentary
 ===================
 
-I recently found a great documentary on Vimeo about the Arduino project.
-Highly recommended to watch, especially if you're interested in
-electronics, programming, microcontrollers and hacking stuff.
+I recently found a great documentary on Vimeo about the Arduino project.  Highly recommended to
+watch, especially if you're interested in electronics, programming, microcontrollers and hacking
+stuff.
 
-[vimeo]http://vimeo.com/18539129[/vimeo]
-
+.. vimeo:: 18539129
+    :width: 900
+    :height: 504

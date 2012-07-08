@@ -1,5 +1,5 @@
 public: yes
-tags: [Serveradministration,Hacking,Programmieren,Linux]
+tags: [System Administration, Databases]
 
 Show MySQL Storage Engines
 ==========================
@@ -14,13 +14,13 @@ it on
 Usage:
 ~~~~~~
 
-::
+.. sourcecode:: bash
 
     $ ./show-engines.py
 
 or
 
-::
+.. sourcecode:: bash
 
     $ python show-engines.py
 
@@ -28,4 +28,3 @@ Download:
 ~~~~~~~~~
 
 `https://github.com/gwrtheyrn/MySQL-Show-Storage-Engines <https://github.com/gwrtheyrn/MySQL-Show-Storage-Engines>`_
-

@@ -10,5 +10,4 @@ NAS (100-MBit ethernet)...
 -  ...using SMB - 6min 40sec
 -  ...using NFS - 5min 43sec **(-14%)**
 
-Note: This is not a professional speed test, just a little experiment.
-
+**Note:** This is not a professional speed test, just a little experiment.

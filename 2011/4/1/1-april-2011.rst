@@ -6,58 +6,55 @@ tags: [Anderes,Witziges,Kurioses]
 
 Hier ein paar der Aprilscherze 2011:
 
--  `DayDeal <http://daydeal.ch/>`_: DIY Lego-Haus
-   (`screenshot <http://i.imgur.com/527DV.png>`_)
--  `XKCD <http://xkcd.com/>`_: Alle Comics in 3D mit Parallaxscrolling
-   (`screenshot <http://i.imgur.com/YLoH2.png>`_)
--  `OMG! Ubuntu <http://www.omgubuntu.co.uk/>`_: X11 Error - Terminal
-   fallback mode (`link <http://www.omgubuntu.co.uk/bash/>`_,
-   `screenshot <http://i.imgur.com/b7Azv.png>`_)
--  `Icinga <https://www.icinga.org/>`_: We're moving from GIT to CVS
-   (`link <https://www.icinga.org/2011/04/01/icinga-moves-from-git-to-cvs/>`_)
--  `IETF RFC <http://www.ietf.org/rfc.html>`_: RFC
-   `5984 <http://tools.ietf.org/html/rfc5984>`_,
-   `6214 <http://tools.ietf.org/html/rfc6214>`_ und
-   `6217 <http://tools.ietf.org/html/rfc6217>`_
--  `local.ch <http://local.ch/>`_: Local has got balls today
-   (`screenshot <http://i.imgur.com/bqF1i.png>`_)
--  `NZZ online <http://www.nzz.ch/>`_: Wikileaks-Dokumente zu Caesars
+-  `DayDeal <http://daydeal.ch/>`__: DIY Lego-Haus
+   (`screenshot <http://i.imgur.com/527DV.png>`__)
+-  `XKCD <http://xkcd.com/>`__: Alle Comics in 3D mit Parallaxscrolling
+   (`screenshot <http://i.imgur.com/YLoH2.png>`__)
+-  `OMG! Ubuntu <http://www.omgubuntu.co.uk/>`__: X11 Error - Terminal
+   fallback mode (`link <http://www.omgubuntu.co.uk/bash/>`__,
+   `screenshot <http://i.imgur.com/b7Azv.png>`__)
+-  `Icinga <https://www.icinga.org/>`__: We're moving from GIT to CVS
+   (`link <https://www.icinga.org/2011/04/01/icinga-moves-from-git-to-cvs/>`__)
+-  `IETF RFC <http://www.ietf.org/rfc.html>`__: RFC
+   `5984 <http://tools.ietf.org/html/rfc5984>`__,
+   `6214 <http://tools.ietf.org/html/rfc6214>`__ und
+   `6217 <http://tools.ietf.org/html/rfc6217>`__
+-  `local.ch <http://local.ch/>`__: Local has got balls today
+   (`screenshot <http://i.imgur.com/bqF1i.png>`__)
+-  `NZZ online <http://www.nzz.ch/>`__: Wikileaks-Dokumente zu Caesars
    Ermordung
-   (`link <http://www.nzz.ch/nachrichten/kultur/medien/wikileaks-dokumente_zu_caesars_ermordung_1.8931839.html>`_)
--  `@omgubuntu <https://twitter.com/omgubuntu>`_: Gnome 3 delay
+   (`link <http://www.nzz.ch/nachrichten/kultur/medien/wikileaks-dokumente_zu_caesars_ermordung_1.8931839.html>`__)
+-  `@omgubuntu <https://twitter.com/omgubuntu>`__: Gnome 3 delay
    announcement
-   (`tweet1 <https://twitter.com/omgubuntu/status/53735379156742144>`_,
-   `tweet2 <https://twitter.com/omgubuntu/status/53740594098479104>`_)
--  `memonic Blog <http://blog.memonic.com/>`_: Offline clipping for
+   (`tweet1 <https://twitter.com/omgubuntu/status/53735379156742144>`__,
+   `tweet2 <https://twitter.com/omgubuntu/status/53740594098479104>`__)
+-  `memonic Blog <http://blog.memonic.com/>`__: Offline clipping for
    memonic
-   (`link <http://blog.memonic.com/2011/04/01/todays-changes-offline-clipping/>`_)
--  `Tagesanzeiger online <http://tagesanzeiger.ch/>`_: Militär prüft
+   (`link <http://blog.memonic.com/2011/04/01/todays-changes-offline-clipping/>`__)
+-  `Tagesanzeiger online <http://tagesanzeiger.ch/>`__: Militär prüft
    Prime Tower auf Erdbeben- und Sturmfestigkeit
-   (`link <http://www.tagesanzeiger.ch/zuerich/stadt/Militaer-prueft-Prime-Tower-auf-Erdbeben-und-Sturmfestigkeit-/story/15564992>`_)
--  `Google Motion <http://mail.google.com/mail/help/motion.html>`_: A
+   (`link <http://www.tagesanzeiger.ch/zuerich/stadt/Militaer-prueft-Prime-Tower-auf-Erdbeben-und-Sturmfestigkeit-/story/15564992>`__)
+-  `Google Motion <http://mail.google.com/mail/help/motion.html>`__: A
    new way to communicate
-   (`link <http://mail.google.com/mail/help/motion.html>`_,
-   `video <http://www.youtube.com/watch?v=Bu927_ul_X0>`_)
--  `Stackoverflow <http://stackoverflow.com/>`_: Unicorns appear on
-   upvote (`screenshots <http://imgur.com/a/7Jpyc>`_)
--  `Flattr Blog <http://blog.flattr.net/>`_: Flattr Partners with North
+   (`link <http://mail.google.com/mail/help/motion.html>`__,
+   `video <http://www.youtube.com/watch?v=Bu927_ul_X0>`__)
+-  `Stackoverflow <http://stackoverflow.com/>`__: Unicorns appear on
+   upvote (`screenshots <http://imgur.com/a/7Jpyc>`__)
+-  `Flattr Blog <http://blog.flattr.net/>`__: Flattr Partners with North
    Korea
-   (`link <http://blog.flattr.net/2011/04/flattr-partners-with-asian-country/>`_
--  `Mezeske Blog <http://blog.mezeske.com/>`_: cppsh - a bash-like shell
-   with c++ syntax (`link <http://blog.mezeske.com/?p=377>`_)
+   (`link <http://blog.flattr.net/2011/04/flattr-partners-with-asian-country/>`__
+-  `Mezeske Blog <http://blog.mezeske.com/>`__: cppsh - a bash-like shell
+   with c++ syntax (`link <http://blog.mezeske.com/?p=377>`__)
 -  `Microsoft
-   Newsroom <http://www.microsoft.com/germany/presseservice/news/pressemitteilungen.mspx>`_:
+   Newsroom <http://www.microsoft.com/germany/presseservice/news/pressemitteilungen.mspx>`__:
    Microsoft kündigt 42" Tablet an
-   (`link <http://www.microsoft.com/germany/presseservice/news/pressemitteilung.mspx?id=533347>`_)
--  `wuv.de <http://www.wuv.de/>`_: "Social-Media-Experte" wird
+   (`link <http://www.microsoft.com/germany/presseservice/news/pressemitteilung.mspx?id=533347>`__)
+-  `wuv.de <http://www.wuv.de/>`__: "Social-Media-Experte" wird
    geschützte Berufsbezeichnung
-   (`link <http://www.wuv.de/nachrichten/digital/social_media_experte_wird_geschuetzte_berufsbezeichnung>`_)
--  `Stackoverflow <http://stackoverflow.com/>`_: Program is erroneously
+   (`link <http://www.wuv.de/nachrichten/digital/social_media_experte_wird_geschuetzte_berufsbezeichnung>`__)
+-  `Stackoverflow <http://stackoverflow.com/>`__: Program is erroneously
    rejected by three C++ compilers
-   (`link <http://stackoverflow.com/questions/5508110/why-is-this-program-erroneously-rejected-by-three-c-compilers>`_)
--  `Google <http://google.com/>`_: Suche nach "Helvetica" liefert
+   (`link <http://stackoverflow.com/questions/5508110/why-is-this-program-erroneously-rejected-by-three-c-compilers>`__)
+-  `Google <http://google.com/>`__: Suche nach "Helvetica" liefert
    Ergebnisse in Comic Sans
-   (`screenshot <http://i.imgur.com/1utfU.png>`_)
-
-Liste wird laufend ergänzt.
-
+   (`screenshot <http://i.imgur.com/1utfU.png>`__)

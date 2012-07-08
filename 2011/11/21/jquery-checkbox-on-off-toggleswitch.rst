@@ -12,19 +12,19 @@ using jQuery JavaScript and CSS.
 
 This is what it looks like:
 
-.. figure:: http://ich-wars-nicht.ch/tmp/screenshots/20111121_151358.png
-   :align: center
-   :alt: Screenshot
+.. image:: /static/img/2011/11/21/screenshot_toggles.png
+   :alt: Screenshot of Toggles
 
-   Screenshot of Toggles
 1. HTML
-~~~~~~~
+-------
 
-::
+.. sourcecode:: html
 
+    <div class="switch">
+        <label for="mycheckbox" class="switch-toggle" data-on="On" data-off="Off"></label>
+        <input type="checkbox" id="mycheckbox" />
+    </div>
       
-      
-
 The element containing the checkbox and the label should have the class
 ``switch`` assigned. The label element needs the class ``switch-toggle``
 as well as the ``data-on`` and ``data-on`` attributes to define the
@@ -35,9 +35,9 @@ and that the checkbox and the label are direct children of the
 ``.switch`` element.
 
 2. CSS
-~~~~~~
+------
 
-::
+.. sourcecode:: css
 
     label.switch-toggle {
         background: url('switch.png') repeat-y;
@@ -57,13 +57,12 @@ and that the checkbox and the label are direct children of the
         display: none;
     }
 
-Don't forget to download the `switch.png
-file </wp-content/uploads/2011/11/switch.png>`_.
+Don't forget to download the `switch.png file </static/img/2011/11/switch.png>`_.
 
 3. jQuery
-~~~~~~~~~
+---------
 
-::
+.. sourcecode:: javascript
 
     $(document).ready( function(){ 
         $('.switch').each(function() {
@@ -103,10 +102,8 @@ file </wp-content/uploads/2011/11/switch.png>`_.
         }); 
     });
 
-Yes, I violated the DRY principle, but the logic works, so that's good
-enough for now ;)
+Yes, I violated the DRY principle, but the logic works, so that's good enough
+for now ;)
 
-*Credits: The image used was taken from the `Heise's socialshareprivacy
-plugin <http://www.heise.de/extras/socialshareprivacy/>`_ which I'm also
-using on this blog.*
-
+(Credits: The image used was taken from the `Heise's socialshareprivacy
+plugin <http://www.heise.de/extras/socialshareprivacy/>`__.)

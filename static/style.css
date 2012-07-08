@@ -1,6 +1,6 @@
 body {
-    font-family: 'Linden Hill', serif;
-    font-size: 16px;
+    font-family: 'Linden Hill', Georgia, serif;
+    font-size: 19px;
 }
 
 #wrapper {
@@ -32,16 +32,20 @@ body {
     margin-top: 40px;
 }
 
-div.highlight {
+div.highlight, pre.literal-block {
     background-color: #f4f4f4;
     border: 1px solid #ddd;
     margin-bottom: 10px;
 }
 
-div.highlight pre {
+div.highlight pre, pre.literal-block {
     margin: 5px;
     font-family: 'Consolas', 'Menlo', 'Deja Vu Sans Mono', 'Bitstream Vera Sans Mono', monospace;
     font-size: 14px;
+}
+
+pre.literal-block {
+    padding: 5px;
 }
 
 tt.literal {
@@ -53,6 +57,10 @@ cite {
     font-family: 'Consolas', 'Menlo', 'Deja Vu Sans Mono', 'Bitstream Vera Sans Mono', monospace;
     font-size: 13px;
     font-style: normal;
+}
+
+.figure .caption {
+    font-style: italic;
 }
 
 h1 cite {

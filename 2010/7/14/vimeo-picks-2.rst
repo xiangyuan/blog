@@ -4,14 +4,48 @@ tags: [Anderes,Youtube]
 Vimeo Picks 2
 =============
 
-Hier die Fortsetzung der `Serie </2009/09/vimeo-picks-1/>`_...
+Hier die Fortsetzung der `Serie </2009/9/25/vimeo-picks-1/>`_...
 
-[vimeo]http://vimeo.com/12630017[/vimeo]
-[vimeo]http://vimeo.com/12825278[/vimeo]
-[vimeo]http://vimeo.com/12849638[/vimeo]
-[vimeo]http://vimeo.com/12493449[/vimeo]
-[vimeo]http://vimeo.com/12433033[/vimeo]
-[vimeo]http://vimeo.com/9669721[/vimeo]
-[vimeo]http://vimeo.com/7235885[/vimeo](Den gesamten Film zu sehen gibts
-`hier <http://vimeo.com/11885622>`_)
+.. vimeo:: 12630017
+    :width: 900
+    :height: 506
 
+.. raw:: html
+    
+    <br><br>
+
+.. vimeo:: 12825278
+    :width: 900
+    :height: 506
+
+.. raw:: html
+    
+    <br><br>
+
+.. vimeo:: 12849638
+    :width: 900
+    :height: 506
+
+.. raw:: html
+    
+    <br><br>
+
+.. vimeo:: 12493449
+    :width: 900
+    :height: 506
+
+.. raw:: html
+    
+    <br><br>
+
+.. vimeo:: 9669721
+    :width: 900
+    :height: 506
+
+.. raw:: html
+    
+    <br><br>
+
+.. vimeo:: 7235885 
+    :width: 900
+    :height: 506

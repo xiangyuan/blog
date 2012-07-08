@@ -12,8 +12,13 @@ last weeks, I've spent a lot of time on Google+ and none on Diaspora
 Anyways, today I logged back into Diaspora and - being accustomed to
 Google+ - almost didn't note any difference concerning the layout.
 
-`|Google+| <http://blog.ich-wars-nicht.ch/wp-content/uploads/2011/08/google1.png>`_
-`|Diaspora| <http://blog.ich-wars-nicht.ch/wp-content/uploads/2011/08/diaspora1.png>`_
+.. image:: http://blog.ich-wars-nicht.ch/wp-content/uploads/2011/08/google1-1024x744.png
+    :alt: Google+
+    :target: http://blog.ich-wars-nicht.ch/wp-content/uploads/2011/08/google1.png
+
+.. image:: http://blog.ich-wars-nicht.ch/wp-content/uploads/2011/08/diaspora1-1024x613.png
+    :alt: Diaspora
+    :target: http://blog.ich-wars-nicht.ch/wp-content/uploads/2011/08/diaspora1.png
 
 (Sorry about forgetting to switch Diaspora to English...)
 
@@ -44,7 +49,3 @@ the focus on sharing which information with whom, the concept of
 "unidirectional relationships" (following without being followed) etc...
 
 Opinions?
-
-.. |Google+| image:: http://blog.ich-wars-nicht.ch/wp-content/uploads/2011/08/google1-1024x744.png
-.. |Diaspora| image:: http://blog.ich-wars-nicht.ch/wp-content/uploads/2011/08/diaspora1-1024x613.png
-

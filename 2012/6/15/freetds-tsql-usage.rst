@@ -29,7 +29,7 @@ some of the relevant options:
 
 After successfully connecting to a database server, there was another issue for me. The SQL queries
 were not submitted simply by ending them with a semicolon, unlike the ``mysql`` and ``psql``
-commands. It took me a while to figure out that the keyword to submit a query was ``go``...
+tools. It took me a while to figure out that the keyword to submit a query was ``go``...
 
 .. sourcecode:: plain
 

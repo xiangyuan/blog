@@ -4,16 +4,16 @@ tags: [Arch Linux,Linux]
 dwm config - volume, battery notification, unread e-mail count & more
 =====================================================================
 
-As many other `dwm <http://dwm.suckless.org/>`_ users do, I customized
-my .xinitrc file and the dwm status bar in to display some useful
-information. Here is my configuration:
+As many other `dwm <http://dwm.suckless.org/>`_ users do, I customized my
+`.xinitrc` file and the dwm status bar in to display some useful information.
+Here is my configuration:
 
 .xinitrc
 ~~~~~~~~
 
 This is what my .xinitrc looks like:
 
-::
+.. sourcecode:: bash
 
     # set keyboard layout to Swiss German
     setxkbmap ch
@@ -70,11 +70,11 @@ This is what my .xinitrc looks like:
 .Xresources
 ~~~~~~~~~~~
 
-In my .Xresources, I'm setting the UXTerm color to white on black, as
-well as fixing a bug with the ``Alt`` key in SSH sessions. The last line
-is to set the window URGENT flag when the window uses the system bell.
+In my `.Xresources`, I'm setting the UXTerm color to white on black, as well as
+fixing a bug with the ``Alt`` key in SSH sessions. The last line is to set the
+window URGENT flag when the window uses the system bell.
 
-::
+.. sourcecode:: bash
 
     UXTerm*eightBitInput: false
     UXTerm*metaSendsEscape: true
@@ -84,16 +84,17 @@ is to set the window URGENT flag when the window uses the system bell.
 .xsetroot.sh
 ~~~~~~~~~~~~
 
-As you've seen in my .xinitrc file, I didn't want to keep my xsetroot
-commands in the .xinitrc file. The main reason for this is that now I
-can update the status information from an external script, e.g. when
-pushing some volume buttons on my notebook.
+As you've seen in my `.xinitrc` file, I didn't want to keep my xsetroot commands
+directly in that file. The main reason for this is that now I can update the
+status information from an external script, e.g. when pushing some volume
+buttons on my notebook.
 
-::
+.. sourcecode:: bash
 
     DATETIME=`date`
     UPTIME=`uptime | sed 's/.*up\s*//' | sed 's/,\s*[0-9]* user.*//' | sed 's/  / /g'`
-    VOLUME=$( amixer sget Master | grep -e 'Front Left:' | sed 's/[^\[]*\[\([0-9]\{1,3\}%\).*\(on\|off\).*/\2 \1/' | sed 's/off/M/' | sed 's/on //' )
+    VOLUME=$( amixer sget Master | grep -e 'Front Left:' | \
+        sed 's/[^\[]*\[\([0-9]\{1,3\}%\).*\(on\|off\).*/\2 \1/' | sed 's/off/M/' | sed 's/on //' )
     UNREADMAIL=`cat .unreadmail`
     BATTERYSTATE=$( acpi -b | awk '{ split($5,a,":"); print substr($3,0,2), $4, "["a[1]":"a[2]"]" }' | tr -d ',' )
     if [ `date +%S` == 30 -o `date +%S` == 00 ]; then python imap_check_unread.py > .unreadmail; fi
@@ -113,12 +114,12 @@ In summary, my status bar displays the following things:
 imap\_check\_unread.py
 ~~~~~~~~~~~~~~~~~~~~~~
 
-To check the unread mail count in my IMAP account, I created a little
-Python script. But because I don't want to query the server every
-second, I'm caching the value in a file and updating it every 30
-seconds. Create a cronjob or similar to update the file.
+To check the unread mail count in my IMAP account, I created a little Python
+script. But because I don't want to query the server every second, I'm caching
+the value in a file and update it every 30 seconds. Create a cronjob or similar
+to update the file.
 
-::
+.. sourcecode:: python
 
     #!/usr/bin/env python
 
