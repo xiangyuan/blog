@@ -1,12 +1,24 @@
 <!doctype html>
 <html>
     <head>
-        <meta charset=utf-8>
         <title>{% block title %}{% endblock %}</title>
-        {% if ctx and ctx.summary %}
-            <meta name="description" content="{{ ctx.summary }}">
+
+        <!-- meta -->
+        <meta charset="utf-8">
+        <meta name="author" content="Danilo Bargen">
+        <meta name="dc.language" content="de-CH">
+        <meta name="dc.license" content="http://creativecommons.org/licenses/by-sa/3.0/">
+        {% if ctx and ctx.summary %}<meta name="description" content="{{ ctx.summary }}">{% endif %}
+        {% if ctx and ctx.tags %}<meta name="keywords" content="{{ ctx.tags|sort(case_sensitive=true)|join(', ') }}">{% endif %}
+        {% if ctx and ctx.pub_date %}
+            <meta name="dc.date.created" content="{{ ctx.pub_date.date().isoformat() }}">
+            <meta name="dc.date.issued" content="{{ ctx.pub_date.date().isoformat() }}">
         {% endif %}
+
+        <!-- newsfeed -->
         <link href="/feed.atom" rel="alternate" title="Feed" type="application/atom+xml">
+
+        <!-- assets -->
         <link href="http://fonts.googleapis.com/css?family=Linden+Hill:400,400italic" rel="stylesheet" type="text/css">
         <link rel="stylesheet" href="/static/style.css" type="text/css">
         {%- for link in links %}
