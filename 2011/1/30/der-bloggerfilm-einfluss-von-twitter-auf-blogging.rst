@@ -1,5 +1,5 @@
 public: yes
-tags: [internet, social media]
+tags: [internet, social media, blog]
 
 Der Bloggerfilm / Einfluss von Twitter auf Blogging
 ===================================================
