@@ -48,3 +48,6 @@ To get started, here are some related blogposts:
 - http://codesymphony.net/2011/09/10/setting-up-rstblog/
 - http://nblock.org/2011/08/31/1st-blogpost/
 - http://mattdeboard.net/2011/05/09/more-tips-on-rstblog/
+
+Besides the technical details, this blog will from now on focus on technical
+content, usually written in English about Python/Django related things.
