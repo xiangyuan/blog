@@ -4,6 +4,9 @@ from fabric.contrib.project import rsync_project
 env.hosts = ['ich-wars-nicht.ch']
 env.path = '/var/www/dbrgn/blog/'
 
+def push():
+    local('git push')
+
 def build():
     local('rm -rf _build/ && run-rstblog build')
     local('python gensitemap.py > _build/sitemap.xml')
@@ -17,3 +20,7 @@ def sync():
 def deploy():
     build()
     sync()
+
+def publish():
+    deploy()
+    push()
