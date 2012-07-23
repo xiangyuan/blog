@@ -7,6 +7,9 @@ env.path = '/var/www/dbrgn/blog/'
 def push():
     local('git push')
 
+def serve():
+    local('run-rstblog serve')
+
 def build():
     local('rm -rf _build/ && run-rstblog build')
     local('python gensitemap.py > _build/sitemap.xml')
