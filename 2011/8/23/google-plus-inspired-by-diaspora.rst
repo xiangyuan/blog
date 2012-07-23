@@ -1,7 +1,7 @@
 public: yes
 tags: [social media, web design, internet]
 
-Google Plus - Inspired by Diaspora?
+Google Plus – Inspired by Diaspora?
 ===================================
 
 After all the buzz around Google+, one of its competitors,
@@ -9,15 +9,23 @@ After all the buzz around Google+, one of its competitors,
 almost forgotten. I have to admit, the same thing counts for me. In the
 last weeks, I've spent a lot of time on Google+ and none on Diaspora
 (mainly because I don't have many contacts on there (yet?), of course).
-Anyways, today I logged back into Diaspora and - being accustomed to
-Google+ - almost didn't note any difference concerning the layout.
+Anyways, today I logged back into Diaspora and – being accustomed to
+Google+ – almost didn't note any difference concerning the layout.
+
+**Google+**
 
 .. image:: http://blog.ich-wars-nicht.ch/wp-content/uploads/2011/08/google1-1024x744.png
-    :alt: Google+
+    :alt: Google+ Screenshot
+    :width: 895
+    :height: 650
     :target: http://blog.ich-wars-nicht.ch/wp-content/uploads/2011/08/google1.png
 
+**Diaspora**
+
 .. image:: http://blog.ich-wars-nicht.ch/wp-content/uploads/2011/08/diaspora1-1024x613.png
-    :alt: Diaspora
+    :alt: Diaspora Screenshot
+    :width: 895
+    :height: 536
     :target: http://blog.ich-wars-nicht.ch/wp-content/uploads/2011/08/diaspora1.png
 
 (Sorry about forgetting to switch Diaspora to English...)
@@ -40,8 +48,8 @@ Well...
 
 I'm not saying Google copied Diaspora, especially as many of those
 things are common and obviously chosen web design elements, but Google+
-certainly looks strongly inspired by Diaspora, which - as far as I
-remember - didn't change much of its layout over the last year or so.
+certainly looks strongly inspired by Diaspora, which – as far as I
+remember – didn't change much of its layout over the last year or so.
 
 Also, many ideas/philosophies behind Google+ that make it successful are
 almost identical to those of Diaspora. The concept of circles/aspects,
