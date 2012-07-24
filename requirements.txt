@@ -1,3 +1,4 @@
 -e git+git@github.com:gwrtheyrn/rstblog.git@integrate#egg=rstblog-dev
 Pygments==1.5
 Fabric==1.4.3
+cssmin==0.1.4

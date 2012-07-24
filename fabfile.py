@@ -11,8 +11,15 @@ def serve():
     local('run-rstblog serve')
 
 def build():
+    # Build HTML
     local('rm -rf _build/ && run-rstblog build')
+    # Generate sitemaps
     local('python gensitemap.py > _build/sitemap.xml')
+    # Minify CSS
+    local('cssmin < _build/static/style.css > _build/static/style.min.css')
+    local('mv _build/static/style.min.css _build/static/style.css')
+    local('cssmin < _build/static/_pygments.css > _build/static/_pygments.min.css')
+    local('mv _build/static/_pygments.min.css _build/static/_pygments.css')
 
 def sync():
     rsync_project(remote_dir=env.path,
