@@ -1,7 +1,7 @@
 ---
 active_modules: [pygments, tags, blog, disqus, latex, videos]
 author: Danilo Bargen
-canonical_url: http://w00t.ws
+canonical_url: http://dbrgn.ch/
 modules:
     pygments:
         style: tango
