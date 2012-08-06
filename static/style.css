@@ -26,10 +26,10 @@ body {
 }
 
 #mainnav li:before {
-    content: ' { ';
+    content: '{\00A0';
 }
 #mainnav li:after {
-    content: ' } ';
+    content: '\00A0}';
 }
 
 #content {
