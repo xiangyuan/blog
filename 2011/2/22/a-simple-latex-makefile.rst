@@ -18,16 +18,16 @@ overlooked anything just point it out to me.
     all: pdf clean
 
     pdf:
-        for file in $$(ls *tex | cut -d \. -f 1) ; do make $$file.pdf ; done
+		for file in $$(ls *tex | cut -d \. -f 1) ; do make $$file.pdf ; done
 
     %.pdf: %.tex
-        rubber -m pdftex $<
+		rubber -m pdftex $<
 
     clean:
-        rm -f *.toc *.aux *.log
+		rm -f *.toc *.aux *.log *.out
 
     cleanall:
-        rm -f *.toc *.pdf *.aux *.log
+		rm -f *.toc *.pdf *.aux *.log *.out
 
     .PHONY: all pdf clean cleanall
     .SILENT: pdf
