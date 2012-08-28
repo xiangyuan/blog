@@ -22,12 +22,16 @@ Benutzung
 HTML Ersetzung
 ^^^^^^^^^^^^^^
 
-::
+.. sourcecode:: html
 
-    TODO
-
-
-     {URL}
+    <object height="81" width="100%">
+    <param name="movie"
+    value="http://player.soundcloud.com/player.swf?url={URL}&amp;g=bb"></param>
+    <param name="allowscriptaccess" value="always"></param>
+    <embed allowscriptaccess="always" height="81"
+    src="http://player.soundcloud.com/player.swf?url={URL}&amp;g=bb"
+    type="application/x-shockwave-flash" width="100%"></embed>
+    </object> <a href="{URL}">{URL}</a>
 
 Tipp-Anzeige
 ^^^^^^^^^^^^
