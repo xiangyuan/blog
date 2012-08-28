@@ -1,7 +1,7 @@
 public: yes
 tags: [music, quotes]
 
-heavy Metal hat etwas urkomisches
+Heavy Metal hat etwas urkomisches
 =================================
 
 .. epigraph::
