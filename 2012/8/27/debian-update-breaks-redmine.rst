@@ -40,4 +40,4 @@ should work again.
 Redmine on a more up-to-date operating sytem. See my
 `Ubuntu / Redmine / Nginx / Mongrel / Supervisord
 </2012/2/21/ubuntu-redmine-nginx-mongrel-supervisord/>`_
-blogpost for a howto on setting up Redmine on Ubuntu.
+blogpost for a howto on setting up Redmine on Ubuntu.)
