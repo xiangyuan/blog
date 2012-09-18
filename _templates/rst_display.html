@@ -13,7 +13,7 @@
   {{ rst.fragment }}
 
   <a href="https://flattr.com/submit/auto?user_id=danilo&url=http://blog.dbrgn.ch{{ link_to('page', slug=ctx.slug) }}/&title={{ rst.title|urlencode }}&description={{ ctx.summary|urlencode }}&tags={{ ctx.tags|sort(case_sensitive=true)|join(", ")|urlencode }}&category=text">
-       <img src="/static/img/flattr-badge-large.png" alt="Flattr this!" /> 
+       <img class="flattrbutton" src="/static/img/flattr-badge-large.png" alt="Flattr this!" /> 
   </a>
 
   {% if ctx.tags %}

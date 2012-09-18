@@ -77,6 +77,11 @@ div.date {
     display: block;
 }
 
+img.flattrbutton {
+    margin-top: 15px;
+    float: right;
+}
+
 div.tags p {
     float: right;
     clear: both;
