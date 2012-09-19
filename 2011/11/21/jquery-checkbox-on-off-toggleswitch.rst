@@ -58,7 +58,7 @@ and that the checkbox and the label are direct children of the
         display: none;
     }
 
-Don't forget to download the `switch.png file </static/img/2011/11/switch.png>`_.
+Don't forget to download the `switch.png file </static/img/2011/11/21/switch.png>`_.
 
 3. jQuery
 ---------
