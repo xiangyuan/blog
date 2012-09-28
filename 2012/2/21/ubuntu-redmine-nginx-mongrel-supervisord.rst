@@ -1,5 +1,5 @@
 public: yes
-tags: [sysadmin, nginx]
+tags: [sysadmin, nginx, redmine]
 summary: How to install Redmine on Ubuntu with Nginx, Mongrel and Supervisord.
 
 Ubuntu / Redmine / Nginx / Mongrel / Supervisord
