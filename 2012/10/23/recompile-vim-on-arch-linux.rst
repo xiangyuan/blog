@@ -28,7 +28,7 @@ Then rebuild the `vim` and `vim-runtime` packages with the `--edit` option::
     $ pacbuilder --install --edit vim vim-runtime
 
 When the script asks you whether you want to edit the `PKGBUILD` file, answer
-with `y`. Then find the line that looks like this::
+with `y`. Then find the first line that looks like this::
 
     ./configure --prefix=/usr --localstatedir=/var/lib/vim \
       --with-features=big --with-compiledby=ArchLinux \
@@ -40,13 +40,17 @@ with `y`. Then find the line that looks like this::
 Edit the configure options to your likings. In my case, I changed the following
 things:
 
-- ``--disable-pythoninterp`` -> ``--enable-pythoninterp``
-- ``--disable-python3interp`` -> ``--enable-python3interp``
-- ``--disable-rubyinterp`` -> ``--enable-rubyinterp``
-- ``--with-compiledby=ArchLinux`` -> ``--with-compiledby="Custom Build (http://blog.dbrgn.ch/2012/10/23/recompile-vim-on-arch-linux/)"``
+- `--disable-pythoninterp` ⇒ `--enable-pythoninterp`
+- `--disable-python3interp` ⇒ `--enable-python3interp`
+- `--disable-rubyinterp` ⇒ `--enable-rubyinterp`
+- `--with-compiledby=ArchLinux` ⇒ `--with-compiledby="Custom Build (http://s.dbrgn.ch/uqK6)"`
 
 Also add `python`, `python2` and `ruby` to the `depends` list inside the
 `package_vim()` function. Then save and close the `PKGBUILD` file.
 
 Pacbuilder will now go on to compile and install your custom build of Vim. You
 can verify it with ``vim --version`` on the commandline.
+
+Afterwards, if you want to prevent `pacman` from auto-upgrading your `vim`
+package, you can add `vim` and `vim-runtime` to the `IgnorePkg` variable in
+`/etc/pacman.conf`.
