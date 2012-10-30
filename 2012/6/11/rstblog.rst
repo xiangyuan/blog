@@ -87,10 +87,10 @@ To easily publish content, I use `Fabric <http://fabfile.org/>`_ and `rsync
         local('mv _build/static/_pygments.min.css _build/static/_pygments.css')
 
         # Add timestamp to css files
-        local('find _build -type f -exec sed -i "s/style.css/style.css?%s/g" \
-                {} \;' % int(time.time()))
-        local('find _build -type f -exec sed -i "s/_pygments.css/_pygments.css?%s/g" \
-                {} \;' % int(time.time()))
+        local('find _build -type f -exec sed -i "s/\(link.*\)' + \
+              'style.css/\\1style.css?%s/g" {} \;' % int(time.time()))
+        local('find _build -type f -exec sed -i "s/\(link.*\)' + \
+              '_pygments.css/\\1_pygments.css?%s/g" {} \;' % int(time.time()))
 
     def sync():
         rsync_project(remote_dir=env.path,
@@ -126,9 +126,9 @@ are taken:
 This Blog
 ---------
 
-Besides the blog-related technical details, this blog will from now on focus on
-technical content, usually written in English about Python/Django related
-things.
+Besides the blog-related technical details, this blog will from now on focus
+mostly on technical content, usually written in English, mostly about Python /
+Django / Linux / Programming related things.
 
 The blog repository is `published on Github
 <https://github.com/gwrtheyrn/blog>`__. Content is under a CC by-sa 3.0 license.
