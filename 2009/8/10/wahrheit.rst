@@ -1,5 +1,6 @@
 public: yes
 tags: [society, literature, quotes]
+language: de
 
 Wahrheit
 ========

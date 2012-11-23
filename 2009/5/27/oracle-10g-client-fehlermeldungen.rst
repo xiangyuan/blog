@@ -1,5 +1,6 @@
 public: yes
 tags: [sysadmin]
+language: de
 
 Oracle 10g Client Fehlermeldungen
 =================================

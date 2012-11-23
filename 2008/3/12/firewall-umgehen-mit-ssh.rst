@@ -1,5 +1,6 @@
 public: yes
 tags: [internet]
+language: de
 
 Firewall umgehen mit SSH
 ========================

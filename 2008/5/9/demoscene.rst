@@ -1,5 +1,6 @@
 public: yes
 tags: [demoscene]
+language: de
 
 Demoscene
 =========

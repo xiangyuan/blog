@@ -1,5 +1,6 @@
 public: yes
 tags: [vim]
+language: de
 
 HTML Umbrechen mit VIM
 ======================

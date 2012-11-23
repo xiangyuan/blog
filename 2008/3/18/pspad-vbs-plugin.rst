@@ -1,5 +1,6 @@
 public: yes
 tags: [windows]
+language: de
 
 PSPad VBS Plugin
 ================

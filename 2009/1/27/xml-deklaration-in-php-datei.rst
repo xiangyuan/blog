@@ -1,5 +1,6 @@
 public: yes
 tags: [php]
+language: de
 
 XML Deklaration in PHP Datei
 ============================

@@ -1,5 +1,6 @@
 public: yes
 tags: [vim, python, ruby, archlinux]
+language: en
 summary: |
     Recompile Vim with Python and Ruby support under Arch Linux.
 

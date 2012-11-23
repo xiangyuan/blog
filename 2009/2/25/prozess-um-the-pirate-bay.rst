@@ -1,5 +1,6 @@
 public: yes
 tags: [politics, internet, filesharing]
+language: de
 
 Prozess um 'The Pirate Bay'
 ===========================

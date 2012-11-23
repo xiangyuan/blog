@@ -1,5 +1,6 @@
 public: yes
 tags: [music, quotes]
+language: de
 
 Heavy Metal hat etwas urkomisches
 =================================

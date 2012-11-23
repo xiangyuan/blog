@@ -1,5 +1,6 @@
 public: yes
 tags: [webdev]
+language: de
 
 Website Checkliste
 ==================

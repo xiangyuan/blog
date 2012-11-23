@@ -1,5 +1,6 @@
 public: yes
 tags: [videos, politics]
+language: de
 
 Doku: Militärbunker in der Schweiz
 ==================================

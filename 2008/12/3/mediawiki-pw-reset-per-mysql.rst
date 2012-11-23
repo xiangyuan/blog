@@ -1,5 +1,6 @@
 public: yes
 tags: [sysadmin]
+language: de
 
 Mediawiki PW-Reset per MySQL
 ============================

@@ -1,5 +1,6 @@
 public: yes
 tags: [linux, open source]
+language: de
 
 Der Wert von Linux
 ==================

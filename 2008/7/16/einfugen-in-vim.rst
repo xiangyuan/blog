@@ -1,5 +1,6 @@
 public: yes
 tags: [vim]
+language: de
 
 Einfügen in Vim
 ===============

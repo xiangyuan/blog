@@ -1,5 +1,6 @@
 public: yes
 tags: [webdesign]
+language: de
 
 Farbschema-Generator
 ====================

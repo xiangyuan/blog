@@ -1,5 +1,6 @@
 public: yes
 tags: [gentoo]
+language: de
 
 Unvollständiges CH-Tastaturlayout
 =================================

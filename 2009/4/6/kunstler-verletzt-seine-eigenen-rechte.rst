@@ -1,5 +1,6 @@
 public: yes
 tags: [law, politics]
+language: de
 
 Künstler verletzt seine eigenen Rechte
 ======================================

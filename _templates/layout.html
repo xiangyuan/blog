@@ -1,5 +1,5 @@
 <!doctype html>
-<html>
+<html lang="{% if ctx and ctx.language %}{{ ctx.language }}{% else %}en{%endif %}">
     <head>
         <title>{% block title %}{% endblock %}</title>
 

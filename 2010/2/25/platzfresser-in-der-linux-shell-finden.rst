@@ -1,5 +1,6 @@
 public: yes
 tags: [sysadmin]
+language: de
 
 Platzfresser in der Linux Shell finden
 ======================================

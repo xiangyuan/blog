@@ -1,5 +1,6 @@
 public: yes
 tags: [media, politics]
+language: de
 
 Medienwandel in der Schweiz
 ===========================
