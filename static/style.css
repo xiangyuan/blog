@@ -36,6 +36,10 @@ body {
     margin-top: 40px;
 }
 
+#content p {
+    text-align: justify;
+}
+
 div.highlight, pre.literal-block {
     background-color: #f4f4f4;
     border: 1px solid #ddd;
