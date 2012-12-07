@@ -4,7 +4,7 @@ language: en
 summary: |
     Recompile Vim with Python and Ruby support under Arch Linux.
 
-Recompile Vim with Python/Ruby support on Arch Linux
+Recompile Vim with Python/Ruby Support on Arch Linux
 ====================================================
 
 For my `vim configuration <https://github.com/gwrtheyrn/dotfiles>`__, I need a
