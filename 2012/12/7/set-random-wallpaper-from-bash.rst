@@ -18,4 +18,4 @@ The following lines of code choose a random `.jpg` or `.png` file from my
 
     wp_path=/home/danilo/.wallpapers/
     image=$(ls $wp_path | grep -E '(jpg|png)$' | sort -R | tail -1)
-    feh --bg-scale $image                                                                                                                                                                                   
+    feh --bg-scale $wp_path/$image
