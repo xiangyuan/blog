@@ -42,7 +42,7 @@ This is a tutorial to install and play Rayman 1 (the greatest jump'n'run game ev
      -c 'r:' \
      -c 'install.bat'
 
-6. Install Rayman (don't forget to let the setpu auto-recognize your soundcard).
+6. Install Rayman (don't forget to let the setup auto-recognize your soundcard).
    After the setup, don't play the game, just exit the menu and close the
    DosBox window.
 
