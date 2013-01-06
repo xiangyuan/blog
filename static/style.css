@@ -158,14 +158,20 @@ a, a:visited {
 
 /* Media queries */
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 600px or max-device-width: 600px) {
+    body, #wrapper {
+        max-width: 600px;
+    }
     #mainnav {
         float: left;
         clear: both;;
     }
 }
 
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 500px or max-device-width: 500px) {
+    body, #wrapper {
+        max-width: 500px;
+    }
     p {
         line-height: 1.7em;
     }
