@@ -4,7 +4,7 @@ body {
 }
 
 #wrapper {
-    width: 900px;
+    max-width: 900px;
     margin: 10px auto 0;
 }
 
@@ -154,4 +154,22 @@ a, a:visited {
 .align-left {
     float: left;
     margin-right: 10px;
+}
+
+/* Media queries */
+
+@media only screen and (max-width: 600px) {
+    #mainnav {
+        float: left;
+        clear: both;;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    p {
+        line-height: 1.7em;
+    }
+    .blog-archive li {
+        margin-bottom: 15px;
+    }
 }
