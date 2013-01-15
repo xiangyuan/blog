@@ -9,7 +9,7 @@ in one of your MySQL databases, you know how tedious that can be.
 
 I have written a Python script that will simplify that task. You can get
 it on
-`Github <https://github.com/gwrtheyrn/MySQL-Show-Storage-Engines>`_.
+`Github <https://github.com/dbrgn/MySQL-Show-Storage-Engines>`_.
 
 Usage:
 ~~~~~~
@@ -27,4 +27,4 @@ or
 Download:
 ~~~~~~~~~
 
-`https://github.com/gwrtheyrn/MySQL-Show-Storage-Engines <https://github.com/gwrtheyrn/MySQL-Show-Storage-Engines>`_
+`https://github.com/dbrgn/MySQL-Show-Storage-Engines <https://github.com/dbrgn/MySQL-Show-Storage-Engines>`_

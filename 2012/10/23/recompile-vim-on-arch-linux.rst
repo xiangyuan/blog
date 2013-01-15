@@ -7,7 +7,7 @@ summary: |
 Recompile Vim with Python/Ruby Support on Arch Linux
 ====================================================
 
-For my `vim configuration <https://github.com/gwrtheyrn/dotfiles>`__, I need a
+For my `vim configuration <https://github.com/dbrgn/dotfiles>`__, I need a
 version of Vim that was built with Python and Ruby support. Unfortunately, the
 default version of Vim that is installed with `pacman` doesn't support
 Python/Ruby.
