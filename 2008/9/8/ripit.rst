@@ -12,7 +12,7 @@ man sich selber was scriptet, findet man das perfekte Programm für die Aufgabe.
 
 Soeben geschehen bei der Suche nach einem konsolenbasierten Linux-CD-Rip-Tool.
 Lösung gefunden mit `RipIT <http://www.suwald.com/ripit/news.php>`_. Das
-perlbasierte Tool läuft im **terminal**, also keine nervige GUI mit tausenden
+perlbasierte Tool läuft im **Terminal**, also keine nervige GUI mit tausenden
 Optionen. Es bietet jedoch einen **geführten Dialog**, so dass man sich nicht
 dutzende Parameter merken muss. Und doch unterstützt es parametergesteuerte
 Optionen... Die Dateien werden am Schluss als **ogg, flac, mp3, oder m4a**
