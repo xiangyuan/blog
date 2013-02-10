@@ -13,7 +13,7 @@ online-editor to create `reveal.js`_ based presentations. Here it is:
 
 .. iframe:: http://dbrgn.ch/slides/20130207_getting_git/
     :id: slides
-    :height: 700px
+    :height: 720px
     :seamless:
     :sandbox: allow-scripts
 
