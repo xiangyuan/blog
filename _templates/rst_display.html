@@ -12,9 +12,11 @@
 
   {{ rst.fragment }}
 
-  <a href="https://flattr.com/submit/auto?user_id=danilo&url=http://blog.dbrgn.ch{{ link_to('page', slug=ctx.slug) }}/&title={{ rst.title|urlencode }}&description={{ ctx.summary|urlencode }}&tags={{ ctx.tags|sort(case_sensitive=true)|join(", ")|urlencode }}&category=text">
-       <img class="flattrbutton" src="/static/img/flattr-badge-large.png" alt="Flattr this!" /> 
-  </a>
+  {% if not rst.title == "About me" %}
+      <a href="https://flattr.com/submit/auto?user_id=danilo&url=http://blog.dbrgn.ch{{ link_to('page', slug=ctx.slug) }}/&title={{ rst.title|urlencode }}&description={{ ctx.summary|urlencode }}&tags={{ ctx.tags|sort(case_sensitive=true)|join(", ")|urlencode }}&category=text">
+           <img class="flattrbutton" src="/static/img/flattr-badge-large.png" alt="Flattr this!" /> 
+      </a>
+  {% endif %}
 
   {% if ctx.tags %}
     <div class="tags">
