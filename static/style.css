@@ -57,14 +57,41 @@ pre.literal-block {
 }
 
 tt.literal {
+    font-family: 'Consolas', 'Menlo', 'Deja Vu Sans Mono', 'Bitstream Vera Sans Mono', monospace;
     background-color: #eee;
     padding: 2px 5px;
+    font-size: 0.8em;
 }
 
 cite {
     font-family: 'Consolas', 'Menlo', 'Deja Vu Sans Mono', 'Bitstream Vera Sans Mono', monospace;
     font-size: 13px;
     font-style: normal;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    margin: 15px 0;
+}
+
+tbody {
+    display: table-row-group;
+    vertical-align: middle;
+}
+
+tr {
+    display: table-row;
+}
+
+th, td {
+    display: table-cell;
+    border: 1px solid #ccc;
+    padding: 4px 8px;
+}
+
+th {
+    font-weight: bold;
 }
 
 .figure .caption {
