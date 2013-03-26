@@ -12,6 +12,10 @@ body {
     float: left;
     font-size: 3em;
 }
+#blogtitle a, #blogtitle a:hover, #blogtitle a:visited {
+    color: #000;
+    text-decoration: none;
+}
 #mainnav {
     margin: 0;
     padding: 0;
