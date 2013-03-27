@@ -29,6 +29,11 @@ The weighted sum *s* of these inputs is then passed through a step function *f*
 
     f(s) = \begin{cases} 1 & \textrm{if } s \ge 0 \\ 0 & \textrm{otherwise} \end{cases}
 
+To make things cleaner, here's a little diagram:
+
+.. image:: /static/img/2013/3/26/perceptron.png
+    :alt: The mathematical model of a perceptron.
+
 
 Python!
 -------
