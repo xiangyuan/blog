@@ -39,8 +39,7 @@ and list only specific packages::
       -e, --editable     List editable projects.
       -l, --local        If in a virtualenv that has global access, do not list globally-installed packages.
 
-In summary, you can now showshow outdated dependencies with a single pip
-command::
+In summary, you can now show outdated dependencies with a single pip command::
 
     $ pip list --outdated
     requests (Current: 1.1.0 Latest: 1.2.0)
