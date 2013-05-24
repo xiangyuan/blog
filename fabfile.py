@@ -2,7 +2,7 @@ import time
 from fabric.api import local, env
 from fabric.contrib.project import rsync_project
 
-env.hosts = ['ich-wars-nicht.ch']
+env.hosts = ['dbrgn.ch']
 env.path = '/var/www/dbrgn/blog/'
 
 def push():
