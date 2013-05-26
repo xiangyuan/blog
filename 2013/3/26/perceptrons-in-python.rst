@@ -160,8 +160,8 @@ with an iteration count of 500 or more and plot the errors:
 You could also try to change the training sequence in order to model an AND, NOR
 or NOT function. Note that it's not possible to model an XOR function using a
 single-layer perceptron like this, because the two classes (0 and 1) of an XOR
-function are not linearly separable. In that case you would have to use a
-multi-layer perceptron (which is basically a small neural network).
+function are not linearly separable. In that case you would have to use multiple
+layers of perceptrons (which is basically a small neural network).
 
 
 Wrap Up
