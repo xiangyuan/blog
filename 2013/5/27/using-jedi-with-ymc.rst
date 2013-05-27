@@ -7,6 +7,10 @@ summary: |
 Using Jedi with YouCompleteMe
 =============================
 
+(In case you're not familiar with it yet, Jedi_ is an awesome autocompletion
+library for Python that tries to understand your code. There are editor plugins
+available for Vim, Emacs and Sublime Text 2.)
+
 The "official" Jedi_ plugin for vim is jedi-vim_, but there's another vim
 autocompletion plugin that supports Jedi: YouCompleteMe_.
 
