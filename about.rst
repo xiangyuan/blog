@@ -36,7 +36,7 @@ Online Profiles
 :Last.fm: http://www.lastfm.de/user/gwrtheyrn
 :Stackoverflow: http://stackoverflow.com/users/284318/danilo-bargen
 :Xing: https://www.xing.com/profile/Danilo_Bargen
-:OSS Report Card: http://osrc.dfm.io/dbrgn
+:OSRC: http://osrc.dfm.io/dbrgn
 
 GPG
 ---
