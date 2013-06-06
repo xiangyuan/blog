@@ -10,13 +10,13 @@ About me
     :width: 144
     :height: 205
 
-Hi. I'm Danilo Bargen. I'm 21 years old, live in Switzerland and study computer
+Hi. I'm Danilo Bargen. I'm 22 years old, live in Switzerland and study computer
 science at `HSR Rapperswil`_. Besides that, I currently work part-time as a
 software engineer at `Webrepublic`_. I'm `a third culture kid
-</2009/4/14/third-culture-kids/>`_ from Peru. I'm a member of the `Swiss Pirate
-Party`_. I `paraglide <http://en.wikipedia.org/wiki/Paragliding>`_. I like
-`Python`_, `Django`_, `ArchLinux`_, `Vim`_, `Git`_, `Github`_ and `Free
-Software`_.
+</2009/4/14/third-culture-kids/>`_ from Peru. I `paraglide
+<http://en.wikipedia.org/wiki/Paragliding>`_. I'm active on `Kiva
+<http://www.kiva.org/invitedby/danilo1664>`_. I like `Python`_, `Django`_,
+`ArchLinux`_, `Vim`_, `Git`_, `Github`_ and `Free Software`_.
 
 Contact
 -------
@@ -36,6 +36,7 @@ Online Profiles
 :Last.fm: http://www.lastfm.de/user/gwrtheyrn
 :Stackoverflow: http://stackoverflow.com/users/284318/danilo-bargen
 :Xing: https://www.xing.com/profile/Danilo_Bargen
+:OSS Report Card: http://osrc.dfm.io/dbrgn
 
 GPG
 ---
