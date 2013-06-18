@@ -109,7 +109,7 @@ h1 cite {
 
 div.date {
     color: #777;
-    display: block;
+    display: inline-block;
 }
 
 img.flattrbutton {
