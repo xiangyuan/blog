@@ -4,11 +4,11 @@ disqus: no
 About me
 ========
 
-.. image:: /static/img/me.jpg
-    :alt: Picture of me sitting at a lake
+.. image:: /static/img/me2.jpg
+    :alt: Portrait picture of me
     :align: right
     :width: 144
-    :height: 205
+    :height: 226
 
 Hi. I'm Danilo Bargen. I'm 22 years old, live in Switzerland and study computer
 science at `HSR Rapperswil`_. Besides that, I currently work part-time as a
