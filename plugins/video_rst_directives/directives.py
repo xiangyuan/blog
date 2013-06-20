@@ -1,28 +1,25 @@
 # -*- coding: utf-8 -*-
 """
-    rstblog.modules.videos
-    ~~~~~~~~~~~~~~~~~~~~~~
+Adds support for embedding Youtube and Vimeo videos.
 
-    Adds support for embedding Youtube and Vimeo videos.
+To use, include ``videos`` in the list of modules in your ``config.yml``.
 
-    To use, include ``videos`` in the list of modules in your ``config.yml``.
+There are two directives added: ``youtube`` and ``vimeo``. The only
+argument is the video id of the video to include.
 
-    There are two directives added: ``youtube`` and ``vimeo``. The only
-    argument is the video id of the video to include.
+Both directives have three optional arguments: ``height``, ``width``
+and ``align``. Default height is 281 and default width is 500. If ``align``
+is not set, it defaults to ``none``.
 
-    Both directives have three optional arguments: ``height``, ``width``
-    and ``align``. Default height is 281 and default width is 500. If ``align``
-    is not set, it defaults to ``none``.
+Example::
 
-    Example::
+    .. youtube:: anwy2MPT5RE
+        :height: 315
+        :width: 560
+        :align: left
 
-        .. youtube:: anwy2MPT5RE
-            :height: 315
-            :width: 560
-            :align: left
-
-    :copyright: (c) 2012 by Danilo Bargen.
-    :license: BSD, see LICENSE for more details.
+:copyright: (c) 2012 by Danilo Bargen.
+:license: MIT
 """
 from __future__ import absolute_import
 from docutils import nodes
@@ -72,6 +69,7 @@ class Vimeo(IframeVideo):
     class="align-%(align)s"></iframe>'
 
 
-def setup(builder):
+def register():
+    """Plugin registration."""
     directives.register_directive('youtube', Youtube)
     directives.register_directive('vimeo', Vimeo)

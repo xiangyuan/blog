@@ -1,42 +1,42 @@
 # -*- coding: utf-8 -*-
 """
-    rstblog.modules.iframe
-    ~~~~~~~~~~~~~~~~~~~~~~
+Adds support for embedding iframes (e.g. for HTML presentations).
 
-    Adds support for embedding iframes (e.g. for HTML presentations).
+To use, include ``iframe`` in the list of modules in your ``config.yml``.
 
-    To use, include ``iframe`` in the list of modules in your ``config.yml``.
+There is a new directive added: ``iframe``. The only argument is the source
+url of the iframe to include.
 
-    There is a new directive added: ``iframe``. The only argument is the source
-    url of the iframe to include.
+The directive has eight optional arguments: ``height``, ``width`` ``id``,
+``name``, ``class``, ``sandbox``, ``seamless`` and ``allowfullscreen``.
+They correspond to the html attributes of an iframe tag. Default height is
+500 and default width is 100%.
 
-    The directive has eight optional arguments: ``height``, ``width`` ``id``,
-    ``name``, ``class``, ``sandbox``, ``seamless`` and ``allowfullscreen``.
-    They correspond to the html attributes of an iframe tag. Default height is
-    500 and default width is 100%.
+Example::
 
-    Example::
+    .. iframe:: http://github.com/
 
-        .. iframe:: http://github.com/
+Example 2::
 
-    Example 2::
+    .. iframe:: http://google.com/
+        :height: 315
+        :width: 50%
+        :id: my-iframe
+        :name: my-iframe
+        :class: iframe-type-3
+        :sandbox: allow-popups allow-pointer-lock
 
-        .. iframe:: http://google.com/
-            :height: 315
-            :width: 50%
-            :id: my-iframe
-            :name: my-iframe
-            :class: iframe-type-3
-            :sandbox: allow-popups allow-pointer-lock
-
-    :copyright: (c) 2013 by Danilo Bargen.
-    :license: BSD, see LICENSE for more details.
+:copyright: (c) 2013 by Danilo Bargen.
+:license: MIT
 """
 from __future__ import absolute_import
+
 from string import Template
 from collections import defaultdict
+
 from docutils import nodes
 from docutils.parsers.rst import Directive, directives
+from pelican import signals
 
 
 class Iframe(Directive):
@@ -79,5 +79,6 @@ class Iframe(Directive):
         return [nodes.raw('', self.html.substitute(options), format='html')]
 
 
-def setup(builder):
+def register():
+    """Plugin registration."""
     directives.register_directive('iframe', Iframe)

@@ -22,6 +22,9 @@ FILENAME_METADATA = '(?P<date>\d{4}-\d{2}-\d{2})_(?P<slug>.*).rst'
 JINJA_EXTENSIONS = []
 JINJA_FILTERS = []
 
+# Plugins
+PLUGINS = ['plugins.iframe_rst_directive', 'plugins.video_rst_directives']
+
 # Markup
 MARKUP = ('rst',)
 
