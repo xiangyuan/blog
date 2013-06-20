@@ -59,6 +59,7 @@ CATEGORY_SAVE_AS = False
 # Theme
 THEME = 'themes/dbrgn'
 GITHUB_URL = 'https://github.com/dbrgn/'
+FLATTR_USERNAME = 'danilo'
 FAVICON = 'favicon.ico'
 BLOG_LICENSE = 'http://creativecommons.org/licenses/by-sa/3.0/'
 GOOGLE_SITE_VERIFICATION = 'uJWWR6d5ESb8torD0v97T_07HLMGX7VzQ-smcUTc_IQ'

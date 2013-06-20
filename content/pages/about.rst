@@ -3,7 +3,7 @@ About me
 
 :comments: no
 
-.. image:: /static/img/me2.jpg
+.. image:: /images/me2.jpg
     :alt: Portrait picture of me
     :align: right
     :width: 144

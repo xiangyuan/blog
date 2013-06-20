@@ -9,15 +9,16 @@
             <div class="date">{{ article.locale_date }}</div>
             <div class="detail">
                 <header><h1>
+                    {% if article.language %}{{ article.language }}{% endif %}
                     <a href="{{ SITEURL }}/{{ article.url }}" rel="bookmark" title="Permalink to {{ article.title|striptags }}">
                         {{ article.title }}
                     </a>
                 </h1></header>
-                <div class="summary">{{ article.summary }}</div>
+                <div class="summary">{{ article.summary|striptags }}</div>
                 <div class="indextags">
-                {#{% for tag in entry.tags|sort %}
-                    <a href="{{ link_to('tag', tag=tag) }}">#{{ tag.replace(' ', '_') }}</a>
-                    {% endfor %}#}
+                    {% for tag in article.tags|sort %}
+                        <a href="{{ SITEURL }}/{{ tag.url }}">#{{ tag.name.replace(' ', '_') }}</a>
+                    {% endfor %}
                  </div>
             </div>
         </article>
