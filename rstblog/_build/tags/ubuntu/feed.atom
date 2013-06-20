@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title type="text">Recent Blog Posts</title>
+  <id>http://blog.dbrgn.ch/feed.atom</id>
+  <updated>2010-11-16T00:00:00Z</updated>
+  <link href="http://blog.dbrgn.ch/" />
+  <link href="http://blog.dbrgn.ch/feed.atom" rel="self" />
+  <subtitle type="text">Recent blog posts</subtitle>
+  <generator>Werkzeug</generator>
+  <entry xml:base="http://blog.dbrgn.ch/feed.atom">
+    <title type="text">Enable Ctr+Alt+Backspace in Ubuntu Jaunty</title>
+    <id>http://blog.dbrgn.ch/2009/8/6/enable-ctraltbackspace-in-ubuntu-jaunty</id>
+    <updated>2009-08-06T00:00:00Z</updated>
+    <link href="http://blog.dbrgn.ch/2009/8/6/enable-ctraltbackspace-in-ubuntu-jaunty" />
+    <author>
+      <name>Danilo Bargen</name>
+    </author>
+    <content type="html">&lt;p&gt;To re-enable the &lt;cite&gt;ctrl+alt+backspace&lt;/cite&gt; key combination in Ubuntu Jaunty, add this code to
+&lt;cite&gt;/etc/X11/xorg.conf&lt;/cite&gt;:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;Section &amp;quot;ServerFlags&amp;quot;
+    Option &amp;quot;DontZap&amp;quot; &amp;quot;false&amp;quot;
+EndSection
+&lt;/pre&gt;&lt;/div&gt;
+</content>
+  </entry>
+  <entry xml:base="http://blog.dbrgn.ch/feed.atom">
+    <title type="text">Fingerprint Reader with Thinkpad T410 using Ubuntu</title>
+    <id>http://blog.dbrgn.ch/2010/10/6/fingerprint-reader-with-thinkpad-t410-using-ubuntu</id>
+    <updated>2010-10-06T00:00:00Z</updated>
+    <link href="http://blog.dbrgn.ch/2010/10/6/fingerprint-reader-with-thinkpad-t410-using-ubuntu" />
+    <author>
+      <name>Danilo Bargen</name>
+    </author>
+    <content type="html">&lt;p&gt;How to add fingerprint reader support to your Ubuntu installation (yes, it does work):&lt;/p&gt;
+&lt;ol class="arabic simple"&gt;
+&lt;li&gt;Add fingerprint-gui ppa to your sources:&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="nv"&gt;$ &lt;/span&gt;sudo add-apt-repository ppa:fingerprint/fingerprint-gui
+&lt;span class="nv"&gt;$ &lt;/span&gt;sudo apt-get update
+&lt;/pre&gt;&lt;/div&gt;
+&lt;ol class="arabic simple" start="2"&gt;
+&lt;li&gt;Install fingerprint-gui&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="nv"&gt;$ &lt;/span&gt;sudo apt-get install fingerprint-gui
+&lt;/pre&gt;&lt;/div&gt;
+&lt;ol class="arabic simple" start="3"&gt;
+&lt;li&gt;Install UPEK library libbsapi&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="nv"&gt;$ &lt;/span&gt;sudo apt-get install libbsapi
+&lt;/pre&gt;&lt;/div&gt;
+&lt;ol class="arabic simple" start="4"&gt;
+&lt;li&gt;Log out and back in&lt;/li&gt;
+&lt;li&gt;Play with settings in &lt;em&gt;System &amp;gt; Preferences &amp;gt; Fingerprint GUI&lt;/em&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;For more and more detailed information, see
+&lt;a class="reference external" href="https://launchpad.net/~fingerprint/+archive/fingerprint-gui"&gt;https://launchpad.net/~fingerprint/+archive/fingerprint-gui&lt;/a&gt;.&lt;/p&gt;
+</content>
+  </entry>
+  <entry xml:base="http://blog.dbrgn.ch/feed.atom">
+    <title type="text">Fix Ubuntu user directories (Desktop/Music/Templates etc)</title>
+    <id>http://blog.dbrgn.ch/2010/5/21/fix-ubuntu-user-directories-desktopmusictemplates-etc</id>
+    <updated>2010-05-21T00:00:00Z</updated>
+    <link href="http://blog.dbrgn.ch/2010/5/21/fix-ubuntu-user-directories-desktopmusictemplates-etc" />
+    <author>
+      <name>Danilo Bargen</name>
+    </author>
+    <content type="html">&lt;p&gt;If you accidentally deleted one of your Ubuntu user directories (like &lt;em&gt;Desktop&lt;/em&gt;, &lt;em&gt;Music&lt;/em&gt;,
+&lt;em&gt;Pictures&lt;/em&gt;, &lt;em&gt;Templates&lt;/em&gt; etc), you can fix them by editing the file &lt;cite&gt;~/.config/user-dirs.dirs&lt;/cite&gt;.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="c"&gt;# This file is written by xdg-user-dirs-update&lt;/span&gt;
+&lt;span class="c"&gt;# If you want to change or add directories, just edit the line you&amp;#39;re&lt;/span&gt;
+&lt;span class="c"&gt;# interested in. All local changes will be retained on the next run&lt;/span&gt;
+&lt;span class="c"&gt;# Format is XDG_xxx_DIR=&amp;quot;$HOME/yyy&amp;quot;, where yyy is a shell-escaped&lt;/span&gt;
+&lt;span class="c"&gt;# homedir-relative path, or XDG_xxx_DIR=&amp;quot;/yyy&amp;quot;, where /yyy is an&lt;/span&gt;
+&lt;span class="c"&gt;# absolute path. No other format is supported.&lt;/span&gt;
+&lt;span class="c"&gt;#&lt;/span&gt;
+&lt;span class="nv"&gt;XDG_DESKTOP_DIR&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;$HOME/Desktop&amp;quot;&lt;/span&gt;
+&lt;span class="nv"&gt;XDG_DOWNLOAD_DIR&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;$HOME/Downloads&amp;quot;&lt;/span&gt;
+&lt;span class="nv"&gt;XDG_TEMPLATES_DIR&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;$HOME/Templates&amp;quot;&lt;/span&gt;
+&lt;span class="nv"&gt;XDG_PUBLICSHARE_DIR&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;$HOME/Public&amp;quot;&lt;/span&gt;
+&lt;span class="nv"&gt;XDG_DOCUMENTS_DIR&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;$HOME/Documents&amp;quot;&lt;/span&gt;
+&lt;span class="nv"&gt;XDG_MUSIC_DIR&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;$HOME/Music&amp;quot;&lt;/span&gt;
+&lt;span class="nv"&gt;XDG_PICTURES_DIR&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;$HOME/Pictures&amp;quot;&lt;/span&gt;
+&lt;span class="nv"&gt;XDG_VIDEOS_DIR&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;$HOME/Videos&amp;quot;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;For more information about those &amp;quot;xdg user dirs&amp;quot;, see
+&lt;a class="reference external" href="http://www.freedesktop.org/wiki/Software/xdg-user-dirs"&gt;http://www.freedesktop.org/wiki/Software/xdg-user-dirs&lt;/a&gt;.&lt;/p&gt;
+</content>
+  </entry>
+  <entry xml:base="http://blog.dbrgn.ch/feed.atom">
+    <title type="text">Tips for using Ubuntu with dwm</title>
+    <id>http://blog.dbrgn.ch/2010/11/16/tips-for-using-ubuntu-with-dwm</id>
+    <updated>2010-11-16T00:00:00Z</updated>
+    <link href="http://blog.dbrgn.ch/2010/11/16/tips-for-using-ubuntu-with-dwm" />
+    <author>
+      <name>Danilo Bargen</name>
+    </author>
+    <content type="html">&lt;p&gt;Some useful tips for using the &lt;a class="reference external" href="http://dwm.suckless.org/"&gt;dwm&lt;/a&gt; window manager on Ubuntu:&lt;/p&gt;
+&lt;div class="section" id="gdm-booting"&gt;
+&lt;h2&gt;GDM / Booting&lt;/h2&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;To disable the automatic start of gdm, add &amp;quot;text&amp;quot; to the &lt;tt class="docutils literal"&gt;GRUB_CMDLINE_LINUX_DEFAULT&lt;/tt&gt;-line in
+&lt;tt class="docutils literal"&gt;/etc/defaults/grub&lt;/tt&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="network-wlan"&gt;
+&lt;h2&gt;Network / WLAN&lt;/h2&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;If you want easier network configuration, use &lt;a class="reference external" href="http://wicd.sourceforge.net/"&gt;wicd&lt;/a&gt; instead of
+the &lt;a class="reference external" href="http://projects.gnome.org/NetworkManager/"&gt;gnome network manager&lt;/a&gt; (&lt;tt class="docutils literal"&gt;sudo aptitude install
+&lt;span class="pre"&gt;network-manager-&lt;/span&gt; &lt;span class="pre"&gt;network-manager-gnome-&lt;/span&gt; wicd+&lt;/tt&gt;).  You can start it with &lt;tt class="docutils literal"&gt;&lt;span class="pre"&gt;wicd-client&lt;/span&gt; &lt;span class="pre"&gt;-n&lt;/span&gt;&lt;/tt&gt;. Or if
+you prefer console-based configuration, try &lt;tt class="docutils literal"&gt;&lt;span class="pre"&gt;wicd-curses&lt;/span&gt;&lt;/tt&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="audio-sound"&gt;
+&lt;h2&gt;Audio / Sound&lt;/h2&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;In order for the sound to work, add &lt;tt class="docutils literal"&gt;&lt;span class="pre"&gt;start-pulseaudio-x11&lt;/span&gt; &amp;amp;&lt;/tt&gt; to your &lt;tt class="docutils literal"&gt;&lt;span class="pre"&gt;-/.xinitrc&lt;/span&gt;&lt;/tt&gt; file, add
+your user to the audio group and reboot. You can configure your sound devices using &lt;tt class="docutils literal"&gt;alsamixer&lt;/tt&gt;.&lt;/li&gt;
+&lt;li&gt;As a replacement for your usual audio player software, you can use &lt;a class="reference external" href="http://herrie.info/"&gt;herrie&lt;/a&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="communication-chat"&gt;
+&lt;h2&gt;Communication / Chat&lt;/h2&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Use &lt;a class="reference external" href="http://www.centerim.org/"&gt;centerim&lt;/a&gt; or &lt;a class="reference external" href="http://www.bitlbee.org/"&gt;bitlbee&lt;/a&gt; for instant
+messaging to replace pidgin. Or use &lt;a class="reference external" href="http://developer.pidgin.im/wiki/Using%20Finch"&gt;finch&lt;/a&gt;, a
+console-based frontend for pidgin.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+</content>
+  </entry>
+  <entry xml:base="http://blog.dbrgn.ch/feed.atom">
+    <title type="text">Ubuntu 9.10 "Karmic Koala" watch encrypted DVD</title>
+    <id>http://blog.dbrgn.ch/2010/1/3/ubuntu-9-10-karmic-koala-watch-encrypted-dvd</id>
+    <updated>2010-01-03T00:00:00Z</updated>
+    <link href="http://blog.dbrgn.ch/2010/1/3/ubuntu-9-10-karmic-koala-watch-encrypted-dvd" />
+    <author>
+      <name>Danilo Bargen</name>
+    </author>
+    <content type="html">&lt;p&gt;In my Ubuntu 9.10 &amp;quot;Karmic Koala&amp;quot; installation, I wasn't able to watch a DVD, even though libdvdcss
+was installed. The player windows just closed themselves immediately after starting playback. After
+some searching, I found the solution.&lt;/p&gt;
+&lt;p&gt;To solve that problem, first install the package &lt;tt class="docutils literal"&gt;&lt;span class="pre"&gt;ubuntu-restricted-extras&lt;/span&gt;&lt;/tt&gt; from the universe
+repository...&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="nv"&gt;$ &lt;/span&gt;sudo apt-get install ubuntu-restricted-extras
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;...and then execute the following script.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="nv"&gt;$ &lt;/span&gt;sudo /usr/share/doc/libdvdread4/install-css.sh
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;(Via &lt;a class="reference external" href="http://everflux.de/ubuntu-dvd-wiedergabe-libdvdcss-mit-karmic-1430/"&gt;everflux.de&lt;/a&gt;)&lt;/p&gt;
+</content>
+  </entry>
+  <entry xml:base="http://blog.dbrgn.ch/feed.atom">
+    <title type="text">Ubuntu Lucid - fix theme</title>
+    <id>http://blog.dbrgn.ch/2010/5/14/ubuntu-lucid-fix-theme</id>
+    <updated>2010-05-14T00:00:00Z</updated>
+    <link href="http://blog.dbrgn.ch/2010/5/14/ubuntu-lucid-fix-theme" />
+    <author>
+      <name>Danilo Bargen</name>
+    </author>
+    <content type="html">&lt;p&gt;After upgrading to Ubuntu Lucid, I didn't like some aspects of the new theme (Ambiance). Here the
+fixes for the two of those things.&lt;/p&gt;
+&lt;div class="section" id="move-minimize-maximize-close-buttons-to-the-right-side"&gt;
+&lt;h2&gt;Move minimize/maximize/close buttons to the right side&lt;/h2&gt;
+&lt;p&gt;With the new theme, the three buttons to minimize, maximize and close the window have been moved to
+the left side of the window. To fix this, issue this command:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="nv"&gt;$ &lt;/span&gt;gconftool-2 --type string --set /apps/metacity/general/button_layout &lt;span class="s2"&gt;&amp;quot;:minimize,maximize,close&amp;quot;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="section" id="a-panel-wider-than-24px-looks-ugly"&gt;
+&lt;h2&gt;A panel wider than 24px looks ugly&lt;/h2&gt;
+&lt;p&gt;Another thing is, that the background image for the panels doesn't scale (See Launchpad Bug &lt;a class="reference external" href="https://bugs.launchpad.net/ubuntu/+source/light-themes/+bug/532309"&gt;532309&lt;/a&gt;). To fix this, edit the file
+&lt;cite&gt;/usr/share/themes/Ambiance/gtk-2.0/gtkrc&lt;/cite&gt; and comment out the line &lt;cite&gt;bg_pixmap[NORMAL] =
+&amp;quot;panel_bg.png&amp;quot;&lt;/cite&gt;.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="c"&gt;#bg_pixmap[NORMAL] = &amp;quot;panel_bg.png&amp;quot;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;As an alternative, if your panel is exactly 30px wide, you can also replace &lt;cite&gt;panel_bg.png&lt;/cite&gt; with
+&lt;cite&gt;panel_bg_30.png&lt;/cite&gt;.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;bg_pixmap&lt;span class="o"&gt;[&lt;/span&gt;NORMAL&lt;span class="o"&gt;]&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;panel_bg_30.png&amp;quot;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;After that, log out and then log in again, and the panels should be
+fixed.&lt;/p&gt;
+&lt;/div&gt;
+</content>
+  </entry>
+</feed>
+

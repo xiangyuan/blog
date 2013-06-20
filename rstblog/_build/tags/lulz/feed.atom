@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title type="text">Recent Blog Posts</title>
+  <id>http://blog.dbrgn.ch/feed.atom</id>
+  <updated>2011-04-01T00:00:00Z</updated>
+  <link href="http://blog.dbrgn.ch/" />
+  <link href="http://blog.dbrgn.ch/feed.atom" rel="self" />
+  <subtitle type="text">Recent blog posts</subtitle>
+  <generator>Werkzeug</generator>
+  <entry xml:base="http://blog.dbrgn.ch/feed.atom">
+    <title type="text">1. April 2011</title>
+    <id>http://blog.dbrgn.ch/2011/4/1/1-april-2011</id>
+    <updated>2011-04-01T00:00:00Z</updated>
+    <link href="http://blog.dbrgn.ch/2011/4/1/1-april-2011" />
+    <author>
+      <name>Danilo Bargen</name>
+    </author>
+    <content type="html">&lt;p&gt;Hier ein paar der Aprilscherze 2011:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://daydeal.ch/"&gt;DayDeal&lt;/a&gt;: DIY Lego-Haus
+(&lt;a class="reference external" href="http://i.imgur.com/527DV.png"&gt;screenshot&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://xkcd.com/"&gt;XKCD&lt;/a&gt;: Alle Comics in 3D mit Parallaxscrolling
+(&lt;a class="reference external" href="http://i.imgur.com/YLoH2.png"&gt;screenshot&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://www.omgubuntu.co.uk/"&gt;OMG! Ubuntu&lt;/a&gt;: X11 Error - Terminal
+fallback mode (&lt;a class="reference external" href="http://www.omgubuntu.co.uk/bash/"&gt;link&lt;/a&gt;,
+&lt;a class="reference external" href="http://i.imgur.com/b7Azv.png"&gt;screenshot&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://www.icinga.org/"&gt;Icinga&lt;/a&gt;: We're moving from GIT to CVS
+(&lt;a class="reference external" href="https://www.icinga.org/2011/04/01/icinga-moves-from-git-to-cvs/"&gt;link&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://www.ietf.org/rfc.html"&gt;IETF RFC&lt;/a&gt;: RFC
+&lt;a class="reference external" href="http://tools.ietf.org/html/rfc5984"&gt;5984&lt;/a&gt;,
+&lt;a class="reference external" href="http://tools.ietf.org/html/rfc6214"&gt;6214&lt;/a&gt; und
+&lt;a class="reference external" href="http://tools.ietf.org/html/rfc6217"&gt;6217&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://local.ch/"&gt;local.ch&lt;/a&gt;: Local has got balls today
+(&lt;a class="reference external" href="http://i.imgur.com/bqF1i.png"&gt;screenshot&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://www.nzz.ch/"&gt;NZZ online&lt;/a&gt;: Wikileaks-Dokumente zu Caesars
+Ermordung
+(&lt;a class="reference external" href="http://www.nzz.ch/nachrichten/kultur/medien/wikileaks-dokumente_zu_caesars_ermordung_1.8931839.html"&gt;link&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://twitter.com/omgubuntu"&gt;&amp;#64;omgubuntu&lt;/a&gt;: Gnome 3 delay
+announcement
+(&lt;a class="reference external" href="https://twitter.com/omgubuntu/status/53735379156742144"&gt;tweet1&lt;/a&gt;,
+&lt;a class="reference external" href="https://twitter.com/omgubuntu/status/53740594098479104"&gt;tweet2&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://blog.memonic.com/"&gt;memonic Blog&lt;/a&gt;: Offline clipping for
+memonic
+(&lt;a class="reference external" href="http://blog.memonic.com/2011/04/01/todays-changes-offline-clipping/"&gt;link&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://tagesanzeiger.ch/"&gt;Tagesanzeiger online&lt;/a&gt;: Militär prüft
+Prime Tower auf Erdbeben- und Sturmfestigkeit
+(&lt;a class="reference external" href="http://www.tagesanzeiger.ch/zuerich/stadt/Militaer-prueft-Prime-Tower-auf-Erdbeben-und-Sturmfestigkeit-/story/15564992"&gt;link&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://mail.google.com/mail/help/motion.html"&gt;Google Motion&lt;/a&gt;: A
+new way to communicate
+(&lt;a class="reference external" href="http://mail.google.com/mail/help/motion.html"&gt;link&lt;/a&gt;,
+&lt;a class="reference external" href="http://www.youtube.com/watch?v=Bu927_ul_X0"&gt;video&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://stackoverflow.com/"&gt;Stackoverflow&lt;/a&gt;: Unicorns appear on
+upvote (&lt;a class="reference external" href="http://imgur.com/a/7Jpyc"&gt;screenshots&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://blog.flattr.net/"&gt;Flattr Blog&lt;/a&gt;: Flattr Partners with North
+Korea
+(&lt;a class="reference external" href="http://blog.flattr.net/2011/04/flattr-partners-with-asian-country/"&gt;link&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://blog.mezeske.com/"&gt;Mezeske Blog&lt;/a&gt;: cppsh - a bash-like shell
+with c++ syntax (&lt;a class="reference external" href="http://blog.mezeske.com/?p=377"&gt;link&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://www.microsoft.com/germany/presseservice/news/pressemitteilungen.mspx"&gt;Microsoft
+Newsroom&lt;/a&gt;:
+Microsoft kündigt 42&amp;quot; Tablet an
+(&lt;a class="reference external" href="http://www.microsoft.com/germany/presseservice/news/pressemitteilung.mspx?id=533347"&gt;link&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://www.wuv.de/"&gt;wuv.de&lt;/a&gt;: &amp;quot;Social-Media-Experte&amp;quot; wird
+geschützte Berufsbezeichnung
+(&lt;a class="reference external" href="http://www.wuv.de/nachrichten/digital/social_media_experte_wird_geschuetzte_berufsbezeichnung"&gt;link&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://stackoverflow.com/"&gt;Stackoverflow&lt;/a&gt;: Program is erroneously
+rejected by three C++ compilers
+(&lt;a class="reference external" href="http://stackoverflow.com/questions/5508110/why-is-this-program-erroneously-rejected-by-three-c-compilers"&gt;link&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://google.com/"&gt;Google&lt;/a&gt;: Suche nach &amp;quot;Helvetica&amp;quot; liefert
+Ergebnisse in Comic Sans
+(&lt;a class="reference external" href="http://i.imgur.com/1utfU.png"&gt;screenshot&lt;/a&gt;)&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+  </entry>
+</feed>
+

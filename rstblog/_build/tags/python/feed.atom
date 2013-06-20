@@ -1,0 +1,702 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title type="text">Recent Blog Posts</title>
+  <id>http://blog.dbrgn.ch/feed.atom</id>
+  <updated>2013-06-18T00:00:00Z</updated>
+  <link href="http://blog.dbrgn.ch/" />
+  <link href="http://blog.dbrgn.ch/feed.atom" rel="self" />
+  <subtitle type="text">Recent blog posts</subtitle>
+  <generator>Werkzeug</generator>
+  <entry xml:base="http://blog.dbrgn.ch/feed.atom">
+    <title type="text">Enums in Python</title>
+    <id>http://blog.dbrgn.ch/2013/5/10/python-enum-type</id>
+    <updated>2013-05-10T00:00:00Z</updated>
+    <link href="http://blog.dbrgn.ch/2013/5/10/python-enum-type" />
+    <author>
+      <name>Danilo Bargen</name>
+    </author>
+    <content type="html">&lt;p&gt;Until now, if you wanted to use enumeration types in Python you had to fall back
+to a class-attribute approach:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="k"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;Color&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;object&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+&lt;span class="o"&gt;...&lt;/span&gt;    &lt;span class="n"&gt;RED&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;
+&lt;span class="o"&gt;...&lt;/span&gt;    &lt;span class="n"&gt;GREEN&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt;
+&lt;span class="o"&gt;...&lt;/span&gt;    &lt;span class="n"&gt;BLUE&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;3&lt;/span&gt;
+&lt;span class="o"&gt;...&lt;/span&gt;
+&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;Color&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;RED&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="mi"&gt;1&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;This has different downsides, for example with representation (&lt;tt class="docutils literal"&gt;Color.RED&lt;/tt&gt; is
+represented as an integer, not as a color type) and comparability (&lt;tt class="docutils literal"&gt;Color.RED&lt;/tt&gt;
+will be equal to &lt;tt class="docutils literal"&gt;HttpResponses.INTERNAL_SERVER_ERROR&lt;/tt&gt; if both have the value
+1).&lt;/p&gt;
+&lt;p&gt;Enter &lt;a class="reference external" href="http://www.python.org/dev/peps/pep-0435/"&gt;PEP 435&lt;/a&gt;, which was accepted by &lt;a class="reference external" href="http://www.python.org/~guido/"&gt;Guido&lt;/a&gt; today. It specifies a new base
+class which can be subclassed to create a custom enumeration.&lt;/p&gt;
+&lt;div class="section" id="quickstart"&gt;
+&lt;h2&gt;Quickstart&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Declaration:&lt;/strong&gt;&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;enum&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;Enum&lt;/span&gt;
+&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="k"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;Color&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;Enum&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+&lt;span class="o"&gt;...&lt;/span&gt;     &lt;span class="n"&gt;red&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;
+&lt;span class="o"&gt;...&lt;/span&gt;     &lt;span class="n"&gt;green&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt;
+&lt;span class="o"&gt;...&lt;/span&gt;     &lt;span class="n"&gt;blue&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;3&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;Representation:&lt;/strong&gt;&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;Color&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;red&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;Color&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;red&lt;/span&gt;
+&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;repr&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;Color&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;red&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
+&lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="n"&gt;Color&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;red&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;Iteration:&lt;/strong&gt;&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;color&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="n"&gt;Color&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+&lt;span class="o"&gt;...&lt;/span&gt;   &lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;color&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="o"&gt;...&lt;/span&gt;
+&lt;span class="n"&gt;Color&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;red&lt;/span&gt;
+&lt;span class="n"&gt;Color&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;green&lt;/span&gt;
+&lt;span class="n"&gt;Color&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;blue&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;Programmatic access:&lt;/strong&gt;&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;Color&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;Color&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;red&lt;/span&gt;
+&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;Color&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;blue&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+&lt;span class="n"&gt;Color&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;blue&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;There's even more awesome stuff you can do with those enums. For more
+information, refer to &lt;a class="reference external" href="http://www.python.org/dev/peps/pep-0435/"&gt;the proposal&lt;/a&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="can-i-already-use-this"&gt;
+&lt;h2&gt;Can I already use this?&lt;/h2&gt;
+&lt;p&gt;Yes and no. The PEP will be included in Python 3.4. But if you want to start
+using it right now, you can use the &lt;a class="reference external" href="http://pythonhosted.org/flufl.enum/"&gt;flufl.enum&lt;/a&gt; library which is the base
+implementation for PEP 435 and works for Python ≥2.7 and ≥3.2.&lt;/p&gt;
+&lt;/div&gt;
+</content>
+  </entry>
+  <entry xml:base="http://blog.dbrgn.ch/feed.atom">
+    <title type="text">Goodbye Wordpress, hi rstblog!</title>
+    <id>http://blog.dbrgn.ch/2012/6/11/rstblog</id>
+    <updated>2012-06-11T00:00:00Z</updated>
+    <link href="http://blog.dbrgn.ch/2012/6/11/rstblog" />
+    <author>
+      <name>Danilo Bargen</name>
+    </author>
+    <content type="html">&lt;p&gt;Since having switched from the PHP world to the Python world about 2 years ago, I thought about
+relaunching my Blog using Python instead of PHP. At first, I thought about creating an application
+with Django and PostgreSQL, but never really had the time and motivation to finally implement it.
+But today I stumbled over &lt;a class="reference external" href="https://github.com/mitsuhiko/rstblog"&gt;rstblog&lt;/a&gt; by &lt;a class="reference external" href="http://lucumr.pocoo.org/"&gt;Armin Ronacher&lt;/a&gt;.&lt;/p&gt;
+&lt;div class="section" id="meet-rstblog"&gt;
+&lt;h2&gt;Meet rstblog&lt;/h2&gt;
+&lt;p&gt;It is basically a static &lt;a class="reference external" href="http://docutils.sourceforge.net/rst.html"&gt;reStructuredText&lt;/a&gt; to HTML converter. You create a
+&lt;cite&gt;year/month/day&lt;/cite&gt; folder structure, create &lt;cite&gt;.rst&lt;/cite&gt; files in there, add metadata
+to them in &lt;a class="reference external" href="http://www.yaml.org/"&gt;YAML&lt;/a&gt; format and run the generator-script.&lt;/p&gt;
+&lt;p&gt;Because it's static, you don't need any dynamic webserver or interpreter, it's just plain HTML files
+that you can serve practically everywhere. You can even track them using a source control system.
+And last but not least – you'll never have to update your Wordpress installation again, yay!&lt;/p&gt;
+&lt;p&gt;rstblog supports everything a blog needs: detail pages, archive pages, tags,
+atom feeds and comments (using &lt;a class="reference external" href="http://disqus.com/"&gt;Disqus&lt;/a&gt;). You can create
+custom stylesheets and templates.&lt;/p&gt;
+&lt;p&gt;You can also embed syntax highlighted code using &lt;a class="reference external" href="http://pygments.org/"&gt;pygments&lt;/a&gt;:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="k"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;Bar&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;object&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+    &lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;foo&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;bar&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+        &lt;span class="k"&gt;print&lt;/span&gt; &lt;span class="s"&gt;&amp;#39;I don&lt;/span&gt;&lt;span class="se"&gt;\&amp;#39;&lt;/span&gt;&lt;span class="s"&gt;t like spam!&amp;#39;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;And &lt;a class="reference external" href="http://www.latex-project.org/"&gt;LaTeX&lt;/a&gt; formulas:&lt;/p&gt;
+&lt;blockquote class="math"&gt;&lt;img src="/static/_math/d53927719c238cece74d6de3f2bc80ff512faf78.png" alt="f(x) = a_0 + \sum_{n=1}^{\infty}\left(a_n \cos \frac{n \pi x}{L} + b_n \sin \frac{n \pi x}{L}\right)"&gt;&lt;/blockquote&gt;&lt;p&gt;There's even more to like. If you want to know more, take a look at the
+&lt;a class="reference external" href="https://github.com/mitsuhiko/rstblog"&gt;repository and the sourcecode&lt;/a&gt;. That's
+also one of the downsides – there's no official documentation and the project
+seems pretty inactive, pull requests aren't being merged.&lt;/p&gt;
+&lt;p&gt;To get started, here are some related blogposts:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://codesymphony.net/2011/09/10/setting-up-rstblog/"&gt;http://codesymphony.net/2011/09/10/setting-up-rstblog/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://nblock.org/2011/08/31/1st-blogpost/"&gt;http://nblock.org/2011/08/31/1st-blogpost/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://mattdeboard.net/2011/05/09/more-tips-on-rstblog/"&gt;http://mattdeboard.net/2011/05/09/more-tips-on-rstblog/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="publishing-content"&gt;
+&lt;h2&gt;Publishing Content&lt;/h2&gt;
+&lt;p&gt;To easily publish content, I use &lt;a class="reference external" href="http://fabfile.org/"&gt;Fabric&lt;/a&gt; and &lt;a class="reference external" href="http://rsync.samba.org/"&gt;rsync&lt;/a&gt;. Some easy fab tasks simplify the workflow:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;time&lt;/span&gt;
+&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;fabric.api&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;local&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;env&lt;/span&gt;
+&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;fabric.contrib.project&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;rsync_project&lt;/span&gt;
+
+&lt;span class="n"&gt;env&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;hosts&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;ich-wars-nicht.ch&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+&lt;span class="n"&gt;env&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;path&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;&amp;#39;/var/www/dbrgn/blog/&amp;#39;&lt;/span&gt;
+
+&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;push&lt;/span&gt;&lt;span class="p"&gt;():&lt;/span&gt;
+    &lt;span class="n"&gt;local&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;git push&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;serve&lt;/span&gt;&lt;span class="p"&gt;():&lt;/span&gt;
+    &lt;span class="n"&gt;local&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;run-rstblog serve&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;build&lt;/span&gt;&lt;span class="p"&gt;():&lt;/span&gt;
+    &lt;span class="c"&gt;# Build HTML&lt;/span&gt;
+    &lt;span class="n"&gt;local&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;rm -rf _build/ &amp;amp;&amp;amp; run-rstblog build&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+    &lt;span class="c"&gt;# Generate sitemaps&lt;/span&gt;
+    &lt;span class="n"&gt;local&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;python gensitemap.py &amp;gt; _build/sitemap.xml&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+    &lt;span class="c"&gt;# Minify CSS&lt;/span&gt;
+    &lt;span class="n"&gt;local&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;cssmin &amp;lt; _build/static/style.css &amp;gt; _build/static/style.min.css&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="n"&gt;local&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;mv _build/static/style.min.css _build/static/style.css&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="n"&gt;local&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;cssmin &amp;lt; _build/static/_pygments.css &amp;gt; _build/static/_pygments.min.css&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="n"&gt;local&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;mv _build/static/_pygments.min.css _build/static/_pygments.css&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+    &lt;span class="c"&gt;# Add timestamp to css files&lt;/span&gt;
+    &lt;span class="n"&gt;local&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;find _build -type f -exec sed -i &amp;quot;s/\(link.*\)&amp;#39;&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; \
+          &lt;span class="s"&gt;&amp;#39;style.css/&lt;/span&gt;&lt;span class="se"&gt;\\&lt;/span&gt;&lt;span class="s"&gt;1style.css?&lt;/span&gt;&lt;span class="si"&gt;%s&lt;/span&gt;&lt;span class="s"&gt;/g&amp;quot; {} \;&amp;#39;&lt;/span&gt; &lt;span class="o"&gt;%&lt;/span&gt; &lt;span class="nb"&gt;int&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;time&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;time&lt;/span&gt;&lt;span class="p"&gt;()))&lt;/span&gt;
+    &lt;span class="n"&gt;local&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;find _build -type f -exec sed -i &amp;quot;s/\(link.*\)&amp;#39;&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; \
+          &lt;span class="s"&gt;&amp;#39;_pygments.css/&lt;/span&gt;&lt;span class="se"&gt;\\&lt;/span&gt;&lt;span class="s"&gt;1_pygments.css?&lt;/span&gt;&lt;span class="si"&gt;%s&lt;/span&gt;&lt;span class="s"&gt;/g&amp;quot; {} \;&amp;#39;&lt;/span&gt; &lt;span class="o"&gt;%&lt;/span&gt; &lt;span class="nb"&gt;int&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;time&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;time&lt;/span&gt;&lt;span class="p"&gt;()))&lt;/span&gt;
+
+&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;sync&lt;/span&gt;&lt;span class="p"&gt;():&lt;/span&gt;
+    &lt;span class="n"&gt;rsync_project&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;remote_dir&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;env&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;path&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+                  &lt;span class="n"&gt;local_dir&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;_build/&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+                  &lt;span class="n"&gt;delete&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="bp"&gt;True&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+                  &lt;span class="n"&gt;exclude&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;*.py&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s"&gt;&amp;#39;*.pyc&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s"&gt;&amp;#39;requirements.txt&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt;
+
+&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;deploy&lt;/span&gt;&lt;span class="p"&gt;():&lt;/span&gt;
+    &lt;span class="n"&gt;build&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+    &lt;span class="n"&gt;sync&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+
+&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;publish&lt;/span&gt;&lt;span class="p"&gt;():&lt;/span&gt;
+    &lt;span class="n"&gt;deploy&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+    &lt;span class="n"&gt;push&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;You can see the entire fabfile &lt;a class="reference external" href="https://github.com/dbrgn/blog/blob/master/fabfile.py"&gt;on Github&lt;/a&gt;. The sitemaps are
+generated by &lt;a class="reference external" href="https://github.com/dbrgn/blog/blob/master/gensitemap.py"&gt;gensitemap.py&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;By issueing a simple &lt;tt class="docutils literal"&gt;fab publish&lt;/tt&gt; in the root directory, the following steps
+are taken:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;The &lt;cite&gt;_build&lt;/cite&gt; directory is (re)built&lt;/li&gt;
+&lt;li&gt;Sitemaps are generated for each &lt;cite&gt;.html&lt;/cite&gt; file&lt;/li&gt;
+&lt;li&gt;CSS files are minified in-place&lt;/li&gt;
+&lt;li&gt;A timestamp is appended to all CSS file names to make browsers reload cached
+content&lt;/li&gt;
+&lt;li&gt;The &lt;cite&gt;_build&lt;/cite&gt; directory is deployed to the server&lt;/li&gt;
+&lt;li&gt;The git repository is pushed to Github&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="this-blog"&gt;
+&lt;h2&gt;This Blog&lt;/h2&gt;
+&lt;p&gt;Besides the blog-related technical details, this blog will from now on focus
+mostly on technical content, usually written in English, mostly about Python /
+Django / Linux / Programming related things.&lt;/p&gt;
+&lt;p&gt;The blog repository is &lt;a class="reference external" href="https://github.com/dbrgn/blog"&gt;published on Github&lt;/a&gt;. Content is under a CC by-sa 3.0 license.&lt;/p&gt;
+&lt;/div&gt;
+</content>
+  </entry>
+  <entry xml:base="http://blog.dbrgn.ch/feed.atom">
+    <title type="text">Heroku Buildpack for Numpy, Scipy and Scikit-Learn</title>
+    <id>http://blog.dbrgn.ch/2013/6/18/heroku-buildpack-numpy-scipy-scikit-learn</id>
+    <updated>2013-06-18T00:00:00Z</updated>
+    <link href="http://blog.dbrgn.ch/2013/6/18/heroku-buildpack-numpy-scipy-scikit-learn" />
+    <author>
+      <name>Danilo Bargen</name>
+    </author>
+    <content type="html">&lt;p&gt;(TLDR: &lt;a class="reference external" href="https://github.com/dbrgn/heroku-buildpack-python-sklearn"&gt;https://github.com/dbrgn/heroku-buildpack-python-sklearn&lt;/a&gt;)&lt;/p&gt;
+&lt;div class="section" id="background"&gt;
+&lt;h2&gt;Background&lt;/h2&gt;
+&lt;p&gt;At &lt;a class="reference external" href="https://www.webrepublic.ch/"&gt;Webrepublic&lt;/a&gt; we just launched a Python based system that among other things
+does comparison of large texts using tf-idf vectors in a multi-dimensional
+vector space and measuring the cosine similarity between them (see
+&lt;a class="reference external" href="http://stackoverflow.com/a/8897648/284318"&gt;http://stackoverflow.com/a/8897648/284318&lt;/a&gt;). For this, we needed &lt;a class="reference external" href="http://scikit-learn.org/stable/"&gt;scikit-learn&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;During the deployment process, I discovered that &lt;em&gt;one does not simply deploy
+scikit-learn on Heroku&lt;/em&gt;. There were different issues with it. First of all,
+Scipy needs Numpy to be available at &lt;tt class="docutils literal"&gt;setup.py&lt;/tt&gt; parse time. If you just
+install Numpy and Scipy using requirements.txt, Numpy won't yet be installed at
+the time the Scipy &lt;tt class="docutils literal"&gt;setup.py&lt;/tt&gt; is processed. (Note that this has been fixed in
+&lt;a class="reference external" href="https://github.com/scipy/scipy/pull/453"&gt;current versions of Scipy&lt;/a&gt;.)&lt;/p&gt;
+&lt;p&gt;Another issue was that a Fortran compiler and different libraries are needed to
+build Scipy, all of which are not available on Heroku.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="problem-solving-attempts"&gt;
+&lt;h2&gt;Problem Solving Attempts&lt;/h2&gt;
+&lt;p&gt;The first thing I found while looking for a solution was
+&lt;a class="reference external" href="https://github.com/wyn/heroku-buildpack-python"&gt;wyn/heroku-buildpack-python&lt;/a&gt;, but I couldn't quite get it to work. The second
+thing I found was &lt;a class="reference external" href="https://github.com/ToonTimbermont/heroku-buildpack-python"&gt;ToonTimbermont/heroku-buildpack-python&lt;/a&gt;, a fork of wyn's
+fork that solves some of the issues.&lt;/p&gt;
+&lt;p&gt;(I also played around with Kenneth Reitz's &lt;a class="reference external" href="https://github.com/kennethreitz/anaconda-buildpack"&gt;anaconda buildpack&lt;/a&gt;, but didn't
+really get it to work the way I wanted it.)&lt;/p&gt;
+&lt;p&gt;By combining the work of both developers, using the &lt;a class="reference external" href="https://github.com/wyn/npscipy-binaries"&gt;precompiled binaries by
+wyn&lt;/a&gt; and adding some code I managed to rebase all the changes on top of
+Heroku's current buildpack. This solves some issues/bugs with older versions of
+Pip.&lt;/p&gt;
+&lt;p&gt;Another change I made was that the dependencies can be stated in
+&lt;tt class="docutils literal"&gt;requirements.txt&lt;/tt&gt; as usual, instead of requiring a &lt;tt class="docutils literal"&gt;setup.py&lt;/tt&gt; file.&lt;/p&gt;
+&lt;p&gt;You can find the buildpack at
+&lt;a class="reference external" href="https://github.com/dbrgn/heroku-buildpack-python-sklearn"&gt;https://github.com/dbrgn/heroku-buildpack-python-sklearn&lt;/a&gt;. All the changes
+against the official Heroku buildpack have been condensed in a &lt;a class="reference external" href="https://github.com/dbrgn/heroku-buildpack-python-sklearn/commit/87cf7b24a358b916deaf26b784ea95be42590efe"&gt;single commit&lt;/a&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="usage"&gt;
+&lt;h2&gt;Usage&lt;/h2&gt;
+&lt;p&gt;The process to use the buildpack is as straightforward as with any other
+buildpack. For a new app:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+heroku create --buildpack https://github.com/dbrgn/heroku-buildpack-python-sklearn/
+&lt;/pre&gt;
+&lt;p&gt;For an existing app:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+heroku config:set BUILDPACK_URL=https://github.com/dbrgn/heroku-buildpack-python-sklearn/
+&lt;/pre&gt;
+&lt;p&gt;If you have any questions or problems, feel free to leave a comment or &lt;a class="reference external" href="https://github.com/dbrgn/heroku-buildpack-python-sklearn/issues"&gt;open an
+issue on Github&lt;/a&gt;.&lt;/p&gt;
+&lt;/div&gt;
+</content>
+  </entry>
+  <entry xml:base="http://blog.dbrgn.ch/feed.atom">
+    <title type="text">List Outdated Dependencies with Pip</title>
+    <id>http://blog.dbrgn.ch/2013/4/26/pip-list-outdated</id>
+    <updated>2013-04-26T00:00:00Z</updated>
+    <link href="http://blog.dbrgn.ch/2013/4/26/pip-list-outdated" />
+    <author>
+      <name>Danilo Bargen</name>
+    </author>
+    <content type="html">&lt;p&gt;In the past, if you wanted to review your installed pip packages to see if there
+are updates available, you either had to use tools like &lt;a class="reference external" href="https://github.com/nvie/pip-tools"&gt;pip-tools&lt;/a&gt; or check
+all of them manually.&lt;/p&gt;
+&lt;p&gt;But since version 1.3 (released on 2013-03-07), pip supports the checking of
+dependencies with the new &lt;tt class="docutils literal"&gt;list&lt;/tt&gt; command. In contrast to &lt;tt class="docutils literal"&gt;pip freeze&lt;/tt&gt;, the
+primary idea of the &lt;tt class="docutils literal"&gt;list&lt;/tt&gt; command is to list and analyze installed packages
+in a human readable (instead of machine parseable) format.&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+$ pip freeze
+django-unchained==1.0.1
+requests==1.1.0
+wsgiref==0.1.2
+&lt;/pre&gt;
+&lt;pre class="literal-block"&gt;
+$ pip list
+django-unchained (1.0.1)
+requests (1.1.0)
+wsgiref (0.1.2)
+&lt;/pre&gt;
+&lt;p&gt;The best thing about the new command is that you can check packages for updates
+and list only specific packages:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+List Options:
+  -o, --outdated     List outdated packages (excluding editables)
+  -u, --uptodate     List uptodate packages (excluding editables)
+  -e, --editable     List editable projects.
+  -l, --local        If in a virtualenv that has global access, do not list globally-installed packages.
+&lt;/pre&gt;
+&lt;p&gt;In summary, you can now show outdated dependencies with a single pip command:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+$ pip list --outdated
+requests (Current: 1.1.0 Latest: 1.2.0)
+&lt;/pre&gt;
+&lt;p&gt;Awesome!&lt;/p&gt;
+</content>
+  </entry>
+  <entry xml:base="http://blog.dbrgn.ch/feed.atom">
+    <title type="text">Programming a Perceptron in Python</title>
+    <id>http://blog.dbrgn.ch/2013/3/26/perceptrons-in-python</id>
+    <updated>2013-03-26T00:00:00Z</updated>
+    <link href="http://blog.dbrgn.ch/2013/3/26/perceptrons-in-python" />
+    <author>
+      <name>Danilo Bargen</name>
+    </author>
+    <content type="html">&lt;p&gt;At &lt;a class="reference external" href="http://www.hsr.ch/"&gt;HSR&lt;/a&gt;, I'm currently enrolled in a course about neural networks and machine
+learning. One of the simplest forms of a neural network model is the
+&lt;a class="reference external" href="http://reference.wolfram.com/applications/neuralnetworks/NeuralNetworkTheory/2.4.0.html"&gt;perceptron&lt;/a&gt;.&lt;/p&gt;
+&lt;div class="section" id="background-information"&gt;
+&lt;h2&gt;Background Information&lt;/h2&gt;
+&lt;p&gt;A perceptron classifier is a simple model of a neuron. It has different inputs
+(&lt;em&gt;x1&lt;/em&gt; ... &lt;em&gt;xn&lt;/em&gt;) with different weights (&lt;em&gt;w1&lt;/em&gt; ... &lt;em&gt;wn&lt;/em&gt;).&lt;/p&gt;
+&lt;blockquote class="math"&gt;&lt;img src="/static/_math/168ec599f225dd3b64c2c93ef790e347e54e1a1e.png" alt="s = \sum_{i=0}^n w_i \cdot x_i"&gt;&lt;/blockquote&gt;&lt;p&gt;The weighted sum &lt;em&gt;s&lt;/em&gt; of these inputs is then passed through a step function &lt;em&gt;f&lt;/em&gt;
+(usually a &lt;a class="reference external" href="http://en.wikipedia.org/wiki/Heaviside_step_function"&gt;Heaviside step function&lt;/a&gt;).&lt;/p&gt;
+&lt;blockquote class="math"&gt;&lt;img src="/static/_math/8272944ab004edd596966eb30f058e8efc3f39aa.png" alt="f(s) = \begin{cases} 1 &amp;amp; \textrm{if } s \ge 0 \\ 0 &amp;amp; \textrm{otherwise} \end{cases}"&gt;&lt;/blockquote&gt;&lt;p&gt;To make things cleaner, here's a little diagram:&lt;/p&gt;
+&lt;img alt="The mathematical model of a perceptron." src="/static/img/2013/3/26/perceptron.png" /&gt;
+&lt;/div&gt;
+&lt;div class="section" id="python"&gt;
+&lt;h2&gt;Python!&lt;/h2&gt;
+&lt;p&gt;Here's a simple version of such a perceptron using Python and &lt;a class="reference external" href="http://www.numpy.org/"&gt;NumPy&lt;/a&gt;. It will
+take two inputs and learn to act like the logical OR function. First, let's
+import some libraries we need:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;random&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;choice&lt;/span&gt;
+&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;numpy&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;array&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;dot&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;random&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Then let's create the step function. &lt;a class="reference external" href="http://reference.wolfram.com/mathematica/ref/UnitStep.html"&gt;In reference to Mathematica&lt;/a&gt;, I'll call
+this function &lt;tt class="docutils literal"&gt;unit_step&lt;/tt&gt;.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;unit_step&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="k"&gt;lambda&lt;/span&gt; &lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt; &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;x&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt; &lt;span class="k"&gt;else&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Next we need to map the possible input to the expected output. The first two
+entries of the NumPy array in each tuple are the two input values. The second
+element of the tuple is the expected result. And the third entry of the array is
+a &amp;quot;dummy&amp;quot; input which – if I understood it correctly, please correct me if this
+is wrong – is needed to make a nonzero threshold possible. Its value is always
+1. More about this can be found in
+&lt;a class="reference external" href="http://www.cs.cmu.edu/~avrim/ML09/lect0126.pdf"&gt;this paper&lt;/a&gt;.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;training_data&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;
+    &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;array&lt;/span&gt;&lt;span class="p"&gt;([&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;]),&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt;
+    &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;array&lt;/span&gt;&lt;span class="p"&gt;([&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;]),&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt;
+    &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;array&lt;/span&gt;&lt;span class="p"&gt;([&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;]),&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt;
+    &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;array&lt;/span&gt;&lt;span class="p"&gt;([&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;]),&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt;
+&lt;span class="p"&gt;]&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;As you can see, this training sequence maps exactly to the definition of the OR
+function:&lt;/p&gt;
+&lt;table border="1" class="docutils"&gt;
+&lt;colgroup&gt;
+&lt;col width="21%" /&gt;
+&lt;col width="21%" /&gt;
+&lt;col width="57%" /&gt;
+&lt;/colgroup&gt;
+&lt;thead valign="bottom"&gt;
+&lt;tr&gt;&lt;th class="head"&gt;A&lt;/th&gt;
+&lt;th class="head"&gt;B&lt;/th&gt;
+&lt;th class="head"&gt;A OR B&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody valign="top"&gt;
+&lt;tr&gt;&lt;td&gt;0&lt;/td&gt;
+&lt;td&gt;0&lt;/td&gt;
+&lt;td&gt;0&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;0&lt;/td&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;1&lt;/td&gt;
+&lt;td&gt;0&lt;/td&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;1&lt;/td&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;Next we'll choose three random numbers between 0 and 1 as the initial weights:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;w&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;random&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;rand&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Now on to some variable initializations. The &lt;tt class="docutils literal"&gt;errors&lt;/tt&gt; list is only used to
+store the error values so that they can be plotted later on. If you don't want
+to do any plotting, you can just leave it away. The &lt;tt class="docutils literal"&gt;eta&lt;/tt&gt; variable controls
+the learning rate. And &lt;tt class="docutils literal"&gt;n&lt;/tt&gt; specifies the number of learning iterations.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;errors&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;[]&lt;/span&gt;
+&lt;span class="n"&gt;eta&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mf"&gt;0.2&lt;/span&gt;
+&lt;span class="n"&gt;n&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;100&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;In order to find the ideal values for the weights &lt;tt class="docutils literal"&gt;w&lt;/tt&gt;, we try to reduce the
+error magnitude to zero. In this simple case &lt;tt class="docutils literal"&gt;n = 100&lt;/tt&gt; iterations are enough;
+for a bigger and possibly &amp;quot;noisier&amp;quot; set of input data much larger numbers should
+be used.&lt;/p&gt;
+&lt;p&gt;First we get a random input set from the training data. Then we calculate the
+dot product (sometimes also called scalar product or inner product) of the input
+and weight vectors. This is our (scalar) result, which we can compare to the
+expected value. If the expected value is bigger, we need to increase the
+weights, if it's smaller, we need to decrease them. This correction factor is
+calculated in the last line, where the error is multiplied with the learning
+rate (&lt;tt class="docutils literal"&gt;eta&lt;/tt&gt;) and the input vector (&lt;tt class="docutils literal"&gt;x&lt;/tt&gt;). It is then added to the weights
+vector, in order to improve the results in the next iteration.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;i&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="nb"&gt;xrange&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;n&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+    &lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;expected&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;choice&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;training_data&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="n"&gt;result&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;dot&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;w&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="n"&gt;error&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;expected&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt; &lt;span class="n"&gt;unit_step&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;result&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="n"&gt;errors&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;append&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;error&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="n"&gt;w&lt;/span&gt; &lt;span class="o"&gt;+=&lt;/span&gt; &lt;span class="n"&gt;eta&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt; &lt;span class="n"&gt;error&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt; &lt;span class="n"&gt;x&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;And that's already everything we need in order to train the perceptron! It has
+now &amp;quot;learned&amp;quot; to act like a logical OR function:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;_&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="n"&gt;training_data&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+    &lt;span class="n"&gt;result&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;dot&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;w&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;{}: {} -&amp;gt; {}&amp;quot;&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;format&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;[:&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt; &lt;span class="n"&gt;result&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;unit_step&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;result&lt;/span&gt;&lt;span class="p"&gt;)))&lt;/span&gt;
+
+&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;]:&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mf"&gt;0.0714566687173&lt;/span&gt; &lt;span class="o"&gt;-&amp;gt;&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;
+&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;]:&lt;/span&gt; &lt;span class="mf"&gt;0.829739696273&lt;/span&gt; &lt;span class="o"&gt;-&amp;gt;&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;
+&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;]:&lt;/span&gt; &lt;span class="mf"&gt;0.345454042997&lt;/span&gt; &lt;span class="o"&gt;-&amp;gt;&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;
+&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;]:&lt;/span&gt; &lt;span class="mf"&gt;1.24665040799&lt;/span&gt; &lt;span class="o"&gt;-&amp;gt;&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;If you're interested, you can also plot the errors, which is a great way to
+visualize the learning process:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;pylab&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;plot&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;ylim&lt;/span&gt;
+&lt;span class="n"&gt;ylim&lt;/span&gt;&lt;span class="p"&gt;([&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt;
+&lt;span class="n"&gt;plot&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;errors&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;img alt="/static/img/2013/3/26/error_plot.png" src="/static/img/2013/3/26/error_plot.png" /&gt;
+&lt;p&gt;It's easy to see that the errors stabilize around the 60th iteration. If you
+doubt that the errors are definitely eliminated, you can re-run the training
+with an iteration count of 500 or more and plot the errors:&lt;/p&gt;
+&lt;img alt="/static/img/2013/3/26/error_plot2.png" src="/static/img/2013/3/26/error_plot2.png" /&gt;
+&lt;p&gt;You could also try to change the training sequence in order to model an AND, NOR
+or NOT function. Note that it's not possible to model an XOR function using a
+single-layer perceptron like this, because the two classes (0 and 1) of an XOR
+function are not linearly separable. In that case you would have to use multiple
+layers of perceptrons (which is basically a small neural network).&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="wrap-up"&gt;
+&lt;h2&gt;Wrap Up&lt;/h2&gt;
+&lt;p&gt;Here's the entire code:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;random&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;choice&lt;/span&gt;
+&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;numpy&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;array&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;dot&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;random&lt;/span&gt;
+
+&lt;span class="n"&gt;unit_step&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="k"&gt;lambda&lt;/span&gt; &lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt; &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;x&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt; &lt;span class="k"&gt;else&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;
+
+&lt;span class="n"&gt;training_data&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;
+    &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;array&lt;/span&gt;&lt;span class="p"&gt;([&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;]),&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt;
+    &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;array&lt;/span&gt;&lt;span class="p"&gt;([&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;]),&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt;
+    &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;array&lt;/span&gt;&lt;span class="p"&gt;([&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;]),&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt;
+    &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;array&lt;/span&gt;&lt;span class="p"&gt;([&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;]),&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt;
+&lt;span class="p"&gt;]&lt;/span&gt;
+
+&lt;span class="n"&gt;w&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;random&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;rand&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;errors&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;[]&lt;/span&gt;
+&lt;span class="n"&gt;eta&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mf"&gt;0.2&lt;/span&gt;
+&lt;span class="n"&gt;n&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;100&lt;/span&gt;
+
+&lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;i&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="nb"&gt;xrange&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;n&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+    &lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;expected&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;choice&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;training_data&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="n"&gt;result&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;dot&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;w&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="n"&gt;error&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;expected&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt; &lt;span class="n"&gt;unit_step&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;result&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="n"&gt;errors&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;append&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;error&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="n"&gt;w&lt;/span&gt; &lt;span class="o"&gt;+=&lt;/span&gt; &lt;span class="n"&gt;eta&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt; &lt;span class="n"&gt;error&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt; &lt;span class="n"&gt;x&lt;/span&gt;
+
+&lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;_&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="n"&gt;training_data&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+    &lt;span class="n"&gt;result&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;dot&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;w&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;{}: {} -&amp;gt; {}&amp;quot;&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;format&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;[:&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt; &lt;span class="n"&gt;result&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;unit_step&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;result&lt;/span&gt;&lt;span class="p"&gt;)))&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;If you have any questions, or if you've discovered an error (which is easily
+possible as I've just learned about this stuff), feel free to leave a comment
+below.&lt;/p&gt;
+&lt;/div&gt;
+</content>
+  </entry>
+  <entry xml:base="http://blog.dbrgn.ch/feed.atom">
+    <title type="text">Recompile Vim with Python/Ruby Support on Arch Linux</title>
+    <id>http://blog.dbrgn.ch/2012/10/23/recompile-vim-on-arch-linux</id>
+    <updated>2012-10-23T00:00:00Z</updated>
+    <link href="http://blog.dbrgn.ch/2012/10/23/recompile-vim-on-arch-linux" />
+    <author>
+      <name>Danilo Bargen</name>
+    </author>
+    <content type="html">&lt;p&gt;For my &lt;a class="reference external" href="https://github.com/dbrgn/dotfiles"&gt;vim configuration&lt;/a&gt;, I need a
+version of Vim that was built with Python and Ruby support. Unfortunately, the
+default version of Vim that is installed with &lt;cite&gt;pacman&lt;/cite&gt; doesn't support
+Python/Ruby.&lt;/p&gt;
+&lt;p&gt;The easiest way to solve this problem is to install the &lt;cite&gt;gvim&lt;/cite&gt; package instead
+of &lt;cite&gt;vim&lt;/cite&gt; (don't worry, the &lt;cite&gt;gvim&lt;/cite&gt; package also includes a &lt;cite&gt;vim&lt;/cite&gt; binary). But
+this brings along a huge amount of dependencies that I didn't want on my
+system, so there's no way around a package recompilation.&lt;/p&gt;
+&lt;p&gt;To ease the reconfiguration-process I found &lt;a class="reference external" href="https://wiki.archlinux.org/index.php/Pacbuilder"&gt;pacbuilder&lt;/a&gt;, a script to easily
+recompile single packages or even the whole system. Install it using yaourt (or
+manually if you prefer):&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+$ yaourt -S pacbuilder-svn
+&lt;/pre&gt;
+&lt;p&gt;Then rebuild the &lt;cite&gt;vim&lt;/cite&gt; and &lt;cite&gt;vim-runtime&lt;/cite&gt; packages with the &lt;cite&gt;--edit&lt;/cite&gt; option:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+$ pacbuilder --install --edit vim vim-runtime
+&lt;/pre&gt;
+&lt;p&gt;When the script asks you whether you want to edit the &lt;cite&gt;PKGBUILD&lt;/cite&gt; file, answer
+with &lt;cite&gt;y&lt;/cite&gt;. Then find the first line that looks like this:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+./configure --prefix=/usr --localstatedir=/var/lib/vim \
+  --with-features=big --with-compiledby=ArchLinux \
+  --enable-gpm --enable-acl --with-x=no \
+  --disable-gui --enable-multibyte --enable-cscope \
+  --disable-netbeans --enable-perlinterp --disable-pythoninterp \
+  --disable-python3interp --disable-rubyinterp --disable-luainterp
+&lt;/pre&gt;
+&lt;p&gt;Edit the configure options to your likings. In my case, I changed the following
+things:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;cite&gt;--disable-pythoninterp&lt;/cite&gt; ⇒ &lt;cite&gt;--enable-pythoninterp&lt;/cite&gt;&lt;/li&gt;
+&lt;li&gt;&lt;cite&gt;--disable-python3interp&lt;/cite&gt; ⇒ &lt;cite&gt;--enable-python3interp&lt;/cite&gt;&lt;/li&gt;
+&lt;li&gt;&lt;cite&gt;--disable-rubyinterp&lt;/cite&gt; ⇒ &lt;cite&gt;--enable-rubyinterp&lt;/cite&gt;&lt;/li&gt;
+&lt;li&gt;&lt;cite&gt;--with-compiledby=ArchLinux&lt;/cite&gt; ⇒ &lt;cite&gt;--with-compiledby=&amp;quot;Custom Build (http://s.dbrgn.ch/uqK6)&amp;quot;&lt;/cite&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Also add &lt;cite&gt;python&lt;/cite&gt;, &lt;cite&gt;python2&lt;/cite&gt; and &lt;cite&gt;ruby&lt;/cite&gt; to the &lt;cite&gt;depends&lt;/cite&gt; list inside the
+&lt;cite&gt;package_vim()&lt;/cite&gt; function. Then save and close the &lt;cite&gt;PKGBUILD&lt;/cite&gt; file.&lt;/p&gt;
+&lt;p&gt;Pacbuilder will now go on to compile and install your custom build of Vim. You
+can verify it with &lt;tt class="docutils literal"&gt;vim &lt;span class="pre"&gt;--version&lt;/span&gt;&lt;/tt&gt; on the commandline.&lt;/p&gt;
+&lt;p&gt;Afterwards, if you want to prevent &lt;cite&gt;pacman&lt;/cite&gt; from auto-upgrading your &lt;cite&gt;vim&lt;/cite&gt;
+package, you can add &lt;cite&gt;vim&lt;/cite&gt; and &lt;cite&gt;vim-runtime&lt;/cite&gt; to the &lt;cite&gt;IgnorePkg&lt;/cite&gt; variable in
+&lt;cite&gt;/etc/pacman.conf&lt;/cite&gt;.&lt;/p&gt;
+</content>
+  </entry>
+  <entry xml:base="http://blog.dbrgn.ch/feed.atom">
+    <title type="text">Use easy_install under Arch Linux or Ubuntu</title>
+    <id>http://blog.dbrgn.ch/2010/11/18/use-easy_install-under-arch-linux-or-ubuntu</id>
+    <updated>2010-11-18T00:00:00Z</updated>
+    <link href="http://blog.dbrgn.ch/2010/11/18/use-easy_install-under-arch-linux-or-ubuntu" />
+    <author>
+      <name>Danilo Bargen</name>
+    </author>
+    <content type="html">&lt;p&gt;If you want to use Python's &lt;tt class="docutils literal"&gt;easy_install&lt;/tt&gt;, you need to install an
+additional package. Under Arch Linux, you need &lt;tt class="docutils literal"&gt;&lt;span class="pre"&gt;python2-distribute&lt;/span&gt;&lt;/tt&gt;.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="nv"&gt;$ &lt;/span&gt;pacman -S python2-distribute
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;If you're an Ubuntu user, install &lt;tt class="docutils literal"&gt;&lt;span class="pre"&gt;python-setuptools&lt;/span&gt;&lt;/tt&gt;.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="nv"&gt;$ &lt;/span&gt;apt-get install python-setuptools
+&lt;/pre&gt;&lt;/div&gt;
+</content>
+  </entry>
+  <entry xml:base="http://blog.dbrgn.ch/feed.atom">
+    <title type="text">Using Jedi with YouCompleteMe</title>
+    <id>http://blog.dbrgn.ch/2013/5/27/using-jedi-with-ymc</id>
+    <updated>2013-05-27T00:00:00Z</updated>
+    <link href="http://blog.dbrgn.ch/2013/5/27/using-jedi-with-ymc" />
+    <author>
+      <name>Danilo Bargen</name>
+    </author>
+    <content type="html">&lt;p&gt;(In case you're not familiar with it yet, &lt;a class="reference external" href="https://github.com/davidhalter/jedi"&gt;Jedi&lt;/a&gt; is an awesome autocompletion
+library for Python that tries to understand your code. There are editor plugins
+available for Vim, Emacs and Sublime Text 2.)&lt;/p&gt;
+&lt;p&gt;The &amp;quot;official&amp;quot; &lt;a class="reference external" href="https://github.com/davidhalter/jedi"&gt;Jedi&lt;/a&gt; plugin for vim is &lt;a class="reference external" href="https://github.com/davidhalter/jedi-vim"&gt;jedi-vim&lt;/a&gt;, but there's another vim
+autocompletion plugin that supports Jedi: &lt;a class="reference external" href="http://valloric.github.io/YouCompleteMe/"&gt;YouCompleteMe&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;In contrast to jedi-vim, YCM does not only support Python, it also provides
+intelligent &lt;a class="reference external" href="http://clang.llvm.org/"&gt;Clang&lt;/a&gt;-based completion support for C/C++/Objective-C/Objective-C++
+as well as omnicomplete based semantic completions for Ruby, PHP and more.&lt;/p&gt;
+&lt;p&gt;The way YCM works is by automatically showing completion suggestions while
+typing, without the need for a trigger key. Another feature that distinguishes
+it from other autocompletion plugins is that the filtering of possible
+completions is not based on the prefix, but using subsequence matching instead.
+To quote the YCM author, this is a fancy way of saying that any input characters
+need to be present in a completion string in the order in which they appear in
+the input. So &lt;cite&gt;abc&lt;/cite&gt; is a subsequence of &lt;cite&gt;xaybgc&lt;/cite&gt;, but not of &lt;cite&gt;xbyxaxxc&lt;/cite&gt;. And as
+yet another bonus, YCM features integration with &lt;a class="reference external" href="https://github.com/SirVer/ultisnips"&gt;UltiSnips&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;More information and docs can be found at
+&lt;a class="reference external" href="http://valloric.github.io/YouCompleteMe/"&gt;http://valloric.github.io/YouCompleteMe/&lt;/a&gt;.&lt;/p&gt;
+&lt;div class="section" id="setup"&gt;
+&lt;h2&gt;Setup&lt;/h2&gt;
+&lt;p&gt;To use YCM with &lt;a class="reference external" href="https://github.com/gmarik/vundle"&gt;vundle&lt;/a&gt;, simply add the following line to your &lt;cite&gt;.vimrc&lt;/cite&gt;:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;Bundle &lt;span class="s1"&gt;&amp;#39;Valloric/YouCompleteMe&amp;#39;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Then let vundle install the new bundle:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+$ vim +BundleInstall +qall
+&lt;/pre&gt;
+&lt;p&gt;In order for YCM to work, you need to compile the core. Use the
+&lt;tt class="docutils literal"&gt;&lt;span class="pre"&gt;--clang-completer&lt;/span&gt;&lt;/tt&gt; argument if you want semantic support for C family
+languages.&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+$ cd ~/.vim/bundle/YouCompleteMe
+$ ./install.sh --clang-completer
+&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div class="section" id="configuration"&gt;
+&lt;h2&gt;Configuration&lt;/h2&gt;
+&lt;p&gt;In my &lt;cite&gt;.vimrc&lt;/cite&gt; I currently use only two configuration lines. The first
+enables auto closing of the preview window when the user accepts the offered
+completion string.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="k"&gt;let&lt;/span&gt; &lt;span class="k"&gt;g&lt;/span&gt;:ycm_autoclose_preview_window_after_completion&lt;span class="p"&gt;=&lt;/span&gt;&lt;span class="m"&gt;1&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;The next line maps Jedi's jump to definition/declaration feature to the
+&lt;cite&gt;&amp;lt;leader&amp;gt;g&lt;/cite&gt; shortcut:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="nb"&gt;nnoremap&lt;/span&gt; &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;leader&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;&lt;span class="k"&gt;g&lt;/span&gt; :YcmCompleter GoToDefinitionElseDeclaration&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;CR&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="section" id="further-information"&gt;
+&lt;h2&gt;Further Information&lt;/h2&gt;
+&lt;p&gt;jedi-vim and YCM are currently not compatible. You have to choose one of them.&lt;/p&gt;
+&lt;p&gt;YCM's integration with Jedi is still under development. As soon as all features
+are implemented (pydoc is not included yet, for example), it might even replace
+jedi-vim as the &amp;quot;officially endorsed&amp;quot; completion plugin. You can find more
+information in &lt;a class="reference external" href="https://github.com/davidhalter/jedi-vim/issues/119"&gt;jedi-vim issue #119&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;For more information about YCM, refer to its &lt;a class="reference external" href="http://valloric.github.io/YouCompleteMe/"&gt;extensive documentation&lt;/a&gt;.&lt;/p&gt;
+&lt;/div&gt;
+</content>
+  </entry>
+  <entry xml:base="http://blog.dbrgn.ch/feed.atom">
+    <title type="text">Virtualenv Quickstart Guide</title>
+    <id>http://blog.dbrgn.ch/2012/9/18/virtualenv-quickstart</id>
+    <updated>2012-09-18T00:00:00Z</updated>
+    <link href="http://blog.dbrgn.ch/2012/9/18/virtualenv-quickstart" />
+    <author>
+      <name>Danilo Bargen</name>
+    </author>
+    <content type="html">&lt;p&gt;I was searching for a nice &lt;cite&gt;virtualenv&lt;/cite&gt; quickstart guide today, but couldn't find
+one that I liked. Either they were outdated and still relied on
+&lt;cite&gt;easy_install&lt;/cite&gt;, or they were too complicated. So here's my own.&lt;/p&gt;
+&lt;div class="section" id="why-use-virtualenv"&gt;
+&lt;h2&gt;Why use virtualenv?&lt;/h2&gt;
+&lt;p&gt;Virtualenv (&lt;a class="reference external" href="http://www.virtualenv.org/"&gt;http://www.virtualenv.org/&lt;/a&gt;) basically provides you with a full
+Python environment (and/or versions) inside a single folder. This way, you can
+have multiple Python environments next to each other (usually one per project),
+each with its own binaries and packages.&lt;/p&gt;
+&lt;p&gt;I really recommend using virtualenv for &lt;em&gt;all&lt;/em&gt; Python projects. Tools like
+&lt;a class="reference external" href="http://www.doughellmann.com/projects/virtualenvwrapper/"&gt;virtualenvwrapper&lt;/a&gt;
+and &lt;a class="reference external" href="http://www.pip-installer.org/en/latest/requirements.html"&gt;requirements files&lt;/a&gt; make setting up a
+new virtual environment a breeze.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="setup"&gt;
+&lt;h2&gt;Setup&lt;/h2&gt;
+&lt;p&gt;In case you're still using &lt;cite&gt;easy_install&lt;/cite&gt; to install Python packages, you
+should &lt;a class="reference external" href="http://stackoverflow.com/questions/3220404/why-use-pip-over-easy-install"&gt;switch to pip immediately&lt;/a&gt;:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+$ sudo easy_install pip
+&lt;/pre&gt;
+&lt;p&gt;Then install virtualenv itself:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+$ sudo pip install virtualenv
+&lt;/pre&gt;
+&lt;p&gt;Those are usually the only two Python packages that you should install to your
+systemwide &lt;cite&gt;PYTHONPATH&lt;/cite&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="creating-a-virtualenv"&gt;
+&lt;h2&gt;Creating a virtualenv&lt;/h2&gt;
+&lt;p&gt;Now you need to initialize your virtual environment. This can be located
+anywhere. I'd recommend either creating it into a folder called &lt;cite&gt;VIRTUAL&lt;/cite&gt; inside
+your project directory, or creating a folder called &lt;cite&gt;.virtualenv&lt;/cite&gt; in your home
+directory and placing it in there, named like your project.&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+$ virtualenv --no-site-packages VIRTUAL
+New python executable in VIRTUAL/bin/python
+Installing setuptools............done.
+Installing pip...............done.
+&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div class="section" id="enabling-a-virtualenv"&gt;
+&lt;h2&gt;Enabling a virtualenv&lt;/h2&gt;
+&lt;p&gt;To actually work inside a virtualenv, you need to enable it first. This is done
+by sourcing &lt;cite&gt;bin/activate&lt;/cite&gt; inside your virtualenv folder.&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+$ source VIRTUAL/bin/activate
+&lt;/pre&gt;
+&lt;p&gt;This step needs to be done each time you start a new bash prompt. Now every time
+you call a Python-related binary (e.g. &lt;cite&gt;python&lt;/cite&gt; or  &lt;cite&gt;pip&lt;/cite&gt;), the version from
+your virtualenv instead of the system version will be used.&lt;/p&gt;
+&lt;p&gt;You can also use your virtual python without sourcing the mentioned file first,
+but then you need to specify the full path to the desired binary (e.g.
+&lt;cite&gt;VIRTUAL/bin/python manage.py runserver&lt;/cite&gt;). This can be useful for bash scripts.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="installing-packages-tracking-requirements"&gt;
+&lt;h2&gt;Installing packages, tracking requirements&lt;/h2&gt;
+&lt;p&gt;Installing Python packages is as simple as &lt;tt class="docutils literal"&gt;pip install &amp;lt;packagename&amp;gt;&lt;/tt&gt; after
+enabling your virtualenv. When having worked inside a virtualenv for a while,
+you've probably installed a few packages and want to document those dependencies
+somehow. This is where the &lt;cite&gt;pip freeze&lt;/cite&gt; command and &lt;cite&gt;requirements.txt&lt;/cite&gt; files can
+and should be used.&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+$ pip install Django
+...
+$ pip freeze &amp;gt; requirements.txt
+$ cat requirements.txt
+Django==1.4.1
+wsgiref==0.1.2
+&lt;/pre&gt;
+&lt;p&gt;(&lt;strong&gt;Note:&lt;/strong&gt; The &lt;cite&gt;wsgiref&lt;/cite&gt; package is a part of the Python standard library.
+Currently it is the only standard library package that includes package
+metadata, so it is the only standard library package whose presence pip
+reports.)&lt;/p&gt;
+&lt;p&gt;The &lt;cite&gt;requirements.txt&lt;/cite&gt; file is a very good convention, as it allows you or
+another developer to quickly replicate the environment you're currently working
+in. After creating an empty virtualenv, you can simply install all necessary
+packages with:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+$ pip install -r requirements.txt
+&lt;/pre&gt;
+&lt;p&gt;For more information, please refer to the &lt;a class="reference external" href="http://www.pip-installer.org/en/latest/requirements.html"&gt;pip docs&lt;/a&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="next-steps"&gt;
+&lt;h2&gt;Next steps&lt;/h2&gt;
+&lt;p&gt;To simplify your life with virtualenv, you should start using
+&lt;a class="reference external" href="http://www.doughellmann.com/projects/virtualenvwrapper/"&gt;virtualenvwrapper&lt;/a&gt;, which gives you nice shortcut functions like
+&lt;cite&gt;mkvirtualenv&lt;/cite&gt; to create a new environment, &lt;cite&gt;workon&lt;/cite&gt; to enable a specific
+virtual environment, &lt;cite&gt;rmvirtualenv&lt;/cite&gt; to remove an environment and more.&lt;/p&gt;
+&lt;p&gt;This should be enough to get you started. In case some parts of this quickstart
+guide are difficult to understand or if you have any questions, please leave a
+comment below.&lt;/p&gt;
+&lt;/div&gt;
+</content>
+  </entry>
+</feed>
+

@@ -1,0 +1,400 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title type="text">Recent Blog Posts</title>
+  <id>http://blog.dbrgn.ch/feed.atom</id>
+  <updated>2012-07-29T00:00:00Z</updated>
+  <link href="http://blog.dbrgn.ch/" />
+  <link href="http://blog.dbrgn.ch/feed.atom" rel="self" />
+  <subtitle type="text">Recent blog posts</subtitle>
+  <generator>Werkzeug</generator>
+  <entry xml:base="http://blog.dbrgn.ch/feed.atom">
+    <title type="text">ARPANET History</title>
+    <id>http://blog.dbrgn.ch/2009/9/15/arpanet-history</id>
+    <updated>2009-09-15T00:00:00Z</updated>
+    <link href="http://blog.dbrgn.ch/2009/9/15/arpanet-history" />
+    <author>
+      <name>Danilo Bargen</name>
+    </author>
+    <content type="html">&lt;a class="reference external image-reference" href="http://blog.ich-wars-nicht.ch/wp-content/uploads/2009/09/1969.jpg"&gt;&lt;img alt="http://blog.ich-wars-nicht.ch/wp-content/uploads/2009/09/1969-300x184.jpg" src="http://blog.ich-wars-nicht.ch/wp-content/uploads/2009/09/1969-300x184.jpg" /&gt;&lt;/a&gt;
+&lt;p&gt;That's how the internet – or actually the ARPANET – looked in 1969. And this is the same network, 8
+years later, March 1977:&lt;/p&gt;
+&lt;a class="reference external image-reference" href="http://blog.ich-wars-nicht.ch/wp-content/uploads/2009/09/1977.jpg"&gt;&lt;img alt="http://blog.ich-wars-nicht.ch/wp-content/uploads/2009/09/1977-300x214.jpg" src="http://blog.ich-wars-nicht.ch/wp-content/uploads/2009/09/1977-300x214.jpg" /&gt;&lt;/a&gt;
+&lt;p&gt;Since then, many things have changed. On &lt;a class="reference external" href="http://som.csudh.edu/cis/lpress/history/arpamaps/"&gt;[som.csudh.edu]&lt;/a&gt; there's an archive of visualizations of
+ARPANET between 1969 and 1977.&lt;/p&gt;
+</content>
+  </entry>
+  <entry xml:base="http://blog.dbrgn.ch/feed.atom">
+    <title type="text">Der Bloggerfilm / Einfluss von Twitter auf Blogging</title>
+    <id>http://blog.dbrgn.ch/2011/1/30/der-bloggerfilm-einfluss-von-twitter-auf-blogging</id>
+    <updated>2011-01-30T00:00:00Z</updated>
+    <link href="http://blog.dbrgn.ch/2011/1/30/der-bloggerfilm-einfluss-von-twitter-auf-blogging" />
+    <author>
+      <name>Danilo Bargen</name>
+    </author>
+    <content type="html">&lt;div class="section" id="film"&gt;
+&lt;h2&gt;Film&lt;/h2&gt;
+&lt;p&gt;Heute erst entdeckt: &lt;a class="reference external" href="http://bloggerfilm.ch/bloggerfilm-jetzt-anschauen/"&gt;Der Bloggerfilm&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Michael Eugster hat im Rahmen seiner Maturaarbeit eine kurze Dokumentation über
+die Schweizer &amp;quot;Bloggerszene&amp;quot; (aka Blogosphere) produziert. Cool gemacht, zeigt
+auch einige Bekannte Gesichter :)&lt;/p&gt;
+&lt;iframe src="http://player.vimeo.com/video/17227977"     width="500" height="281" frameborder="0"     webkitAllowFullScreen mozallowfullscreen allowFullScreen     class="align-none"&gt;&lt;/iframe&gt;&lt;/div&gt;
+&lt;div class="section" id="statistiken"&gt;
+&lt;h2&gt;Statistiken&lt;/h2&gt;
+&lt;p&gt;Im Film wurde auch die &amp;quot;Abwanderung von Beiträgen zu Twitter / Facebook&amp;quot;
+erwähnt. Bei mir merkt man das auch stark. Ich wollte es genauer wissen und hab
+mir mal mit &lt;a class="reference external" href="http://vis.stanford.edu/protovis/"&gt;Protovis&lt;/a&gt; eine &lt;a class="reference external" href="http://ich-wars-nicht.ch/protovis/blog.php"&gt;Statistik&lt;/a&gt; erstellt. Die Statistik zeigt die
+Anzahl Blogeinträge pro Monat. Schön zu sehen ist hier, wie die Zahlen nach
+meinem &lt;a class="reference external" href="http://twitter.com/helligusvart/status/3781838673"&gt;ersten Tweet&lt;/a&gt; stark
+gesunken sind.&lt;/p&gt;
+&lt;div class="figure align-center"&gt;
+&lt;img alt="Blogposts pro Monat" src="http://blog.ich-wars-nicht.ch/wp-content/uploads/2011/01/screenshot_20110130_01.png" /&gt;
+&lt;p class="caption"&gt;Statistik: Blogposts pro Monat&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;Trotzdem bleiben die Zahlen einigermassen konstant. In der prä-Twitterischen Ära
+waren es zwischen 15 und 25 Posts pro Monat, jetzt in der Ritter... ääh,
+Twitterzeit sind es ungefähr 5 bis 10. Diese sind in meinem Fall meistens
+technischer Natur und häufig auf Englisch, um sie einem breiteren Publikum
+zugänglich zu machen, jedoch sind es ab und zu auch Dinge die ich im Internet
+finde und noch etwas ausführlicher kommentieren will, als es auf Twitter und
+Facebook möglich ist.&lt;/p&gt;
+&lt;p&gt;Für das schnelle Teilen von Links und Videos, wie es die Blogger früher viel
+gemacht haben, hat mein Blog allerdings ausgedient - Twitter ist da viel
+flexibler und schneller.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="fazit"&gt;
+&lt;h2&gt;Fazit&lt;/h2&gt;
+&lt;p&gt;Die Bloggerszene &lt;a class="reference external" href="http://twitter.com/helligusvart/status/3781838673"&gt;ist tot&lt;/a&gt;, es lebe &lt;a class="reference external" href="http://vimeo.com/17987843"&gt;die
+Bloggerszene&lt;/a&gt;!&lt;/p&gt;
+&lt;/div&gt;
+</content>
+  </entry>
+  <entry xml:base="http://blog.dbrgn.ch/feed.atom">
+    <title type="text">Experts Exchange ohne Anmeldung</title>
+    <id>http://blog.dbrgn.ch/2008/5/14/experts-exchange-ohne-anmeldung</id>
+    <updated>2008-05-14T00:00:00Z</updated>
+    <link href="http://blog.dbrgn.ch/2008/5/14/experts-exchange-ohne-anmeldung" />
+    <author>
+      <name>Danilo Bargen</name>
+    </author>
+    <content type="html">&lt;p&gt;Habt ihr euch auch schon über &lt;a class="reference external" href="http://www.experts-exchange.com/"&gt;ExpertsExchange&lt;/a&gt; aufgeregt, das ständig in den Google
+Resultaten auftaucht, aber auf den ersten Blick Geld verlangt für das Lesen der
+Antworten? Naja, falls wieder mal &lt;a class="reference external" href="http://www.experts-exchange.com/Web_Development/Web_Languages-Standards/ASP/Q_22060402.html"&gt;so ein Fall&lt;/a&gt;
+auftritt, scrollt mal ganz nach unten ;)&lt;/p&gt;
+</content>
+  </entry>
+  <entry xml:base="http://blog.dbrgn.ch/feed.atom">
+    <title type="text">Firewall umgehen mit SSH</title>
+    <id>http://blog.dbrgn.ch/2008/3/12/firewall-umgehen-mit-ssh</id>
+    <updated>2008-03-12T00:00:00Z</updated>
+    <link href="http://blog.dbrgn.ch/2008/3/12/firewall-umgehen-mit-ssh" />
+    <author>
+      <name>Danilo Bargen</name>
+    </author>
+    <content type="html">&lt;p&gt;Wer kennt das nicht? Im Büro, in der Schule, oder sonstwo sind bestimmte
+Firewallports gesperrt, und man kann diverse Dienste nicht verwenden.  Bei uns
+im Geschäft ist das neuerdings der Fall. Mit einer neuen Firewall wurden auch
+neue Ports gesperrt. Kein MSN mehr, kein IMAP über Port 993 (Gmail)... Das hat
+gewaltig genervt. Ich habe mich darum umgeschaut und eine Lösung gefunden: &lt;a class="reference external" href="http://de.wikipedia.org/wiki/Tunnel_(Netzwerktechnik)"&gt;SSH
+Tunnelling&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Als erstes braucht man Zugang zu einem beliebigen SSH Server ausserhalb der
+Firewall. Dies kann z.B.  eine Linux-Workstation mit installiertem OpenSSH
+sein... Auch einige Webhoster bieten SSH Zugang, teilweise muss man nur mal
+freundlich nachfragen. Was man jedoch beachten sollte ist dass je tiefer die
+Upload-Geschwindigkeit des SSH Servers desto langsamer wird das ganze sein (die
+Daten die man downloadet müssen ja vom Server geuploadet werden...). Auf eine
+allfällige SSH Konfiguration gehe ich hier nicht ein, eine Überprüfung der
+Sicherheitseinstellungen ist bei einem eigenen Server aber unerlässlich.&lt;/p&gt;
+&lt;p&gt;Anschliessend braucht man einen SSH Client. In diesem Beispiel verwende ich
+&lt;a class="reference external" href="http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html"&gt;PuTTY&lt;/a&gt;, ein
+sehr empfehlenswertes Programm. Hinweis: PuTTY gibt es auch als &lt;a class="reference external" href="http://portableapps.com/apps/internet/putty_portable"&gt;Portable
+Edition&lt;/a&gt; für den USB
+Stick...&lt;/p&gt;
+&lt;p&gt;Als erstes muss man in PuTTY die Verbindungseinstellungen zum SSH Server
+festlegen.&lt;/p&gt;
+&lt;img alt="PuTTY Screenshot" src="/static/img/2008/3/12/putty_screenshot_1.png" /&gt;
+&lt;p&gt;Dann müssen die verschiedenen Tunnels definiert werden. Beispiel 1: Gmail IMAP
+Zugang über Port 993.  Unter Connection&amp;gt;SSH&amp;gt;Tunnels als Source Port einen
+beliebigen freien Port wählen (in meinem Beispiel Port 88).  In das
+Destination-Feld kommt &amp;quot;imap.google.com:993&amp;quot;, und die Optionen werden auf
+&amp;quot;Local&amp;quot; und &amp;quot;Auto&amp;quot; gesetzt. Beispiel 2: Windows Live Messenger. Unter Source
+Port einen beliebigen freien Port wählen (in meinem Beispiel Port 89). Das
+Destination-Feld bleibt leer. Die Optionen werden auf &amp;quot;Dynamic&amp;quot; und &amp;quot;Auto&amp;quot;
+gesetzt.&lt;/p&gt;
+&lt;img alt="PuTTY Screenshot" src="/static/img/2008/3/12/putty_screenshot_2.png" /&gt;
+&lt;p&gt;Um die Verbindung aufzubauen muss man jetzt nur noch auf &amp;quot;Open&amp;quot; klicken und das
+Passwort eingeben.  Das PuTTY Konsolenfenster muss die ganze Zeit geöffnet
+bleiben um die Verbindung aufrechtzuerhalten.&lt;/p&gt;
+&lt;p&gt;Jetzt müssen nur noch die Programme konfiguriert werden. Für IMAP: Unter Outlook
+in den Konteneinstellung als Postausgangs-Serverport den selben Port wie vorhin
+wählen, in meinem Beispiel 88.&lt;/p&gt;
+&lt;img alt="Outlook Konfiguration 1" src="/static/img/2008/3/12/outlook_screenshot_1.png" /&gt;
+&lt;p&gt;Dann den Postausgangsserver von &lt;cite&gt;imap.gmail.com&lt;/cite&gt; zu &lt;cite&gt;127.0.0.1&lt;/cite&gt; ändern (oder
+alternativ &amp;quot;localhost&amp;quot;).&lt;/p&gt;
+&lt;img alt="Outlook Konfiguration 1" src="/static/img/2008/3/12/outlook_screenshot_1.png" /&gt;
+&lt;p&gt;Das wars, IMAP sollte jetzt funktionieren. Jetzt noch zu Windows Live Messenger:
+In den Optionen unter Verbindung&amp;gt;Erweiterte Einstellungen den SOCKS Proxy auf
+127.0.0.1 (bzw &amp;quot;localhost&amp;quot;) und den Port auf den entsprechenden Wert setzen,
+Messenger neu starten, und schon funzt die ganze Sache!  Speziell in Verbindung
+mit der Transparenz-Funktion und dem Bosskey von &lt;a class="reference external" href="http://www.msgpluslive.net/"&gt;Messsenger Plus!&lt;/a&gt; enorm nützlich! ;)&lt;/p&gt;
+&lt;img alt="Live Messenger Konfiguration" src="/static/img/2008/3/12/livemessenger_screenshot_1.png" /&gt;
+&lt;p&gt;Ich hoffe mit diesem Post einigen Leuten helfen zu können. Für Feedback ist die
+Comment-Funktion zuständig. Viel Spass!&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Nachtrag:&lt;/strong&gt; Auf &lt;a class="reference external" href="http://www.bylur.net/free/"&gt;bylur.net&lt;/a&gt; und &lt;a class="reference external" href="http://www.red-pill.eu/freeunix.shtml"&gt;red-pill.eu&lt;/a&gt; gibt es grosse listen mit freien
+Unix-Shell Servern. Es muss darauf geachtet werden dass der Server SSH
+unterstützt. Meistens muss man aber für einen Account dem Besitzer des Servers
+eine Postkarte senden (ja, per Post, das ist diese Firma die diese
+handbeschriebenen Papiere transportiert...) oder etwas spenden, das erscheint
+mir angebracht, ohne Gegenleistung würde ich auch niemandem einen Server
+bereitstellen ;) Also sucht euch ein sympathisches Angebot aus und schickt ne
+Postkarte... Dann sind alle glücklich ;)&lt;/p&gt;
+</content>
+  </entry>
+  <entry xml:base="http://blog.dbrgn.ch/feed.atom">
+    <title type="text">Google Plus – Inspired by Diaspora?</title>
+    <id>http://blog.dbrgn.ch/2011/8/23/google-plus-inspired-by-diaspora</id>
+    <updated>2011-08-23T00:00:00Z</updated>
+    <link href="http://blog.dbrgn.ch/2011/8/23/google-plus-inspired-by-diaspora" />
+    <author>
+      <name>Danilo Bargen</name>
+    </author>
+    <content type="html">&lt;p&gt;After all the buzz around Google+, one of its competitors,
+&lt;a class="reference external" href="https://joindiaspora.com/"&gt;Diaspora&lt;/a&gt; (free and open source) was
+almost forgotten. I have to admit, the same thing counts for me. In the
+last weeks, I've spent a lot of time on Google+ and none on Diaspora
+(mainly because I don't have many contacts on there (yet?), of course).
+Anyways, today I logged back into Diaspora and – being accustomed to
+Google+ – almost didn't note any difference concerning the layout.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Google+&lt;/strong&gt;&lt;/p&gt;
+&lt;a class="reference external image-reference" href="http://blog.ich-wars-nicht.ch/wp-content/uploads/2011/08/google1.png"&gt;&lt;img alt="Google+ Screenshot" src="http://blog.ich-wars-nicht.ch/wp-content/uploads/2011/08/google1-1024x744.png" style="width: 895px; height: 650px;" /&gt;&lt;/a&gt;
+&lt;p&gt;&lt;strong&gt;Diaspora&lt;/strong&gt;&lt;/p&gt;
+&lt;a class="reference external image-reference" href="http://blog.ich-wars-nicht.ch/wp-content/uploads/2011/08/diaspora1.png"&gt;&lt;img alt="Diaspora Screenshot" src="http://blog.ich-wars-nicht.ch/wp-content/uploads/2011/08/diaspora1-1024x613.png" style="width: 895px; height: 536px;" /&gt;&lt;/a&gt;
+&lt;p&gt;(Sorry about forgetting to switch Diaspora to English...)&lt;/p&gt;
+&lt;div class="section" id="list-of-similarities"&gt;
+&lt;h2&gt;List of similarities&lt;/h2&gt;
+&lt;ol class="arabic simple"&gt;
+&lt;li&gt;Avatar and first name in upper left corner&lt;/li&gt;
+&lt;li&gt;&amp;quot;Stream&amp;quot; and a textbox with some icons (image upload) above the main
+column&lt;/li&gt;
+&lt;li&gt;Avatar and full name in the header bar&lt;/li&gt;
+&lt;li&gt;List of contact avatars in upper right corner&lt;/li&gt;
+&lt;li&gt;Invitations below contact list&lt;/li&gt;
+&lt;li&gt;Aspects/circles on the left, right below the name&lt;/li&gt;
+&lt;li&gt;Tags/sparks below the aspects/circles&lt;/li&gt;
+&lt;li&gt;Display of receiver limiting next to the post&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+&lt;div class="section" id="well"&gt;
+&lt;h2&gt;Well...&lt;/h2&gt;
+&lt;p&gt;I'm not saying Google copied Diaspora, especially as many of those
+things are common and obviously chosen web design elements, but Google+
+certainly looks strongly inspired by Diaspora, which – as far as I
+remember – didn't change much of its layout over the last year or so.&lt;/p&gt;
+&lt;p&gt;Also, many ideas/philosophies behind Google+ that make it successful are
+almost identical to those of Diaspora. The concept of circles/aspects,
+the focus on sharing which information with whom, the concept of
+&amp;quot;unidirectional relationships&amp;quot; (following without being followed) etc...&lt;/p&gt;
+&lt;p&gt;Opinions?&lt;/p&gt;
+&lt;/div&gt;
+</content>
+  </entry>
+  <entry xml:base="http://blog.dbrgn.ch/feed.atom">
+    <title type="text">Mail Loop From Hell</title>
+    <id>http://blog.dbrgn.ch/2012/7/29/mail-loop-from-hell</id>
+    <updated>2012-07-29T00:00:00Z</updated>
+    <link href="http://blog.dbrgn.ch/2012/7/29/mail-loop-from-hell" />
+    <author>
+      <name>Danilo Bargen</name>
+    </author>
+    <content type="html">&lt;p&gt;Found in &lt;cite&gt;#django&lt;/cite&gt; on freenode, Jul 12, 2012. All names are edited.&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+11:16 &amp;lt; abrt&amp;gt; since it's quiet in here I'll tell you a story.
+11:16 &amp;lt; abrt&amp;gt; back in 1992, I had just graduated university and was interning at a government facility in
+              newport news
+11:16 &amp;lt; abrt&amp;gt; along with some friends from college. We made $7.25/hr and were living large.
+11:16 &amp;lt; qns&amp;gt; hahahaha
+11:17 &amp;lt; qns&amp;gt; You sound like Kevin Mitinick.
+11:17 &amp;lt; abrt&amp;gt; we used to play practical jokes on each other all the time.
+11:17 &amp;lt; abrt&amp;gt; mitnick was a pussy compared to us
+11:17 &amp;lt; qns&amp;gt; :O
+11:17 &amp;lt; abrt&amp;gt; anyway, I managed to break into my friend's university UNIX account. guessed his password. easy.
+11:17 &amp;lt; abrt&amp;gt; how well do you know UNIX?
+11:18 &amp;lt; qns&amp;gt; not well yet
+11:18 &amp;lt; abrt&amp;gt; well, back in the day, they didn't have postfix or qmail any of these fancy mailservers
+11:18 &amp;lt; abrt&amp;gt; they ran sendmail
+11:18 &amp;lt; abrt&amp;gt; and they allowed individual .forward files
+11:19 &amp;lt; abrt&amp;gt; the purpose of the .forward file was to forward your email that came to your account to the
+              address in the .forward file.
+11:19 &amp;lt; abrt&amp;gt; anyway, after I broke into my friend Matt's account, I set up his .forward file to be
+              &amp;quot;everyone&amp;#64;***.edu&amp;quot; which I knew was an alias for the entire college.
+11:19 &amp;lt; abrt&amp;gt; I had just learned how to forge sendmail headers and was going to send him a very embarrassing
+              email &amp;quot;from his girlfriend&amp;quot;
+11:20 &amp;lt; abrt&amp;gt; fortunately for me, I decided to do a test run at 1730 on a Friday. Assuming the test run went
+              well, the embarrassing forged email would go out the following Monday.
+11:20 &amp;lt; abrt&amp;gt; so I sent a &amp;quot;this is a test&amp;quot; to Matt.
+11:21 &amp;lt; abrt&amp;gt; and went home, drank some beers with Matt and Steve, and had a great weekend
+11:21 &amp;lt; abrt&amp;gt; Monday morning I get into the lab and everyone's quiet, sort of whispering, and looking at me
+11:21 &amp;lt; abrt&amp;gt; fuck me, right?
+11:21 &amp;lt; abrt&amp;gt; I log into the gov UNIX system - and I have 13000 emails
+11:22 &amp;lt; abrt&amp;gt; what I had forgotten was that &amp;quot;everyone&amp;#64;***.edu&amp;quot; included Matt.
+11:22 &amp;lt; abrt&amp;gt; so the email would get sent to everyone, including him, then he would add 10 lines of header,
+              forward it to everyone, including him, ....
+11:22 &amp;lt; abrt&amp;gt; mail loop from hell.
+11:22 &amp;lt; qns&amp;gt; Did you get in trouble?
+11:22 &amp;lt; abrt&amp;gt; well, here's the thing
+11:22 &amp;lt; abrt&amp;gt; this was summer '92
+11:22 &amp;lt; abrt&amp;gt; nobody at school, right?
+11:23 &amp;lt; abrt&amp;gt; everyone had their email forwarded elsewhere
+11:23 &amp;lt; abrt&amp;gt; and the professors got jobs at places like Camp Peary, and FBI, and other research
+              organizations, ....
+11:23 &amp;lt; qns&amp;gt; So you help them?
+11:23 &amp;lt; abrt&amp;gt; and those systems couldn't handle the volume of mail, and they never thought to put the mail
+              spool on its on separate partition
+11:23 &amp;lt; abrt&amp;gt; so their systems crashed.
+11:24 &amp;lt; qns&amp;gt; haha
+11:24 &amp;lt; qns&amp;gt; So you triggered chaos all over.
+11:24 &amp;lt; abrt&amp;gt; I managed to bring down 13 CIA offices, all FBI offices east of the Mississippi, and the entire
+              Southeastern university Research Network.
+11:24 &amp;lt; etgr&amp;gt; You can claim to have hacked the FBI
+11:24 &amp;lt; qns&amp;gt; using e-mail.
+11:24 &amp;lt; abrt&amp;gt; along with various other systems, but those were the biggies
+11:24 &amp;lt; qns&amp;gt; I'd have shat myself
+11:24 &amp;lt; abrt&amp;gt; I pretty much did.
+11:25 &amp;lt; abrt&amp;gt; But back then, like possession of a fake ID, nobody really knew what to do to you for this sort
+              of thing
+11:25 &amp;lt; abrt&amp;gt; so I got a slap on the wrist, almost fired, and had to write a letter of apology to the head of
+              the computer lab at university
+11:25 &amp;lt; abrt&amp;gt; and I lost my university email account. :(
+11:26 &amp;lt; qns&amp;gt; hahahahaha
+11:26 &amp;lt; abrt&amp;gt; today I'd probably be sent to Guantanamo
+11:26 &amp;lt; qns&amp;gt; Or you'd mysteriously disappear.  :P
+11:26 &amp;lt; abrt&amp;gt; anyway, that's my story for the evening.
+11:26 &amp;lt; qns&amp;gt;  I need a story like that on my resume.
+11:26 &amp;lt; abrt&amp;gt; nah
+11:26 &amp;lt; abrt&amp;gt; here's the thing
+11:26 &amp;lt; abrt&amp;gt; that story doesn't go on a resume
+11:27 &amp;lt; abrt&amp;gt; but - fast forward 10 years later.
+11:27 &amp;lt; qns&amp;gt; Ahh
+11:27 &amp;lt; abrt&amp;gt; I'm getting my clearance
+11:27 &amp;lt; abrt&amp;gt; being interviewed by the suits from OPM
+11:27 &amp;lt; abrt&amp;gt; and they leave the room, come back with a folder, and say, &amp;quot;Tell us about SURANet and the CIA
+              in 1992&amp;quot;
+11:27 &amp;lt; abrt&amp;gt; THAT's when I shat myself.
+11:28 &amp;lt; abrt&amp;gt; BUT - good news - I got my clearance despite my history :)
+11:28 &amp;lt; qns&amp;gt; Were they impressed?
+11:28 &amp;lt; abrt&amp;gt; nah, they were laughing
+&lt;/pre&gt;
+&lt;p&gt;After reading this story, I started a new list on kippt: &lt;a class="reference external" href="https://kippt.com/dbrgn/stories-from-the-internet"&gt;Stories from the Internet&lt;/a&gt;. Feel free to follow it, and also send me new candidates
+if you know of any :)&lt;/p&gt;
+</content>
+  </entry>
+  <entry xml:base="http://blog.dbrgn.ch/feed.atom">
+    <title type="text">Nebeneffekte von Internetzensur</title>
+    <id>http://blog.dbrgn.ch/2009/5/19/nebeneffekte-von-internetzensur</id>
+    <updated>2009-05-19T00:00:00Z</updated>
+    <link href="http://blog.dbrgn.ch/2009/5/19/nebeneffekte-von-internetzensur" />
+    <author>
+      <name>Danilo Bargen</name>
+    </author>
+    <content type="html">&lt;img alt="http://kinderpornos.info/banner.gif" src="http://kinderpornos.info/banner.gif" /&gt;
+</content>
+  </entry>
+  <entry xml:base="http://blog.dbrgn.ch/feed.atom">
+    <title type="text">Order confirmation - the CD Baby way</title>
+    <id>http://blog.dbrgn.ch/2011/2/26/order-confirmation-the-cd-baby-way</id>
+    <updated>2011-02-26T00:00:00Z</updated>
+    <link href="http://blog.dbrgn.ch/2011/2/26/order-confirmation-the-cd-baby-way" />
+    <author>
+      <name>Danilo Bargen</name>
+    </author>
+    <content type="html">&lt;p&gt;I just received a pretty dang awesome confirmation-email for a CD order
+at &lt;a class="reference external" href="http://cdbaby.com/"&gt;CD Baby&lt;/a&gt;, a great indie music
+onlineshop/label:&lt;/p&gt;
+&lt;blockquote&gt;
+Thanks for your order with CD Baby! Your CDs have been gently taken from our
+CD Baby shelves with sterilized contamination-free gloves and placed onto a
+satin pillow. A team of 50 employees inspected your CDs and polished them to
+make sure they were in the best possible condition before mailing. Our
+packing specialist from Japan lit a candle and a hush fell over the crowd as
+he put your CDs into the finest gold-lined box that money can buy. We all
+had a wonderful celebration afterwards and the whole party marched down the
+street to the post office where the entire town of Portland waved &amp;quot;Bon
+Voyage!&amp;quot; to your package, on its way to you, in our private CD Baby jet on
+this day, February 25, 2011. We hope you had a wonderful time shopping at CD
+Baby. In commemoration, we have placed your picture on our wall as &amp;quot;Customer
+of the Year.&amp;quot; We're all exhausted but can't wait for you to come back to
+CDBABY.COM!! Thank you, thank you, thank you! Sigh... We miss you already.
+We'll be right here at &lt;a class="reference external" href="http://cdbaby.com/"&gt;http://cdbaby.com/&lt;/a&gt;, patiently awaiting your return.&lt;/blockquote&gt;
+&lt;p&gt;Awesome - makes me want to submit another order :)&lt;/p&gt;
+</content>
+  </entry>
+  <entry xml:base="http://blog.dbrgn.ch/feed.atom">
+    <title type="text">phpBB Soundcloud Embed BBCode</title>
+    <id>http://blog.dbrgn.ch/2012/1/22/phpbb-soundcloud-embed-bbcode</id>
+    <updated>2012-01-22T00:00:00Z</updated>
+    <link href="http://blog.dbrgn.ch/2012/1/22/phpbb-soundcloud-embed-bbcode" />
+    <author>
+      <name>Danilo Bargen</name>
+    </author>
+    <content type="html">&lt;p&gt;Um Soundcloud-Songs direkt in ein phpBB Forum einzubinden, einfach
+folgenden BB-Code im Backend erstellen:&lt;/p&gt;
+&lt;a class="reference external image-reference" href="http://blog.ich-wars-nicht.ch/wp-content/uploads/2012/01/2012-01-22-235418_1421x609_scrot.png"&gt;&lt;img alt="Soundcloud BBCode Configuration Screenshot" src="http://blog.ich-wars-nicht.ch/wp-content/uploads/2012/01/2012-01-22-235418_1421x609_scrot-300x128.png" /&gt;&lt;/a&gt;
+&lt;div class="section" id="benutzung"&gt;
+&lt;h2&gt;Benutzung&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="k"&gt;[Soundcloud]&lt;/span&gt;{URL}&lt;span class="k"&gt;[/Soundcloud]&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="section" id="html-ersetzung"&gt;
+&lt;h2&gt;HTML Ersetzung&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="nt"&gt;&amp;lt;object&lt;/span&gt; &lt;span class="na"&gt;height=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;81&amp;quot;&lt;/span&gt; &lt;span class="na"&gt;width=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;100%&amp;quot;&lt;/span&gt;&lt;span class="nt"&gt;&amp;gt;&lt;/span&gt;
+&lt;span class="nt"&gt;&amp;lt;param&lt;/span&gt; &lt;span class="na"&gt;name=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;movie&amp;quot;&lt;/span&gt;
+&lt;span class="na"&gt;value=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;http://player.soundcloud.com/player.swf?url={URL}&amp;amp;amp;g=bb&amp;quot;&lt;/span&gt;&lt;span class="nt"&gt;&amp;gt;&amp;lt;/param&amp;gt;&lt;/span&gt;
+&lt;span class="nt"&gt;&amp;lt;param&lt;/span&gt; &lt;span class="na"&gt;name=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;allowscriptaccess&amp;quot;&lt;/span&gt; &lt;span class="na"&gt;value=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;always&amp;quot;&lt;/span&gt;&lt;span class="nt"&gt;&amp;gt;&amp;lt;/param&amp;gt;&lt;/span&gt;
+&lt;span class="nt"&gt;&amp;lt;embed&lt;/span&gt; &lt;span class="na"&gt;allowscriptaccess=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;always&amp;quot;&lt;/span&gt; &lt;span class="na"&gt;height=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;81&amp;quot;&lt;/span&gt;
+&lt;span class="na"&gt;src=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;http://player.soundcloud.com/player.swf?url={URL}&amp;amp;amp;g=bb&amp;quot;&lt;/span&gt;
+&lt;span class="na"&gt;type=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;application/x-shockwave-flash&amp;quot;&lt;/span&gt; &lt;span class="na"&gt;width=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;100%&amp;quot;&lt;/span&gt;&lt;span class="nt"&gt;&amp;gt;&amp;lt;/embed&amp;gt;&lt;/span&gt;
+&lt;span class="nt"&gt;&amp;lt;/object&amp;gt;&lt;/span&gt; &lt;span class="nt"&gt;&amp;lt;a&lt;/span&gt; &lt;span class="na"&gt;href=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;{URL}&amp;quot;&lt;/span&gt;&lt;span class="nt"&gt;&amp;gt;&lt;/span&gt;{URL}&lt;span class="nt"&gt;&amp;lt;/a&amp;gt;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="section" id="tipp-anzeige"&gt;
+&lt;h2&gt;Tipp-Anzeige&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="k"&gt;[Soundcloud]&lt;/span&gt;http://soundcloud.com/user/track&lt;span class="k"&gt;[/Soundcloud]&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+</content>
+  </entry>
+  <entry xml:base="http://blog.dbrgn.ch/feed.atom">
+    <title type="text">Prozess um 'The Pirate Bay'</title>
+    <id>http://blog.dbrgn.ch/2009/2/25/prozess-um-the-pirate-bay</id>
+    <updated>2009-02-25T00:00:00Z</updated>
+    <link href="http://blog.dbrgn.ch/2009/2/25/prozess-um-the-pirate-bay" />
+    <author>
+      <name>Danilo Bargen</name>
+    </author>
+    <content type="html">&lt;img alt="&amp;quot;The Piratebay&amp;quot; logo" src="http://blog.ich-wars-nicht.ch/wp-content/uploads/2009/02/piratebay-272x300.gif" /&gt;
+&lt;p&gt;Der Bericht über den Prozesstag 7 auf &lt;a class="reference external" href="http://www.gulli.com/"&gt;Gulli&lt;/a&gt; übertrifft wiedermal alles.
+Ich kann nur empfehlen die bisherigen Berichte zum Prozess durchzulesen, und den Prozess
+weiterzuverfolgen.  Ein Lacher nach dem anderen....&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://www.gulli.com/news/the-pirate-bay-tag-1-der-2009-02-17/"&gt;Tag 1 - Computerkriminalistikexperte hat
+PC-Probleme&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://www.gulli.com/news/tpb-h-lfte-der-anklagepunkte-2009-02-17/"&gt;Tag 2 - Epic Winning
+Lol&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://www.gulli.com/news/tag-3-des-gerichtsverfahrens-2009-02-18/"&gt;Tag
+3&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://www.gulli.com/news/tpb-ifpi-org-down-party-king-2009-02-19/"&gt;Ifpi.org down, king kong
+party&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://www.gulli.com/news/the-pirate-bay-geschrei-am-4-2009-02-19/"&gt;Tag 4 - Lautstarke
+Argumentation&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://www.gulli.com/news/the-pirate-bay-der-5-tag-mit-2009-02-20/"&gt;Tag 5 - 1337
+Staatsanwalt&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://www.gulli.com/news/the-pirate-bay-anakata-erkl-rt-2009-02-21/"&gt;Tag 6 - IFPI zeigt nicht gerade rosse
+Szenekentnis&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://www.gulli.com/news/the-pirate-bay-unn-tze-hilfe-f-2009-02-24/"&gt;Wadsted sucht
+Hilfe&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://www.gulli.com/news/the-pirate-bay-prozesstag-7-2009-02-24/"&gt;Tag 7 - Beweislose
+Beweise&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+  </entry>
+</feed>
+

@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title type="text">Recent Blog Posts</title>
+  <id>http://blog.dbrgn.ch/feed.atom</id>
+  <updated>2010-08-31T00:00:00Z</updated>
+  <link href="http://blog.dbrgn.ch/" />
+  <link href="http://blog.dbrgn.ch/feed.atom" rel="self" />
+  <subtitle type="text">Recent blog posts</subtitle>
+  <generator>Werkzeug</generator>
+  <entry xml:base="http://blog.dbrgn.ch/feed.atom">
+    <title type="text">Doku: Militärbunker in der Schweiz</title>
+    <id>http://blog.dbrgn.ch/2009/3/19/militarbunker-in-der-schweiz</id>
+    <updated>2009-03-19T00:00:00Z</updated>
+    <link href="http://blog.dbrgn.ch/2009/3/19/militarbunker-in-der-schweiz" />
+    <author>
+      <name>Danilo Bargen</name>
+    </author>
+    <content type="html">&lt;p&gt;Ich bin zwar eigentlich kein grosser Fan der schweizer Armee, aber sowas
+ist schon recht genial.&lt;/p&gt;
+&lt;iframe src="http://www.youtube.com/embed/RGYR34-4t9M"     width="500" height="281" frameborder="0"     webkitAllowFullScreen mozallowfullscreen allowfullscreen     class="align-none"&gt;&lt;/iframe&gt;&lt;iframe src="http://www.youtube.com/embed/QkI96ZWgf-c"     width="500" height="281" frameborder="0"     webkitAllowFullScreen mozallowfullscreen allowfullscreen     class="align-none"&gt;&lt;/iframe&gt;&lt;p&gt;Artikel dazu auf Spiegel Online: &lt;a class="reference external" href="http://www.spiegel.de/sptv/reportage/0,1518,384095,00.html"&gt;http://www.spiegel.de/sptv/reportage/0,1518,384095,00.html&lt;/a&gt;&lt;/p&gt;
+</content>
+  </entry>
+  <entry xml:base="http://blog.dbrgn.ch/feed.atom">
+    <title type="text">Ghana: Digital Dumping Ground</title>
+    <id>http://blog.dbrgn.ch/2009/7/6/digital-dumping-in-drittweltlandern</id>
+    <updated>2009-07-06T00:00:00Z</updated>
+    <link href="http://blog.dbrgn.ch/2009/7/6/digital-dumping-in-drittweltlandern" />
+    <author>
+      <name>Danilo Bargen</name>
+    </author>
+    <content type="html">&lt;p&gt;The effects of e-waste on the third world.&lt;/p&gt;
+&lt;iframe src="http://www.youtube.com/embed/OkpBcFDjk7Y"     width="500" height="281" frameborder="0"     webkitAllowFullScreen mozallowfullscreen allowfullscreen     class="align-none"&gt;&lt;/iframe&gt;&lt;iframe src="http://www.youtube.com/embed/ACXwo6MntpA"     width="500" height="281" frameborder="0"     webkitAllowFullScreen mozallowfullscreen allowfullscreen     class="align-none"&gt;&lt;/iframe&gt;</content>
+  </entry>
+  <entry xml:base="http://blog.dbrgn.ch/feed.atom">
+    <title type="text">Künstler verletzt seine eigenen Rechte</title>
+    <id>http://blog.dbrgn.ch/2009/4/6/kunstler-verletzt-seine-eigenen-rechte</id>
+    <updated>2009-04-06T00:00:00Z</updated>
+    <link href="http://blog.dbrgn.ch/2009/4/6/kunstler-verletzt-seine-eigenen-rechte" />
+    <author>
+      <name>Danilo Bargen</name>
+    </author>
+    <content type="html">&lt;p&gt;Jetzt richtet sich das Urheberrecht schon gegen die Urheberrechtsinhaber
+selber... Wo soll das alles noch hinführen...&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="http://www.gulli.com/news/urheberrecht-k-nstler-verletzt-2009-04-06/"&gt;http://www.gulli.com/news/urheberrecht-k-nstler-verletzt-2009-04-06/&lt;/a&gt;&lt;/p&gt;
+</content>
+  </entry>
+  <entry xml:base="http://blog.dbrgn.ch/feed.atom">
+    <title type="text">Medienwandel in der Schweiz</title>
+    <id>http://blog.dbrgn.ch/2010/8/31/medienwandel-in-der-schweiz</id>
+    <updated>2010-08-31T00:00:00Z</updated>
+    <link href="http://blog.dbrgn.ch/2010/8/31/medienwandel-in-der-schweiz" />
+    <author>
+      <name>Danilo Bargen</name>
+    </author>
+    <content type="html">&lt;p&gt;Ein sehr interessantes und super gemachtes Video zum Thema &amp;quot;Medienwandel in der Schweiz&amp;quot;:&lt;/p&gt;
+&lt;iframe src="http://www.youtube.com/embed/UsMvG8Tz0Ac"     width="500" height="281" frameborder="0"     webkitAllowFullScreen mozallowfullscreen allowfullscreen     class="align-none"&gt;&lt;/iframe&gt;&lt;p&gt;Genau aus jenen Gründen sollte auch in der Politik ein Umdenken stattfinden - die heutige Generation
+lebt genauso in der Digitalen welt, wie auch in der Realen.&lt;/p&gt;
+</content>
+  </entry>
+  <entry xml:base="http://blog.dbrgn.ch/feed.atom">
+    <title type="text">Nebeneffekte von Internetzensur</title>
+    <id>http://blog.dbrgn.ch/2009/5/19/nebeneffekte-von-internetzensur</id>
+    <updated>2009-05-19T00:00:00Z</updated>
+    <link href="http://blog.dbrgn.ch/2009/5/19/nebeneffekte-von-internetzensur" />
+    <author>
+      <name>Danilo Bargen</name>
+    </author>
+    <content type="html">&lt;img alt="http://kinderpornos.info/banner.gif" src="http://kinderpornos.info/banner.gif" /&gt;
+</content>
+  </entry>
+  <entry xml:base="http://blog.dbrgn.ch/feed.atom">
+    <title type="text">Prozess um 'The Pirate Bay'</title>
+    <id>http://blog.dbrgn.ch/2009/2/25/prozess-um-the-pirate-bay</id>
+    <updated>2009-02-25T00:00:00Z</updated>
+    <link href="http://blog.dbrgn.ch/2009/2/25/prozess-um-the-pirate-bay" />
+    <author>
+      <name>Danilo Bargen</name>
+    </author>
+    <content type="html">&lt;img alt="&amp;quot;The Piratebay&amp;quot; logo" src="http://blog.ich-wars-nicht.ch/wp-content/uploads/2009/02/piratebay-272x300.gif" /&gt;
+&lt;p&gt;Der Bericht über den Prozesstag 7 auf &lt;a class="reference external" href="http://www.gulli.com/"&gt;Gulli&lt;/a&gt; übertrifft wiedermal alles.
+Ich kann nur empfehlen die bisherigen Berichte zum Prozess durchzulesen, und den Prozess
+weiterzuverfolgen.  Ein Lacher nach dem anderen....&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://www.gulli.com/news/the-pirate-bay-tag-1-der-2009-02-17/"&gt;Tag 1 - Computerkriminalistikexperte hat
+PC-Probleme&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://www.gulli.com/news/tpb-h-lfte-der-anklagepunkte-2009-02-17/"&gt;Tag 2 - Epic Winning
+Lol&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://www.gulli.com/news/tag-3-des-gerichtsverfahrens-2009-02-18/"&gt;Tag
+3&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://www.gulli.com/news/tpb-ifpi-org-down-party-king-2009-02-19/"&gt;Ifpi.org down, king kong
+party&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://www.gulli.com/news/the-pirate-bay-geschrei-am-4-2009-02-19/"&gt;Tag 4 - Lautstarke
+Argumentation&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://www.gulli.com/news/the-pirate-bay-der-5-tag-mit-2009-02-20/"&gt;Tag 5 - 1337
+Staatsanwalt&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://www.gulli.com/news/the-pirate-bay-anakata-erkl-rt-2009-02-21/"&gt;Tag 6 - IFPI zeigt nicht gerade rosse
+Szenekentnis&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://www.gulli.com/news/the-pirate-bay-unn-tze-hilfe-f-2009-02-24/"&gt;Wadsted sucht
+Hilfe&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://www.gulli.com/news/the-pirate-bay-prozesstag-7-2009-02-24/"&gt;Tag 7 - Beweislose
+Beweise&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+  </entry>
+</feed>
+

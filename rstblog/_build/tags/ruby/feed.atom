@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title type="text">Recent Blog Posts</title>
+  <id>http://blog.dbrgn.ch/feed.atom</id>
+  <updated>2012-10-23T00:00:00Z</updated>
+  <link href="http://blog.dbrgn.ch/" />
+  <link href="http://blog.dbrgn.ch/feed.atom" rel="self" />
+  <subtitle type="text">Recent blog posts</subtitle>
+  <generator>Werkzeug</generator>
+  <entry xml:base="http://blog.dbrgn.ch/feed.atom">
+    <title type="text">Debian Squeeze Update breaks Redmine 1.1.2</title>
+    <id>http://blog.dbrgn.ch/2012/8/27/debian-update-breaks-redmine</id>
+    <updated>2012-08-27T00:00:00Z</updated>
+    <link href="http://blog.dbrgn.ch/2012/8/27/debian-update-breaks-redmine" />
+    <author>
+      <name>Danilo Bargen</name>
+    </author>
+    <content type="html">&lt;p&gt;I'm running a Debian Squeeze box with Redmine 1.1.2, Apache and Passenger. After
+a system update that upgraded the &lt;cite&gt;rubygems&lt;/cite&gt; package to version 1.8.x, Redmine
+was broken with the following error message:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+undefined method `name' for &amp;quot;rubygems-update&amp;quot;:String
+&lt;/pre&gt;
+&lt;p&gt;This is due to an incompatibility between Redmine and recent Rubygems versions.
+The problem can be fixed by downgrading &lt;cite&gt;rubygems&lt;/cite&gt; to a lower version, in my
+case 1.3.7. You can check the current version with&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="nv"&gt;$ &lt;/span&gt;gem --version
+1.8.15
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;To downgrade &lt;cite&gt;rubygems&lt;/cite&gt;, you need to make &lt;cite&gt;gem&lt;/cite&gt; install an older version of
+&lt;cite&gt;rubygems-update&lt;/cite&gt;. As root, run:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="nv"&gt;$ &lt;/span&gt;gem install rubygems-update --version&lt;span class="o"&gt;=&lt;/span&gt;1.3.7
+...
+&lt;span class="nv"&gt;$ REALLY_GEM_UPDATE_SYSTEM&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;1 gem update --system 1.3.7
+...
+&lt;span class="nv"&gt;$ &lt;/span&gt;gem --version
+1.3.7
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;That's it, after restarting Apache (or whatever your webserver is), Redmine
+should work again.&lt;/p&gt;
+&lt;p&gt;(Of course, a better alternative would be to set up a more recent version of
+Redmine on a more up-to-date operating sytem. See my
+&lt;a class="reference external" href="/2012/2/21/ubuntu-redmine-nginx-mongrel-supervisord/"&gt;Ubuntu / Redmine / Nginx / Mongrel / Supervisord&lt;/a&gt;
+blogpost for a howto on setting up Redmine on Ubuntu.)&lt;/p&gt;
+</content>
+  </entry>
+  <entry xml:base="http://blog.dbrgn.ch/feed.atom">
+    <title type="text">Recompile Vim with Python/Ruby Support on Arch Linux</title>
+    <id>http://blog.dbrgn.ch/2012/10/23/recompile-vim-on-arch-linux</id>
+    <updated>2012-10-23T00:00:00Z</updated>
+    <link href="http://blog.dbrgn.ch/2012/10/23/recompile-vim-on-arch-linux" />
+    <author>
+      <name>Danilo Bargen</name>
+    </author>
+    <content type="html">&lt;p&gt;For my &lt;a class="reference external" href="https://github.com/dbrgn/dotfiles"&gt;vim configuration&lt;/a&gt;, I need a
+version of Vim that was built with Python and Ruby support. Unfortunately, the
+default version of Vim that is installed with &lt;cite&gt;pacman&lt;/cite&gt; doesn't support
+Python/Ruby.&lt;/p&gt;
+&lt;p&gt;The easiest way to solve this problem is to install the &lt;cite&gt;gvim&lt;/cite&gt; package instead
+of &lt;cite&gt;vim&lt;/cite&gt; (don't worry, the &lt;cite&gt;gvim&lt;/cite&gt; package also includes a &lt;cite&gt;vim&lt;/cite&gt; binary). But
+this brings along a huge amount of dependencies that I didn't want on my
+system, so there's no way around a package recompilation.&lt;/p&gt;
+&lt;p&gt;To ease the reconfiguration-process I found &lt;a class="reference external" href="https://wiki.archlinux.org/index.php/Pacbuilder"&gt;pacbuilder&lt;/a&gt;, a script to easily
+recompile single packages or even the whole system. Install it using yaourt (or
+manually if you prefer):&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+$ yaourt -S pacbuilder-svn
+&lt;/pre&gt;
+&lt;p&gt;Then rebuild the &lt;cite&gt;vim&lt;/cite&gt; and &lt;cite&gt;vim-runtime&lt;/cite&gt; packages with the &lt;cite&gt;--edit&lt;/cite&gt; option:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+$ pacbuilder --install --edit vim vim-runtime
+&lt;/pre&gt;
+&lt;p&gt;When the script asks you whether you want to edit the &lt;cite&gt;PKGBUILD&lt;/cite&gt; file, answer
+with &lt;cite&gt;y&lt;/cite&gt;. Then find the first line that looks like this:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+./configure --prefix=/usr --localstatedir=/var/lib/vim \
+  --with-features=big --with-compiledby=ArchLinux \
+  --enable-gpm --enable-acl --with-x=no \
+  --disable-gui --enable-multibyte --enable-cscope \
+  --disable-netbeans --enable-perlinterp --disable-pythoninterp \
+  --disable-python3interp --disable-rubyinterp --disable-luainterp
+&lt;/pre&gt;
+&lt;p&gt;Edit the configure options to your likings. In my case, I changed the following
+things:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;cite&gt;--disable-pythoninterp&lt;/cite&gt; ⇒ &lt;cite&gt;--enable-pythoninterp&lt;/cite&gt;&lt;/li&gt;
+&lt;li&gt;&lt;cite&gt;--disable-python3interp&lt;/cite&gt; ⇒ &lt;cite&gt;--enable-python3interp&lt;/cite&gt;&lt;/li&gt;
+&lt;li&gt;&lt;cite&gt;--disable-rubyinterp&lt;/cite&gt; ⇒ &lt;cite&gt;--enable-rubyinterp&lt;/cite&gt;&lt;/li&gt;
+&lt;li&gt;&lt;cite&gt;--with-compiledby=ArchLinux&lt;/cite&gt; ⇒ &lt;cite&gt;--with-compiledby=&amp;quot;Custom Build (http://s.dbrgn.ch/uqK6)&amp;quot;&lt;/cite&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Also add &lt;cite&gt;python&lt;/cite&gt;, &lt;cite&gt;python2&lt;/cite&gt; and &lt;cite&gt;ruby&lt;/cite&gt; to the &lt;cite&gt;depends&lt;/cite&gt; list inside the
+&lt;cite&gt;package_vim()&lt;/cite&gt; function. Then save and close the &lt;cite&gt;PKGBUILD&lt;/cite&gt; file.&lt;/p&gt;
+&lt;p&gt;Pacbuilder will now go on to compile and install your custom build of Vim. You
+can verify it with &lt;tt class="docutils literal"&gt;vim &lt;span class="pre"&gt;--version&lt;/span&gt;&lt;/tt&gt; on the commandline.&lt;/p&gt;
+&lt;p&gt;Afterwards, if you want to prevent &lt;cite&gt;pacman&lt;/cite&gt; from auto-upgrading your &lt;cite&gt;vim&lt;/cite&gt;
+package, you can add &lt;cite&gt;vim&lt;/cite&gt; and &lt;cite&gt;vim-runtime&lt;/cite&gt; to the &lt;cite&gt;IgnorePkg&lt;/cite&gt; variable in
+&lt;cite&gt;/etc/pacman.conf&lt;/cite&gt;.&lt;/p&gt;
+</content>
+  </entry>
+</feed>
+

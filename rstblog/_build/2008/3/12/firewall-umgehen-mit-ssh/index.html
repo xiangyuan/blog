@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="de">
+    <head>
+        <title>Firewall umgehen mit SSH</title>
+
+        <!-- meta -->
+        <meta name="author" content="Danilo Bargen">
+        <meta name="dc.language" content="en-US">
+        <meta name="dc.license" content="http://creativecommons.org/licenses/by-sa/3.0/">
+        
+        <meta name="keywords" content="internet">
+        
+            <meta name="dc.date.created" content="2008-03-12">
+            <meta name="dc.date.issued" content="2008-03-12">
+        
+        <meta name="google-site-verification" content="uJWWR6d5ESb8torD0v97T_07HLMGX7VzQ-smcUTc_IQ" />
+
+        <!-- favicon -->
+        <link rel="icon" href="/favicon.ico" type="image/x-icon">
+
+        <!-- newsfeed -->
+        <link href="/feed.atom" rel="alternate" title="Feed" type="application/atom+xml">
+
+        <!-- assets -->
+        <link href="https://fonts.googleapis.com/css?family=Linden+Hill:400,400italic" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" href="/static/style.css?1371592067" type="text/css">
+            <link rel="stylesheet" href="/static/_pygments.css?1371592069" type="text/css">
+    </head>
+    <body>
+        <div id="wrapper">
+            <div id="blogtitle"><a href="/">blog.dbrgn.ch</a></div>
+            <ul id="mainnav">
+                <li><a href="/">home</a></li>
+                <li><a href="/archive/">archive</a></li>
+                <li><a href="/tags/">tags</a></li>
+                <li><a href="/blog/">about this blog</a></li>
+                <li class="last"><a href="/about/">about me</a></li>
+            </ul>
+
+            <div class="clearboth"></div>
+
+            <div id="content" class="hyphenate">
+                
+  <h1 class="title">Firewall umgehen mit SSH</h1>
+
+  
+    <div class="date">
+      <p>written on Wednesday, March 12, 2008</p>
+    </div>
+  
+
+  <p>Wer kennt das nicht? Im Büro, in der Schule, oder sonstwo sind bestimmte
+Firewallports gesperrt, und man kann diverse Dienste nicht verwenden.  Bei uns
+im Geschäft ist das neuerdings der Fall. Mit einer neuen Firewall wurden auch
+neue Ports gesperrt. Kein MSN mehr, kein IMAP über Port 993 (Gmail)... Das hat
+gewaltig genervt. Ich habe mich darum umgeschaut und eine Lösung gefunden: <a class="reference external" href="http://de.wikipedia.org/wiki/Tunnel_(Netzwerktechnik)">SSH
+Tunnelling</a>.</p>
+<p>Als erstes braucht man Zugang zu einem beliebigen SSH Server ausserhalb der
+Firewall. Dies kann z.B.  eine Linux-Workstation mit installiertem OpenSSH
+sein... Auch einige Webhoster bieten SSH Zugang, teilweise muss man nur mal
+freundlich nachfragen. Was man jedoch beachten sollte ist dass je tiefer die
+Upload-Geschwindigkeit des SSH Servers desto langsamer wird das ganze sein (die
+Daten die man downloadet müssen ja vom Server geuploadet werden...). Auf eine
+allfällige SSH Konfiguration gehe ich hier nicht ein, eine Überprüfung der
+Sicherheitseinstellungen ist bei einem eigenen Server aber unerlässlich.</p>
+<p>Anschliessend braucht man einen SSH Client. In diesem Beispiel verwende ich
+<a class="reference external" href="http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html">PuTTY</a>, ein
+sehr empfehlenswertes Programm. Hinweis: PuTTY gibt es auch als <a class="reference external" href="http://portableapps.com/apps/internet/putty_portable">Portable
+Edition</a> für den USB
+Stick...</p>
+<p>Als erstes muss man in PuTTY die Verbindungseinstellungen zum SSH Server
+festlegen.</p>
+<img alt="PuTTY Screenshot" src="/static/img/2008/3/12/putty_screenshot_1.png" />
+<p>Dann müssen die verschiedenen Tunnels definiert werden. Beispiel 1: Gmail IMAP
+Zugang über Port 993.  Unter Connection&gt;SSH&gt;Tunnels als Source Port einen
+beliebigen freien Port wählen (in meinem Beispiel Port 88).  In das
+Destination-Feld kommt &quot;imap.google.com:993&quot;, und die Optionen werden auf
+&quot;Local&quot; und &quot;Auto&quot; gesetzt. Beispiel 2: Windows Live Messenger. Unter Source
+Port einen beliebigen freien Port wählen (in meinem Beispiel Port 89). Das
+Destination-Feld bleibt leer. Die Optionen werden auf &quot;Dynamic&quot; und &quot;Auto&quot;
+gesetzt.</p>
+<img alt="PuTTY Screenshot" src="/static/img/2008/3/12/putty_screenshot_2.png" />
+<p>Um die Verbindung aufzubauen muss man jetzt nur noch auf &quot;Open&quot; klicken und das
+Passwort eingeben.  Das PuTTY Konsolenfenster muss die ganze Zeit geöffnet
+bleiben um die Verbindung aufrechtzuerhalten.</p>
+<p>Jetzt müssen nur noch die Programme konfiguriert werden. Für IMAP: Unter Outlook
+in den Konteneinstellung als Postausgangs-Serverport den selben Port wie vorhin
+wählen, in meinem Beispiel 88.</p>
+<img alt="Outlook Konfiguration 1" src="/static/img/2008/3/12/outlook_screenshot_1.png" />
+<p>Dann den Postausgangsserver von <cite>imap.gmail.com</cite> zu <cite>127.0.0.1</cite> ändern (oder
+alternativ &quot;localhost&quot;).</p>
+<img alt="Outlook Konfiguration 1" src="/static/img/2008/3/12/outlook_screenshot_1.png" />
+<p>Das wars, IMAP sollte jetzt funktionieren. Jetzt noch zu Windows Live Messenger:
+In den Optionen unter Verbindung&gt;Erweiterte Einstellungen den SOCKS Proxy auf
+127.0.0.1 (bzw &quot;localhost&quot;) und den Port auf den entsprechenden Wert setzen,
+Messenger neu starten, und schon funzt die ganze Sache!  Speziell in Verbindung
+mit der Transparenz-Funktion und dem Bosskey von <a class="reference external" href="http://www.msgpluslive.net/">Messsenger Plus!</a> enorm nützlich! ;)</p>
+<img alt="Live Messenger Konfiguration" src="/static/img/2008/3/12/livemessenger_screenshot_1.png" />
+<p>Ich hoffe mit diesem Post einigen Leuten helfen zu können. Für Feedback ist die
+Comment-Funktion zuständig. Viel Spass!</p>
+<p><strong>Nachtrag:</strong> Auf <a class="reference external" href="http://www.bylur.net/free/">bylur.net</a> und <a class="reference external" href="http://www.red-pill.eu/freeunix.shtml">red-pill.eu</a> gibt es grosse listen mit freien
+Unix-Shell Servern. Es muss darauf geachtet werden dass der Server SSH
+unterstützt. Meistens muss man aber für einen Account dem Besitzer des Servers
+eine Postkarte senden (ja, per Post, das ist diese Firma die diese
+handbeschriebenen Papiere transportiert...) oder etwas spenden, das erscheint
+mir angebracht, ohne Gegenleistung würde ich auch niemandem einen Server
+bereitstellen ;) Also sucht euch ein sympathisches Angebot aus und schickt ne
+Postkarte... Dann sind alle glücklich ;)</p>
+
+
+  
+      <a href="https://flattr.com/submit/auto?user_id=danilo&url=http://blog.dbrgn.ch/2008/3/12/firewall-umgehen-mit-ssh/&title=Firewall%20umgehen%20mit%20SSH&description=None&tags=internet&category=text">
+           <img class="flattrbutton" src="/static/img/flattr-badge-large.png" alt="Flattr this!" /> 
+      </a>
+  
+
+  
+    <div class="tags">
+      <p>This entry was tagged
+      
+        <a href="/tags/internet/">internet</a></p>
+    </div>
+  
+
+  
+    
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'dbrgn'; // required: replace example with your forum shortname
+    
+    
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
+
+  
+
+            </div>
+        </div>
+
+        <script type="text/javascript">
+          var _gaq = _gaq || [];
+          _gaq.push(['_setAccount', 'UA-1033934-12']);
+          _gaq.push(['_trackPageview']);
+          (function() {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+          })();
+        </script>
+        <script type="text/javascript" src="/static/hyphenator.js"></script>
+        <script type="text/javascript">
+            Hyphenator.config({
+                donthyphenateclassname : 'docutils literal'
+            });
+            Hyphenator.run();
+        </script>
+
+    </body>
+</html>

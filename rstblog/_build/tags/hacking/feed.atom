@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title type="text">Recent Blog Posts</title>
+  <id>http://blog.dbrgn.ch/feed.atom</id>
+  <updated>2011-01-13T00:00:00Z</updated>
+  <link href="http://blog.dbrgn.ch/" />
+  <link href="http://blog.dbrgn.ch/feed.atom" rel="self" />
+  <subtitle type="text">Recent blog posts</subtitle>
+  <generator>Werkzeug</generator>
+  <entry xml:base="http://blog.dbrgn.ch/feed.atom">
+    <title type="text">Arduino Documentary</title>
+    <id>http://blog.dbrgn.ch/2011/1/13/arduino-documentary</id>
+    <updated>2011-01-13T00:00:00Z</updated>
+    <link href="http://blog.dbrgn.ch/2011/1/13/arduino-documentary" />
+    <author>
+      <name>Danilo Bargen</name>
+    </author>
+    <content type="html">&lt;p&gt;I recently found a great documentary on Vimeo about the Arduino project.  Highly recommended to
+watch, especially if you're interested in electronics, programming, microcontrollers and hacking
+stuff.&lt;/p&gt;
+&lt;iframe src="http://player.vimeo.com/video/18539129"     width="900" height="504" frameborder="0"     webkitAllowFullScreen mozallowfullscreen allowFullScreen     class="align-none"&gt;&lt;/iframe&gt;</content>
+  </entry>
+  <entry xml:base="http://blog.dbrgn.ch/feed.atom">
+    <title type="text">EOS 450D Remote Trigger</title>
+    <id>http://blog.dbrgn.ch/2009/2/22/eos-450d-remote-trigger</id>
+    <updated>2009-02-22T00:00:00Z</updated>
+    <link href="http://blog.dbrgn.ch/2009/2/22/eos-450d-remote-trigger" />
+    <author>
+      <name>Danilo Bargen</name>
+    </author>
+    <content type="html">&lt;p&gt;On the left side of the Canon EOS 450D (and probably on any other EOS camera), there's a connector
+for a remote shutter trigger. You can make your own remote trigger by sticking one side of a 2.5&amp;quot;
+jack-jack cable into the connector, while bridging two of the pins on the other side of the cable.&lt;/p&gt;
+&lt;a class="reference external image-reference" href="http://blog.ich-wars-nicht.ch/wp-content/uploads/2009/02/img_6945.jpg"&gt;&lt;img alt="http://blog.ich-wars-nicht.ch/wp-content/uploads/2009/02/img_6945-300x172.jpg" src="http://blog.ich-wars-nicht.ch/wp-content/uploads/2009/02/img_6945-300x172.jpg" /&gt;&lt;/a&gt;
+&lt;p&gt;By connecting pin 1 + 3, you can focus and trigger the shutter; connecting pin 2 + 3 triggers
+autofocus only. With that information, you can easily make yourself your own remote trigger, maybe
+even an automatic trigger using the arduino and some sensors.&lt;/p&gt;
+&lt;p&gt;For high speed photography using the arduino and an external flash, i'd recommend the approaches by
+&lt;a class="reference external" href="http://projects.nosomos.org/arduino-controlled-flash-trigger"&gt;[nosmos.org]&lt;/a&gt; and
+&lt;a class="reference external" href="http://www.glacialwanderer.com/hobbyrobotics/?p=11"&gt;[glacialwanderer.com]&lt;/a&gt;.&lt;/p&gt;
+</content>
+  </entry>
+  <entry xml:base="http://blog.dbrgn.ch/feed.atom">
+    <title type="text">Gustave Doré - Free Kindle Screensaver Images</title>
+    <id>http://blog.dbrgn.ch/2010/10/5/gustave-dore-free-kindle-screensaver-images</id>
+    <updated>2010-10-05T00:00:00Z</updated>
+    <link href="http://blog.dbrgn.ch/2010/10/5/gustave-dore-free-kindle-screensaver-images" />
+    <author>
+      <name>Danilo Bargen</name>
+    </author>
+    <content type="html">&lt;p&gt;With the &lt;a class="reference external" href="http://www.mobileread.com/forums/showthread.php?t=88004"&gt;&amp;quot;Jailbreak&amp;quot;&lt;/a&gt; for the Kindle 3,
+you also have the possibility to exchange the default &amp;quot;screensaver&amp;quot; images provided by Amazon.
+Although I like the default screensavers, I got inspired by the look of &lt;a class="reference external" href="http://redeemingqualities.wordpress.com/2009/01/13/piranesis-carcerikindle-screensavers/"&gt;Melody's Piranesi’s Carceri
+screensavers&lt;/a&gt; to
+create a set of 19 screensaver pictures with some of the awesome engravings by the French artist
+&lt;a class="reference external" href="http://en.wikipedia.org/wiki/Gustave_Dor%C3%A9"&gt;Gustave Doré&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;The original pictures are public domain, the composition of images I created is released under the
+creative commons license &lt;a class="reference external" href="http://creativecommons.org/licenses/by/3.0/"&gt;cc-by-3.0&lt;/a&gt;. This means you
+are free to use, share and remix it as long as you link back to this blog entry. (Of course this
+only applies to the edited versions, not to the images themselves, which you can find on Wikipedia).
+Feedback is welcome and appreciated.&lt;/p&gt;
+&lt;div class="section" id="download"&gt;
+&lt;h2&gt;Download&lt;/h2&gt;
+&lt;p&gt;&lt;a class="reference external" href="/static/files/Kindle3_Screensavers_Gustave_Dore.zip"&gt;http://w00t.ws/static/files/Kindle3_Screensavers_Gustave_Dore.zip&lt;/a&gt;&lt;/p&gt;
+&lt;a class="reference external image-reference" href="http://creativecommons.org/licenses/by/3.0/"&gt;&lt;img alt="http://i.creativecommons.org/l/by/3.0/88x31.png" src="http://i.creativecommons.org/l/by/3.0/88x31.png" /&gt;&lt;/a&gt;
+&lt;/div&gt;
+&lt;div class="section" id="gallery"&gt;
+&lt;h2&gt;Gallery&lt;/h2&gt;
+&lt;a class="reference external image-reference" href="/static/img/2010/10/5/gustave_dore_00.jpg"&gt;&lt;img alt="/static/img/2010/10/5/gustave_dore_00.jpg" src="/static/img/2010/10/5/gustave_dore_00.jpg" style="height: 300px;" /&gt;&lt;/a&gt;
+&lt;a class="reference external image-reference" href="/static/img/2010/10/5/gustave_dore_01.jpg"&gt;&lt;img alt="/static/img/2010/10/5/gustave_dore_01.jpg" src="/static/img/2010/10/5/gustave_dore_01.jpg" style="height: 300px;" /&gt;&lt;/a&gt;
+&lt;a class="reference external image-reference" href="/static/img/2010/10/5/gustave_dore_02.jpg"&gt;&lt;img alt="/static/img/2010/10/5/gustave_dore_02.jpg" src="/static/img/2010/10/5/gustave_dore_02.jpg" style="height: 300px;" /&gt;&lt;/a&gt;
+&lt;a class="reference external image-reference" href="/static/img/2010/10/5/gustave_dore_03.jpg"&gt;&lt;img alt="/static/img/2010/10/5/gustave_dore_03.jpg" src="/static/img/2010/10/5/gustave_dore_03.jpg" style="height: 300px;" /&gt;&lt;/a&gt;
+&lt;a class="reference external image-reference" href="/static/img/2010/10/5/gustave_dore_04.jpg"&gt;&lt;img alt="/static/img/2010/10/5/gustave_dore_04.jpg" src="/static/img/2010/10/5/gustave_dore_04.jpg" style="height: 300px;" /&gt;&lt;/a&gt;
+&lt;a class="reference external image-reference" href="/static/img/2010/10/5/gustave_dore_05.jpg"&gt;&lt;img alt="/static/img/2010/10/5/gustave_dore_05.jpg" src="/static/img/2010/10/5/gustave_dore_05.jpg" style="height: 300px;" /&gt;&lt;/a&gt;
+&lt;a class="reference external image-reference" href="/static/img/2010/10/5/gustave_dore_06.jpg"&gt;&lt;img alt="/static/img/2010/10/5/gustave_dore_06.jpg" src="/static/img/2010/10/5/gustave_dore_06.jpg" style="height: 300px;" /&gt;&lt;/a&gt;
+&lt;a class="reference external image-reference" href="/static/img/2010/10/5/gustave_dore_07.jpg"&gt;&lt;img alt="/static/img/2010/10/5/gustave_dore_07.jpg" src="/static/img/2010/10/5/gustave_dore_07.jpg" style="height: 300px;" /&gt;&lt;/a&gt;
+&lt;a class="reference external image-reference" href="/static/img/2010/10/5/gustave_dore_08.jpg"&gt;&lt;img alt="/static/img/2010/10/5/gustave_dore_08.jpg" src="/static/img/2010/10/5/gustave_dore_08.jpg" style="height: 300px;" /&gt;&lt;/a&gt;
+&lt;a class="reference external image-reference" href="/static/img/2010/10/5/gustave_dore_09.jpg"&gt;&lt;img alt="/static/img/2010/10/5/gustave_dore_09.jpg" src="/static/img/2010/10/5/gustave_dore_09.jpg" style="height: 300px;" /&gt;&lt;/a&gt;
+&lt;a class="reference external image-reference" href="/static/img/2010/10/5/gustave_dore_10.jpg"&gt;&lt;img alt="/static/img/2010/10/5/gustave_dore_10.jpg" src="/static/img/2010/10/5/gustave_dore_10.jpg" style="height: 300px;" /&gt;&lt;/a&gt;
+&lt;a class="reference external image-reference" href="/static/img/2010/10/5/gustave_dore_11.jpg"&gt;&lt;img alt="/static/img/2010/10/5/gustave_dore_11.jpg" src="/static/img/2010/10/5/gustave_dore_11.jpg" style="height: 300px;" /&gt;&lt;/a&gt;
+&lt;a class="reference external image-reference" href="/static/img/2010/10/5/gustave_dore_12.jpg"&gt;&lt;img alt="/static/img/2010/10/5/gustave_dore_12.jpg" src="/static/img/2010/10/5/gustave_dore_12.jpg" style="height: 300px;" /&gt;&lt;/a&gt;
+&lt;a class="reference external image-reference" href="/static/img/2010/10/5/gustave_dore_13.jpg"&gt;&lt;img alt="/static/img/2010/10/5/gustave_dore_13.jpg" src="/static/img/2010/10/5/gustave_dore_13.jpg" style="height: 300px;" /&gt;&lt;/a&gt;
+&lt;a class="reference external image-reference" href="/static/img/2010/10/5/gustave_dore_14.jpg"&gt;&lt;img alt="/static/img/2010/10/5/gustave_dore_14.jpg" src="/static/img/2010/10/5/gustave_dore_14.jpg" style="height: 300px;" /&gt;&lt;/a&gt;
+&lt;a class="reference external image-reference" href="/static/img/2010/10/5/gustave_dore_15.jpg"&gt;&lt;img alt="/static/img/2010/10/5/gustave_dore_15.jpg" src="/static/img/2010/10/5/gustave_dore_15.jpg" style="height: 300px;" /&gt;&lt;/a&gt;
+&lt;a class="reference external image-reference" href="/static/img/2010/10/5/gustave_dore_16.jpg"&gt;&lt;img alt="/static/img/2010/10/5/gustave_dore_16.jpg" src="/static/img/2010/10/5/gustave_dore_16.jpg" style="height: 300px;" /&gt;&lt;/a&gt;
+&lt;a class="reference external image-reference" href="/static/img/2010/10/5/gustave_dore_17.jpg"&gt;&lt;img alt="/static/img/2010/10/5/gustave_dore_17.jpg" src="/static/img/2010/10/5/gustave_dore_17.jpg" style="height: 300px;" /&gt;&lt;/a&gt;
+&lt;a class="reference external image-reference" href="/static/img/2010/10/5/gustave_dore_18.jpg"&gt;&lt;img alt="/static/img/2010/10/5/gustave_dore_18.jpg" src="/static/img/2010/10/5/gustave_dore_18.jpg" style="height: 300px;" /&gt;&lt;/a&gt;
+&lt;/div&gt;
+</content>
+  </entry>
+  <entry xml:base="http://blog.dbrgn.ch/feed.atom">
+    <title type="text">Kaffee Nachfüllen</title>
+    <id>http://blog.dbrgn.ch/2009/10/16/kaffee-nachfullen</id>
+    <updated>2009-10-16T00:00:00Z</updated>
+    <link href="http://blog.dbrgn.ch/2009/10/16/kaffee-nachfullen" />
+    <author>
+      <name>Danilo Bargen</name>
+    </author>
+    <content type="html">&lt;p&gt;Dank &lt;a class="reference external" href="http://www.rouge.ch/blog/insert-coin/"&gt;rouge&lt;/a&gt; bin ich auf ein
+&lt;a class="reference external" href="http://kovaya.com/miscellany/2007/10/insert-coin.html"&gt;lustiges
+Script&lt;/a&gt;
+gestossen, welches ich natürlich gleich auf unserem Büro-HP-Laserdrucker
+ausprobieren musste. Mit dem ersten Resultat...&lt;/p&gt;
+&lt;a class="reference external image-reference" href="http://blog.ich-wars-nicht.ch/wp-content/uploads/2009/10/Nokia008.jpg"&gt;&lt;img alt="http://blog.ich-wars-nicht.ch/wp-content/uploads/2009/10/Nokia008-225x300.jpg" src="http://blog.ich-wars-nicht.ch/wp-content/uploads/2009/10/Nokia008-225x300.jpg" /&gt;&lt;/a&gt;
+&lt;p&gt;...war ich allerdings nicht ganz zufrieden, das hier hat mir dann schon
+besser gepasst.&lt;/p&gt;
+&lt;a class="reference external image-reference" href="http://blog.ich-wars-nicht.ch/wp-content/uploads/2009/10/Nokia016.jpg"&gt;&lt;img alt="http://blog.ich-wars-nicht.ch/wp-content/uploads/2009/10/Nokia016-225x300.jpg" src="http://blog.ich-wars-nicht.ch/wp-content/uploads/2009/10/Nokia016-225x300.jpg" /&gt;&lt;/a&gt;
+&lt;p&gt;Nach dem Wochenende wars allerdings wieder weg, möglicherweise durch das
+Abstellen des Stromes. Schade dass die Änderung nicht permanent ist...&lt;/p&gt;
+</content>
+  </entry>
+</feed>
+

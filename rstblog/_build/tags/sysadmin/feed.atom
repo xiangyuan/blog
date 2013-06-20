@@ -1,0 +1,347 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title type="text">Recent Blog Posts</title>
+  <id>http://blog.dbrgn.ch/feed.atom</id>
+  <updated>2012-01-19T00:00:00Z</updated>
+  <link href="http://blog.dbrgn.ch/" />
+  <link href="http://blog.dbrgn.ch/feed.atom" rel="self" />
+  <subtitle type="text">Recent blog posts</subtitle>
+  <generator>Werkzeug</generator>
+  <entry xml:base="http://blog.dbrgn.ch/feed.atom">
+    <title type="text">Change Linux UID/GID</title>
+    <id>http://blog.dbrgn.ch/2010/3/18/change-linux-uidgid</id>
+    <updated>2010-03-18T00:00:00Z</updated>
+    <link href="http://blog.dbrgn.ch/2010/3/18/change-linux-uidgid" />
+    <author>
+      <name>Danilo Bargen</name>
+    </author>
+    <content type="html">&lt;p&gt;Log in with another user than the one to be edited or reboot into
+recovery mode and enter the following commands:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="nv"&gt;$ &lt;/span&gt;usermod -u
+&lt;span class="nv"&gt;$ &lt;/span&gt;groupmod -g
+&lt;span class="nv"&gt;$ &lt;/span&gt;find / -user &amp;lt;user&amp;gt; -exec chown &amp;lt;user&amp;gt; &lt;span class="o"&gt;{}&lt;/span&gt; &lt;span class="se"&gt;\;&lt;/span&gt;
+&lt;span class="nv"&gt;$ &lt;/span&gt;find / -group &amp;lt;group&amp;gt; -exec chgrp &amp;lt;group&amp;gt; &lt;span class="o"&gt;{}&lt;/span&gt; &lt;span class="se"&gt;\;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Warning: Use on your own risk. This change should only be done by users
+that know what they're doing.&lt;/p&gt;
+</content>
+  </entry>
+  <entry xml:base="http://blog.dbrgn.ch/feed.atom">
+    <title type="text">dwm config - volume, battery notification, unread e-mail count &amp; more</title>
+    <id>http://blog.dbrgn.ch/2012/1/19/dwm-config-volume-battery-notification-unread-e-mail-count-more</id>
+    <updated>2012-01-19T00:00:00Z</updated>
+    <link href="http://blog.dbrgn.ch/2012/1/19/dwm-config-volume-battery-notification-unread-e-mail-count-more" />
+    <author>
+      <name>Danilo Bargen</name>
+    </author>
+    <content type="html">&lt;p&gt;As many other &lt;a class="reference external" href="http://dwm.suckless.org/"&gt;dwm&lt;/a&gt; users do, I customized my
+&lt;cite&gt;.xinitrc&lt;/cite&gt; file and the dwm status bar in to display some useful information.
+Here is my configuration:&lt;/p&gt;
+&lt;div class="section" id="xinitrc"&gt;
+&lt;h2&gt;.xinitrc&lt;/h2&gt;
+&lt;p&gt;This is what my .xinitrc looks like:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="c"&gt;# set keyboard layout to Swiss German&lt;/span&gt;
+setxkbmap ch
+
+&lt;span class="c"&gt;# Load .Xresources file&lt;/span&gt;
+xrdb -merge ~/.Xresources
+
+&lt;span class="c"&gt;# Start xbindkeys&lt;/span&gt;
+xbindkeys &amp;amp;
+
+&lt;span class="c"&gt;# Set some defaults&lt;/span&gt;
+&lt;span class="nb"&gt;export &lt;/span&gt;&lt;span class="nv"&gt;BROWSER&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;chromium &amp;amp;
+&lt;span class="nb"&gt;export &lt;/span&gt;&lt;span class="nv"&gt;EDITOR&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;vim &amp;amp;
+xdg-mime default evince.desktop application/pdf &amp;amp;
+
+&lt;span class="c"&gt;# Loop&lt;/span&gt;
+&lt;span class="k"&gt;while &lt;/span&gt;&lt;span class="nb"&gt;true&lt;/span&gt;
+&lt;span class="k"&gt;do&lt;/span&gt;
+    &lt;span class="c"&gt;# Set root title&lt;/span&gt;
+    sh .xsetroot.sh
+
+    &lt;span class="c"&gt;# Check battery level&lt;/span&gt;
+    &lt;span class="nv"&gt;BATT&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="k"&gt;$(&lt;/span&gt; acpi -b | sed &lt;span class="s1"&gt;&amp;#39;s/.*[charging|unknown], \([0-9]*\)%.*/\1/gi&amp;#39;&lt;/span&gt; &lt;span class="k"&gt;)&lt;/span&gt;
+    &lt;span class="nv"&gt;STATUS&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="k"&gt;$(&lt;/span&gt; acpi -b | sed &lt;span class="s1"&gt;&amp;#39;s/.*: \([a-zA-Z]*\),.*/\1/gi&amp;#39;&lt;/span&gt; &lt;span class="k"&gt;)&lt;/span&gt;
+    &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="o"&gt;([&lt;/span&gt; &lt;span class="nv"&gt;$BATT&lt;/span&gt; -le 5 &lt;span class="o"&gt;]&lt;/span&gt; &lt;span class="o"&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class="o"&gt;[&lt;/span&gt; &lt;span class="nv"&gt;$STATUS&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;Discharging&amp;#39;&lt;/span&gt; &lt;span class="o"&gt;])&lt;/span&gt;; &lt;span class="k"&gt;then&lt;/span&gt;
+        &lt;span class="c"&gt;# Beep&lt;/span&gt;
+        &lt;span class="nb"&gt;echo&lt;/span&gt; -e &lt;span class="s2"&gt;&amp;quot;\007&amp;quot;&lt;/span&gt; &amp;gt;/dev/tty10 &lt;span class="o"&gt;&amp;amp;&amp;amp;&lt;/span&gt; sleep 0.2
+        &lt;span class="nb"&gt;echo&lt;/span&gt; -e &lt;span class="s2"&gt;&amp;quot;\007&amp;quot;&lt;/span&gt; &amp;gt;/dev/tty10 &lt;span class="o"&gt;&amp;amp;&amp;amp;&lt;/span&gt; sleep 0.2
+        &lt;span class="nb"&gt;echo&lt;/span&gt; -e &lt;span class="s2"&gt;&amp;quot;\007&amp;quot;&lt;/span&gt; &amp;gt;/dev/tty10 &lt;span class="o"&gt;&amp;amp;&amp;amp;&lt;/span&gt; sleep 0.2
+        &lt;span class="c"&gt;# Blink&lt;/span&gt;
+        &lt;span class="nb"&gt;echo&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;on&amp;#39;&lt;/span&gt; &amp;gt; /proc/acpi/ibm/light &lt;span class="o"&gt;&amp;amp;&amp;amp;&lt;/span&gt; sleep 1
+        &lt;span class="nb"&gt;echo&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;off&amp;#39;&lt;/span&gt; &amp;gt; /proc/acpi/ibm/light
+    &lt;span class="k"&gt;fi&lt;/span&gt;
+
+    &lt;span class="c"&gt;# Update every 10s&lt;/span&gt;
+    sleep 10s
+&lt;span class="k"&gt;done&lt;/span&gt; &amp;amp;
+
+&lt;span class="c"&gt;# Set up rotated dual screen without touching my xorg.conf&lt;/span&gt;
+xrandr --output DVI-1 --auto --rotate left --pos 0x0 --output DVI-0 --auto --pos 1080x720 --rotate normal
+
+&lt;span class="c"&gt;# Read .xsessionrc&lt;/span&gt;
+sh ~/.xsessionrc &amp;amp;
+
+&lt;span class="c"&gt;# Set wallpaper&lt;/span&gt;
+feh --bg-scale ~/.xwallpaper-dwm.png
+
+&lt;span class="c"&gt;# Set WM name (for Java apps)&lt;/span&gt;
+wmname LG3D
+
+&lt;span class="c"&gt;# Run dwm&lt;/span&gt;
+&lt;span class="nb"&gt;exec &lt;/span&gt;dwm
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="section" id="xresources"&gt;
+&lt;h2&gt;.Xresources&lt;/h2&gt;
+&lt;p&gt;In my &lt;cite&gt;.Xresources&lt;/cite&gt;, I'm setting the UXTerm color to white on black, as well as
+fixing a bug with the &lt;tt class="docutils literal"&gt;Alt&lt;/tt&gt; key in SSH sessions. The last line is to set the
+window URGENT flag when the window uses the system bell.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;UXTerm*eightBitInput: &lt;span class="nb"&gt;false&lt;/span&gt;
+UXTerm*metaSendsEscape: &lt;span class="nb"&gt;true&lt;/span&gt;
+UXTerm*reverseVideo: &lt;span class="nb"&gt;true&lt;/span&gt;
+UXTerm*bellIsUrgent: &lt;span class="nb"&gt;true&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="section" id="xsetroot-sh"&gt;
+&lt;h2&gt;.xsetroot.sh&lt;/h2&gt;
+&lt;p&gt;As you've seen in my &lt;cite&gt;.xinitrc&lt;/cite&gt; file, I didn't want to keep my xsetroot commands
+directly in that file. The main reason for this is that now I can update the
+status information from an external script, e.g. when pushing some volume
+buttons on my notebook.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="nv"&gt;DATETIME&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="sb"&gt;`&lt;/span&gt;date&lt;span class="sb"&gt;`&lt;/span&gt;
+&lt;span class="nv"&gt;UPTIME&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="sb"&gt;`&lt;/span&gt;uptime | sed &lt;span class="s1"&gt;&amp;#39;s/.*up\s*//&amp;#39;&lt;/span&gt; | sed &lt;span class="s1"&gt;&amp;#39;s/,\s*[0-9]* user.*//&amp;#39;&lt;/span&gt; | sed &lt;span class="s1"&gt;&amp;#39;s/  / /g&amp;#39;&lt;/span&gt;&lt;span class="sb"&gt;`&lt;/span&gt;
+&lt;span class="nv"&gt;VOLUME&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="k"&gt;$(&lt;/span&gt; amixer sget Master | grep -e &lt;span class="s1"&gt;&amp;#39;Front Left:&amp;#39;&lt;/span&gt; | &lt;span class="se"&gt;\&lt;/span&gt;
+    sed &lt;span class="s1"&gt;&amp;#39;s/[^\[]*\[\([0-9]\{1,3\}%\).*\(on\|off\).*/\2 \1/&amp;#39;&lt;/span&gt; | sed &lt;span class="s1"&gt;&amp;#39;s/off/M/&amp;#39;&lt;/span&gt; | sed &lt;span class="s1"&gt;&amp;#39;s/on //&amp;#39;&lt;/span&gt; &lt;span class="k"&gt;)&lt;/span&gt;
+&lt;span class="nv"&gt;UNREADMAIL&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="sb"&gt;`&lt;/span&gt;cat .unreadmail&lt;span class="sb"&gt;`&lt;/span&gt;
+&lt;span class="nv"&gt;BATTERYSTATE&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="k"&gt;$(&lt;/span&gt; acpi -b | awk &lt;span class="s1"&gt;&amp;#39;{ split($5,a,&amp;quot;:&amp;quot;); print substr($3,0,2), $4, &amp;quot;[&amp;quot;a[1]&amp;quot;:&amp;quot;a[2]&amp;quot;]&amp;quot; }&amp;#39;&lt;/span&gt; | tr -d &lt;span class="s1"&gt;&amp;#39;,&amp;#39;&lt;/span&gt; &lt;span class="k"&gt;)&lt;/span&gt;
+&lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="o"&gt;[&lt;/span&gt; &lt;span class="sb"&gt;`&lt;/span&gt;date +%S&lt;span class="sb"&gt;`&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; 30 -o &lt;span class="sb"&gt;`&lt;/span&gt;date +%S&lt;span class="sb"&gt;`&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; 00 &lt;span class="o"&gt;]&lt;/span&gt;; &lt;span class="k"&gt;then &lt;/span&gt;python imap_check_unread.py &amp;gt; .unreadmail; &lt;span class="k"&gt;fi&lt;/span&gt;
+xsetroot -name &lt;span class="s2"&gt;&amp;quot;Unread ${UNREADMAIL} | ${VOLUME} | ${DATETIME} | Up ${UPTIME}h | ${BATTERYSTATE}&amp;quot;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;The uptime value doesn't look perfect, there are bugs if the uptime is
+&amp;lt;1h. But that doesn't bug me :)&lt;/p&gt;
+&lt;p&gt;In summary, my status bar displays the following things:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Unread e-mail count&lt;/li&gt;
+&lt;li&gt;Volume&lt;/li&gt;
+&lt;li&gt;Date and time&lt;/li&gt;
+&lt;li&gt;Uptime&lt;/li&gt;
+&lt;li&gt;Battery status&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="imap-check-unread-py"&gt;
+&lt;h2&gt;imap_check_unread.py&lt;/h2&gt;
+&lt;p&gt;To check the unread mail count in my IMAP account, I created a little Python
+script. But because I don't want to query the server every second, I'm caching
+the value in a file and update it every 30 seconds. Create a cronjob or similar
+to update the file.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="c"&gt;#!/usr/bin/env python&lt;/span&gt;
+
+&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;imaplib&lt;/span&gt;
+
+&lt;span class="n"&gt;obj&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;imaplib&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;IMAP4_SSL&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;xxx.xxx.xxx.xxx&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s"&gt;&amp;#39;993&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;obj&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;login&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;user&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s"&gt;&amp;#39;password&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;obj&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;select&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;span class="k"&gt;print&lt;/span&gt; &lt;span class="nb"&gt;len&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;obj&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;search&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="bp"&gt;None&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s"&gt;&amp;#39;UnSeen&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)[&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;][&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;split&lt;/span&gt;&lt;span class="p"&gt;())&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+</content>
+  </entry>
+  <entry xml:base="http://blog.dbrgn.ch/feed.atom">
+    <title type="text">dwm ssh/screen/irssi notifications</title>
+    <id>http://blog.dbrgn.ch/2011/9/1/dwm-sshscreenirssi-notifications</id>
+    <updated>2011-09-01T00:00:00Z</updated>
+    <link href="http://blog.dbrgn.ch/2011/9/1/dwm-sshscreenirssi-notifications" />
+    <author>
+      <name>Danilo Bargen</name>
+    </author>
+    <content type="html">&lt;p&gt;I always keep an irssi session open inside a screen session on my server
+via ssh. I always thought that notifications aren't possible for such a
+setup. But they are.&lt;/p&gt;
+&lt;ol class="arabic simple"&gt;
+&lt;li&gt;In your irssi session, issue the following commands:&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;/set beep_msg_level NOTICE MSGS HILIGHT
+/set bell_beeps OFF
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;You can save this configuration permanently by issueing &lt;tt class="docutils literal"&gt;/save&lt;/tt&gt;.&lt;/p&gt;
+&lt;ol class="arabic simple" start="2"&gt;
+&lt;li&gt;In your ~/.screenrc, add the following lines:&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;vbell off
+bell_msg &amp;#39;Bell in window %n^G&amp;#39;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;3. Tell your terminal to set the URGENT flag when beeping. Add one of
+the following lines to your .Xresources:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;# For UXterm users:
+UXTerm*bellIsUrgent: true
+
+# For (u)rxvt users:
+Rxvt.urgentOnBell: true
+&lt;/pre&gt;&lt;/div&gt;
+</content>
+  </entry>
+  <entry xml:base="http://blog.dbrgn.ch/feed.atom">
+    <title type="text">Edit Bash command in $EDITOR</title>
+    <id>http://blog.dbrgn.ch/2009/8/12/edit-bash-command-in-editor</id>
+    <updated>2009-08-12T00:00:00Z</updated>
+    <link href="http://blog.dbrgn.ch/2009/8/12/edit-bash-command-in-editor" />
+    <author>
+      <name>Danilo Bargen</name>
+    </author>
+    <content type="html">&lt;p&gt;To edit the current command in Linux Bash in your default editor (&lt;tt class="docutils literal"&gt;$EDITOR&lt;/tt&gt;), use the &lt;tt class="docutils literal"&gt;&lt;span class="pre"&gt;C-x&lt;/span&gt; &lt;span class="pre"&gt;C-e&lt;/span&gt;&lt;/tt&gt;
+key combination.&lt;/p&gt;
+&lt;p&gt;Some other Bash tips and tricks: &lt;a class="reference external" href="http://samrowe.com/wordpress/advancing-in-the-bash-shell/"&gt;[samrowe.com]&lt;/a&gt; and &lt;a class="reference external" href="http://linuxhelp.blogspot.com/2005/08/bash-shell-shortcuts.html"&gt;[linuxhelp.blogspot.com]&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;(Via
+&lt;a class="reference external" href="http://www.reddit.com/r/linux/comments/99jcu/cd_takes_you_back_to_the_previous_directory_you/"&gt;reddit&lt;/a&gt;)&lt;/p&gt;
+</content>
+  </entry>
+  <entry xml:base="http://blog.dbrgn.ch/feed.atom">
+    <title type="text">Install Android Development Environment under Arch Linux</title>
+    <id>http://blog.dbrgn.ch/2011/3/31/install-android-development-environment-under-arch-linux</id>
+    <updated>2011-03-31T00:00:00Z</updated>
+    <link href="http://blog.dbrgn.ch/2011/3/31/install-android-development-environment-under-arch-linux" />
+    <author>
+      <name>Danilo Bargen</name>
+    </author>
+    <content type="html">&lt;p&gt;How to install Eclipse and the Android Developer Tools under ArchLinux
+x64:&lt;/p&gt;
+&lt;ol class="arabic simple"&gt;
+&lt;li&gt;&lt;tt class="docutils literal"&gt;sudo pacman &lt;span class="pre"&gt;-S&lt;/span&gt; eclipse&lt;/tt&gt;&lt;/li&gt;
+&lt;li&gt;&lt;tt class="docutils literal"&gt;yaourt &lt;span class="pre"&gt;-S&lt;/span&gt; &lt;span class="pre"&gt;android-sdk&lt;/span&gt; &lt;span class="pre"&gt;eclipse-android&lt;/span&gt;&lt;/tt&gt;&lt;/li&gt;
+&lt;li&gt;&lt;tt class="docutils literal"&gt;sudo usermod &lt;span class="pre"&gt;--groups&lt;/span&gt; android &amp;lt;user&amp;gt;&lt;/tt&gt;&lt;/li&gt;
+&lt;li&gt;Log out and back in (to update your permissions)&lt;/li&gt;
+&lt;li&gt;Open Eclipse, select &lt;em&gt;Window &amp;gt; Preferences&lt;/em&gt;, select &lt;em&gt;Android&lt;/em&gt; on the
+left side.&lt;/li&gt;
+&lt;li&gt;Choose &lt;tt class="docutils literal"&gt;&lt;span class="pre"&gt;/opt/android-sdk&lt;/span&gt;&lt;/tt&gt; as your SDK location and click on &lt;em&gt;Apply&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;Select &lt;em&gt;Window &amp;gt; Android SDK and AVD Manager&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;Choose &lt;em&gt;Available Packages&lt;/em&gt; on the left side&lt;/li&gt;
+&lt;li&gt;Install at least the &lt;em&gt;Android SDK Platform-tools&lt;/em&gt; and your desired
+Platform&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;That's it, the Android developer tools should now be usable.&lt;/p&gt;
+</content>
+  </entry>
+  <entry xml:base="http://blog.dbrgn.ch/feed.atom">
+    <title type="text">Install Brother DCP-7010 under Arch Linux</title>
+    <id>http://blog.dbrgn.ch/2011/1/8/install-brother-dcp-7010-under-arch-linux</id>
+    <updated>2011-01-08T00:00:00Z</updated>
+    <link href="http://blog.dbrgn.ch/2011/1/8/install-brother-dcp-7010-under-arch-linux" />
+    <author>
+      <name>Danilo Bargen</name>
+    </author>
+    <content type="html">&lt;p&gt;This how-to will enable you to print and scan with a Brother DCP-7010 printer under Arch Linux. (For
+deb- and rpm-based Distributions, there are &lt;a class="reference external" href="http://welcome.solutions.brother.com/bsc/public_s/id/linux/en/index.html"&gt;drivers available&lt;/a&gt;.)&lt;/p&gt;
+&lt;ol class="arabic simple"&gt;
+&lt;li&gt;Install &lt;a class="reference external" href="http://aur.archlinux.org/packages.php?ID=39170"&gt;brother-dcp7010&lt;/a&gt; and &lt;a class="reference external" href="http://aur.archlinux.org/packages.php?ID=19122"&gt;brscan2&lt;/a&gt; via &lt;a class="reference external" href="https://wiki.archlinux.org/index.php/Arch_User_Repository"&gt;AUR&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Install &lt;tt class="docutils literal"&gt;sane&lt;/tt&gt; and a frontend for it, e.g. &lt;tt class="docutils literal"&gt;xsane&lt;/tt&gt;&lt;/li&gt;
+&lt;li&gt;Add your user to the scanner-Group: &lt;tt class="docutils literal"&gt;gpasswd &lt;span class="pre"&gt;-a&lt;/span&gt; username scanner&lt;/tt&gt;&lt;/li&gt;
+&lt;li&gt;Add the keyword &lt;tt class="docutils literal"&gt;brother2&lt;/tt&gt; to &lt;cite&gt;/etc/sane.d/dll.conf&lt;/cite&gt;&lt;/li&gt;
+&lt;li&gt;Log out and back in&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;You should now be able to print and scan.&lt;/p&gt;
+</content>
+  </entry>
+  <entry xml:base="http://blog.dbrgn.ch/feed.atom">
+    <title type="text">List Available Kernel Modules</title>
+    <id>http://blog.dbrgn.ch/2009/9/1/list-available-kernel-modules</id>
+    <updated>2009-09-01T00:00:00Z</updated>
+    <link href="http://blog.dbrgn.ch/2009/9/1/list-available-kernel-modules" />
+    <author>
+      <name>Danilo Bargen</name>
+    </author>
+    <content type="html">&lt;p&gt;To list all available linux kernel modules, issue as root:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;$ find /lib/modules// -type f -iname &amp;#39;*.o&amp;#39; -or -iname &amp;#39;*.ko&amp;#39;
+&lt;/pre&gt;&lt;/div&gt;
+</content>
+  </entry>
+  <entry xml:base="http://blog.dbrgn.ch/feed.atom">
+    <title type="text">Make Apache Less Talkative</title>
+    <id>http://blog.dbrgn.ch/2009/3/11/make-apache-less-talkative</id>
+    <updated>2009-03-11T00:00:00Z</updated>
+    <link href="http://blog.dbrgn.ch/2009/3/11/make-apache-less-talkative" />
+    <author>
+      <name>Danilo Bargen</name>
+    </author>
+    <content type="html">&lt;p&gt;On a standard installation of Apache, the webserver sends a lot of information about installed
+software to the client. This would provide a hypothetical attacker with a lot of information of how
+to attack your server. To see how verbose your Apache installation actually is, open a non-existing
+website on your webserver. In the signature of the 404-error-message, you'll see something like
+this:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+Apache/2.0.55 (Debian) PHP/5.1.2-1+b1 mod_ssl/2.0.55 OpenSSL/0.9.8b
+&lt;/pre&gt;
+&lt;p&gt;If you don't want that information to be shown, change the
+&lt;tt class="docutils literal"&gt;ServerTokens&lt;/tt&gt; and &lt;tt class="docutils literal"&gt;ServerSignature&lt;/tt&gt; directives in your
+Apache-configfile (&lt;cite&gt;/etc/apache2/apache2.conf&lt;/cite&gt;) to the values shown below:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="c"&gt;# ServerTokens&lt;/span&gt;
+&lt;span class="c"&gt;# This directive configures what you return as the Server HTTP response&lt;/span&gt;
+&lt;span class="c"&gt;# Header. The default is &amp;#39;Full&amp;#39; which sends information about the OS-Type&lt;/span&gt;
+&lt;span class="c"&gt;# and compiled in modules.&lt;/span&gt;
+&lt;span class="c"&gt;# Set to one of:  Full | OS | Minor | Minimal | Major | Prod&lt;/span&gt;
+&lt;span class="c"&gt;# where Full conveys the most information, and Prod the least.&lt;/span&gt;
+&lt;span class="c"&gt;#&lt;/span&gt;
+&lt;span class="nb"&gt;ServerTokens&lt;/span&gt; Prod
+
+&lt;span class="c"&gt;#&lt;/span&gt;
+&lt;span class="c"&gt;# Optionally add a line containing the server version and virtual host&lt;/span&gt;
+&lt;span class="c"&gt;# name to server-generated pages (internal error documents, FTP directory&lt;/span&gt;
+&lt;span class="c"&gt;# listings, mod_status and mod_info output etc., but not CGI generated&lt;/span&gt;
+&lt;span class="c"&gt;# documents or custom error documents).&lt;/span&gt;
+&lt;span class="c"&gt;# Set to &amp;quot;EMail&amp;quot; to also include a mailto: link to the ServerAdmin.&lt;/span&gt;
+&lt;span class="c"&gt;# Set to one of:  On | Off | EMail&lt;/span&gt;
+&lt;span class="c"&gt;#&lt;/span&gt;
+&lt;span class="nb"&gt;ServerSignature&lt;/span&gt; &lt;span class="k"&gt;Off&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;To also hide information about the installed PHP version, change the &lt;tt class="docutils literal"&gt;expose_php&lt;/tt&gt; option in your
+PHP-configfile (&lt;cite&gt;/etc/php5/apache2/php.ini&lt;/cite&gt;) to &lt;cite&gt;Off&lt;/cite&gt;.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="c"&gt;; Decides whether PHP may expose the fact that it is installed on the server&lt;/span&gt;
+&lt;span class="c"&gt;; (e.g. by adding its signature to the Web server header).  It is no security&lt;/span&gt;
+&lt;span class="c"&gt;; threat in any way, but it makes it possible to determine whether you use PHP&lt;/span&gt;
+&lt;span class="c"&gt;; on your server or not.&lt;/span&gt;
+&lt;span class="na"&gt;expose_php&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;Off&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Finally, restart Apache.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="nv"&gt;$ &lt;/span&gt;/etc/init.d/apache2 force-reload
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Voilà, the server-information on your error pages should now be gone.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Update:&lt;/strong&gt; Under Debian Lenny, those directives are stored in the file
+&lt;cite&gt;/etc/apache2/conf.d/security&lt;/cite&gt;.&lt;/p&gt;
+</content>
+  </entry>
+  <entry xml:base="http://blog.dbrgn.ch/feed.atom">
+    <title type="text">Mediawiki PW-Reset per MySQL</title>
+    <id>http://blog.dbrgn.ch/2008/12/3/mediawiki-pw-reset-per-mysql</id>
+    <updated>2008-12-03T00:00:00Z</updated>
+    <link href="http://blog.dbrgn.ch/2008/12/3/mediawiki-pw-reset-per-mysql" />
+    <author>
+      <name>Danilo Bargen</name>
+    </author>
+    <content type="html">&lt;p&gt;Soeben musste ich mein Mediawiki Passwort resetten, hatte aber im Profil keine Mailadresse
+angegeben. Dank einem &lt;a class="reference external" href="http://e-huned.com/2006/08/15/reset-a-mediawiki-password/"&gt;Blogeintrag&lt;/a&gt;
+habe ich es dann aber geschafft, das Passwort per MySQL zu resetten:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="k"&gt;UPDATE&lt;/span&gt; &lt;span class="n"&gt;user&lt;/span&gt; &lt;span class="kt"&gt;SET&lt;/span&gt; &lt;span class="n"&gt;user_password&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nf"&gt;MD5&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nf"&gt;CONCAT&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;user_id&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;-&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="nf"&gt;MD5&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;new_password&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)))&lt;/span&gt; &lt;span class="k"&gt;WHERE&lt;/span&gt; &lt;span class="n"&gt;user_name&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;someone&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+</content>
+  </entry>
+  <entry xml:base="http://blog.dbrgn.ch/feed.atom">
+    <title type="text">Oracle 10g Client Fehlermeldungen</title>
+    <id>http://blog.dbrgn.ch/2009/5/27/oracle-10g-client-fehlermeldungen</id>
+    <updated>2009-05-27T00:00:00Z</updated>
+    <link href="http://blog.dbrgn.ch/2009/5/27/oracle-10g-client-fehlermeldungen" />
+    <author>
+      <name>Danilo Bargen</name>
+    </author>
+    <content type="html">&lt;p&gt;Wenn folgende Fehlermeldung beim Verbinden auf die Datenbank erscheint:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;ORA-00604: Fehler auf rekursiver SQL-Ebene 1
+ORA-02248: Ungültige Option für ALTER SESSION
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Dann muss folgende System-Umgebungsvariable gesetzt werden:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="nv"&gt;NLS_NUMERIC_CHARACTERS&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;.,
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;(Bäh, ich hasse Oracle)&lt;/p&gt;
+</content>
+  </entry>
+</feed>
+

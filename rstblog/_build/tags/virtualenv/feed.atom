@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title type="text">Recent Blog Posts</title>
+  <id>http://blog.dbrgn.ch/feed.atom</id>
+  <updated>2012-09-18T00:00:00Z</updated>
+  <link href="http://blog.dbrgn.ch/" />
+  <link href="http://blog.dbrgn.ch/feed.atom" rel="self" />
+  <subtitle type="text">Recent blog posts</subtitle>
+  <generator>Werkzeug</generator>
+  <entry xml:base="http://blog.dbrgn.ch/feed.atom">
+    <title type="text">Virtualenv Quickstart Guide</title>
+    <id>http://blog.dbrgn.ch/2012/9/18/virtualenv-quickstart</id>
+    <updated>2012-09-18T00:00:00Z</updated>
+    <link href="http://blog.dbrgn.ch/2012/9/18/virtualenv-quickstart" />
+    <author>
+      <name>Danilo Bargen</name>
+    </author>
+    <content type="html">&lt;p&gt;I was searching for a nice &lt;cite&gt;virtualenv&lt;/cite&gt; quickstart guide today, but couldn't find
+one that I liked. Either they were outdated and still relied on
+&lt;cite&gt;easy_install&lt;/cite&gt;, or they were too complicated. So here's my own.&lt;/p&gt;
+&lt;div class="section" id="why-use-virtualenv"&gt;
+&lt;h2&gt;Why use virtualenv?&lt;/h2&gt;
+&lt;p&gt;Virtualenv (&lt;a class="reference external" href="http://www.virtualenv.org/"&gt;http://www.virtualenv.org/&lt;/a&gt;) basically provides you with a full
+Python environment (and/or versions) inside a single folder. This way, you can
+have multiple Python environments next to each other (usually one per project),
+each with its own binaries and packages.&lt;/p&gt;
+&lt;p&gt;I really recommend using virtualenv for &lt;em&gt;all&lt;/em&gt; Python projects. Tools like
+&lt;a class="reference external" href="http://www.doughellmann.com/projects/virtualenvwrapper/"&gt;virtualenvwrapper&lt;/a&gt;
+and &lt;a class="reference external" href="http://www.pip-installer.org/en/latest/requirements.html"&gt;requirements files&lt;/a&gt; make setting up a
+new virtual environment a breeze.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="setup"&gt;
+&lt;h2&gt;Setup&lt;/h2&gt;
+&lt;p&gt;In case you're still using &lt;cite&gt;easy_install&lt;/cite&gt; to install Python packages, you
+should &lt;a class="reference external" href="http://stackoverflow.com/questions/3220404/why-use-pip-over-easy-install"&gt;switch to pip immediately&lt;/a&gt;:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+$ sudo easy_install pip
+&lt;/pre&gt;
+&lt;p&gt;Then install virtualenv itself:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+$ sudo pip install virtualenv
+&lt;/pre&gt;
+&lt;p&gt;Those are usually the only two Python packages that you should install to your
+systemwide &lt;cite&gt;PYTHONPATH&lt;/cite&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="creating-a-virtualenv"&gt;
+&lt;h2&gt;Creating a virtualenv&lt;/h2&gt;
+&lt;p&gt;Now you need to initialize your virtual environment. This can be located
+anywhere. I'd recommend either creating it into a folder called &lt;cite&gt;VIRTUAL&lt;/cite&gt; inside
+your project directory, or creating a folder called &lt;cite&gt;.virtualenv&lt;/cite&gt; in your home
+directory and placing it in there, named like your project.&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+$ virtualenv --no-site-packages VIRTUAL
+New python executable in VIRTUAL/bin/python
+Installing setuptools............done.
+Installing pip...............done.
+&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div class="section" id="enabling-a-virtualenv"&gt;
+&lt;h2&gt;Enabling a virtualenv&lt;/h2&gt;
+&lt;p&gt;To actually work inside a virtualenv, you need to enable it first. This is done
+by sourcing &lt;cite&gt;bin/activate&lt;/cite&gt; inside your virtualenv folder.&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+$ source VIRTUAL/bin/activate
+&lt;/pre&gt;
+&lt;p&gt;This step needs to be done each time you start a new bash prompt. Now every time
+you call a Python-related binary (e.g. &lt;cite&gt;python&lt;/cite&gt; or  &lt;cite&gt;pip&lt;/cite&gt;), the version from
+your virtualenv instead of the system version will be used.&lt;/p&gt;
+&lt;p&gt;You can also use your virtual python without sourcing the mentioned file first,
+but then you need to specify the full path to the desired binary (e.g.
+&lt;cite&gt;VIRTUAL/bin/python manage.py runserver&lt;/cite&gt;). This can be useful for bash scripts.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="installing-packages-tracking-requirements"&gt;
+&lt;h2&gt;Installing packages, tracking requirements&lt;/h2&gt;
+&lt;p&gt;Installing Python packages is as simple as &lt;tt class="docutils literal"&gt;pip install &amp;lt;packagename&amp;gt;&lt;/tt&gt; after
+enabling your virtualenv. When having worked inside a virtualenv for a while,
+you've probably installed a few packages and want to document those dependencies
+somehow. This is where the &lt;cite&gt;pip freeze&lt;/cite&gt; command and &lt;cite&gt;requirements.txt&lt;/cite&gt; files can
+and should be used.&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+$ pip install Django
+...
+$ pip freeze &amp;gt; requirements.txt
+$ cat requirements.txt
+Django==1.4.1
+wsgiref==0.1.2
+&lt;/pre&gt;
+&lt;p&gt;(&lt;strong&gt;Note:&lt;/strong&gt; The &lt;cite&gt;wsgiref&lt;/cite&gt; package is a part of the Python standard library.
+Currently it is the only standard library package that includes package
+metadata, so it is the only standard library package whose presence pip
+reports.)&lt;/p&gt;
+&lt;p&gt;The &lt;cite&gt;requirements.txt&lt;/cite&gt; file is a very good convention, as it allows you or
+another developer to quickly replicate the environment you're currently working
+in. After creating an empty virtualenv, you can simply install all necessary
+packages with:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+$ pip install -r requirements.txt
+&lt;/pre&gt;
+&lt;p&gt;For more information, please refer to the &lt;a class="reference external" href="http://www.pip-installer.org/en/latest/requirements.html"&gt;pip docs&lt;/a&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="next-steps"&gt;
+&lt;h2&gt;Next steps&lt;/h2&gt;
+&lt;p&gt;To simplify your life with virtualenv, you should start using
+&lt;a class="reference external" href="http://www.doughellmann.com/projects/virtualenvwrapper/"&gt;virtualenvwrapper&lt;/a&gt;, which gives you nice shortcut functions like
+&lt;cite&gt;mkvirtualenv&lt;/cite&gt; to create a new environment, &lt;cite&gt;workon&lt;/cite&gt; to enable a specific
+virtual environment, &lt;cite&gt;rmvirtualenv&lt;/cite&gt; to remove an environment and more.&lt;/p&gt;
+&lt;p&gt;This should be enough to get you started. In case some parts of this quickstart
+guide are difficult to understand or if you have any questions, please leave a
+comment below.&lt;/p&gt;
+&lt;/div&gt;
+</content>
+  </entry>
+</feed>
+

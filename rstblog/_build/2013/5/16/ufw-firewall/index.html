@@ -1,0 +1,215 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <title>ufw – A Simple iptables Frontend</title>
+
+        <!-- meta -->
+        <meta name="author" content="Danilo Bargen">
+        <meta name="dc.language" content="en-US">
+        <meta name="dc.license" content="http://creativecommons.org/licenses/by-sa/3.0/">
+        <meta name="description" content="ufw is a very easy way to configure your firewall rules, without writing
+iptables scripts.">
+        <meta name="keywords" content="firewall, sysadmin">
+        
+            <meta name="dc.date.created" content="2013-05-16">
+            <meta name="dc.date.issued" content="2013-05-16">
+        
+        <meta name="google-site-verification" content="uJWWR6d5ESb8torD0v97T_07HLMGX7VzQ-smcUTc_IQ" />
+
+        <!-- favicon -->
+        <link rel="icon" href="/favicon.ico" type="image/x-icon">
+
+        <!-- newsfeed -->
+        <link href="/feed.atom" rel="alternate" title="Feed" type="application/atom+xml">
+
+        <!-- assets -->
+        <link href="https://fonts.googleapis.com/css?family=Linden+Hill:400,400italic" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" href="/static/style.css?1371592067" type="text/css">
+            <link rel="stylesheet" href="/static/_pygments.css?1371592069" type="text/css">
+    </head>
+    <body>
+        <div id="wrapper">
+            <div id="blogtitle"><a href="/">blog.dbrgn.ch</a></div>
+            <ul id="mainnav">
+                <li><a href="/">home</a></li>
+                <li><a href="/archive/">archive</a></li>
+                <li><a href="/tags/">tags</a></li>
+                <li><a href="/blog/">about this blog</a></li>
+                <li class="last"><a href="/about/">about me</a></li>
+            </ul>
+
+            <div class="clearboth"></div>
+
+            <div id="content" class="hyphenate">
+                
+  <h1 class="title">ufw – A Simple iptables Frontend</h1>
+
+  
+    <div class="date">
+      <p>written on Thursday, May 16, 2013</p>
+    </div>
+  
+
+  <p>If you're looking for a simple frontend to iptables, you might want to take a
+look at <a class="reference external" href="https://wiki.ubuntu.com/UncomplicatedFirewall">ufw</a>.</p>
+<p>ufw stands for <em>Uncomplicated Firewall</em> and has been developed for Ubuntu
+Server, to simplify the firewall management process. It provides a fairly
+simple but very powerful commandline interface to show, add and edit firewall
+rules.</p>
+<div class="section" id="getting-started">
+<h2>Getting started</h2>
+<p>On Debian Squeeze or Wheezy, you can install UFW directly from the main
+repository:</p>
+<pre class="literal-block">
+#&gt; aptitude install ufw
+</pre>
+<p>Default behavior is to deny all incoming traffic and to allow all outgoing
+traffic. First, if you're connected to the server via SSH, allow incoming SSH
+traffic to avoid locking yourself out:</p>
+<pre class="literal-block">
+#&gt; ufw allow SSH
+Rules updated
+Rules updated (v6)
+</pre>
+<p>Then enable the firewall:</p>
+<pre class="literal-block">
+#&gt; ufw enable
+Command may disrupt existing ssh connections. Proceed with operation (y|n)? y
+Firewall is active and enabled on system startup
+</pre>
+<p>Now ufw is enabled and will be started automatically at boot time. You can list
+the enabled rules with the <tt class="docutils literal">status</tt> command:</p>
+<pre class="literal-block">
+#&gt; ufw status verbose
+Status: active
+Logging: on (low)
+Default: deny (incoming), allow (outgoing)
+New profiles: skip
+
+To                         Action      From
+--                         ------      ----
+22/tcp (SSH)               ALLOW IN    Anywhere
+22/tcp (SSH (v6))          ALLOW IN    Anywhere (v6)
+</pre>
+<p>You can add further services with the <tt class="docutils literal">allow</tt> command. ufw comes with some
+preconfigured application profiles, you can list them using <tt class="docutils literal">ufw app
+list</tt>:</p>
+<pre class="literal-block">
+#&gt; ufw app list
+Available applications:
+  AIM
+  Bind9
+  Bonjour
+  CIFS
+  DNS
+  ...
+</pre>
+<p>You can also use the aliases in <cite>/etc/services</cite>:</p>
+<pre class="literal-block">
+#&gt; cat /etc/services | grep -i amqp
+amqp            5672/tcp
+amqp            5672/udp
+amqp            5672/sctp
+</pre>
+<p>For example, allow all incoming DNS traffic:</p>
+<pre class="literal-block">
+#&gt; ufw allow DNS
+Rule added
+Rule added (v6)
+</pre>
+<p>To deny outgoing IRC traffic:</p>
+<pre class="literal-block">
+#&gt; ufw deny out ircd
+Rule added
+Rule added (v6)
+</pre>
+<p>The full syntax for the allow/deny function is as follows:</p>
+<pre class="literal-block">
+ufw [--dry-run] [delete] [insert NUM] allow|deny|reject|limit [in|out]
+[log|log-all] PORT[/protocol]
+
+ufw [--dry-run] [delete] [insert NUM]  allow|deny|reject|limit  [in|out  on
+INTERFACE]  [log|log-all] [proto protocol] [from ADDRESS [port PORT]] [to
+ADDRESS [port PORT]]
+</pre>
+<p>The status output should now look like this:</p>
+<pre class="literal-block">
+# ufw status
+Status: active
+
+To                         Action      From
+--                         ------      ----
+SSH                        ALLOW       Anywhere
+DNS                        ALLOW       Anywhere
+SSH (v6)                   ALLOW       Anywhere (v6)
+DNS (v6)                   ALLOW       Anywhere (v6)
+
+6667/tcp                   DENY OUT    Anywhere
+6667/tcp                   DENY OUT    Anywhere (v6)
+</pre>
+</div>
+<div class="section" id="next-steps">
+<h2>Next Steps</h2>
+<p>For a more in-depth introduction, including the removal of rules and the
+configuration of rules with specific IPs or IP subnets, refer to the <a class="reference external" href="https://help.ubuntu.com/community/UFW">Ubuntu
+help pages</a>.</p>
+</div>
+
+
+  
+      <a href="https://flattr.com/submit/auto?user_id=danilo&url=http://blog.dbrgn.ch/2013/5/16/ufw-firewall/&title=ufw%20%E2%80%93%20A%20Simple%20iptables%20Frontend&description=ufw%20is%20a%20very%20easy%20way%20to%20configure%20your%20firewall%20rules%2C%20without%20writing%0Aiptables%20scripts.&tags=firewall%2C%20sysadmin&category=text">
+           <img class="flattrbutton" src="/static/img/flattr-badge-large.png" alt="Flattr this!" /> 
+      </a>
+  
+
+  
+    <div class="tags">
+      <p>This entry was tagged
+      
+        <a href="/tags/firewall/">firewall</a> and 
+        <a href="/tags/sysadmin/">sysadmin</a></p>
+    </div>
+  
+
+  
+    
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'dbrgn'; // required: replace example with your forum shortname
+    
+    
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
+
+  
+
+            </div>
+        </div>
+
+        <script type="text/javascript">
+          var _gaq = _gaq || [];
+          _gaq.push(['_setAccount', 'UA-1033934-12']);
+          _gaq.push(['_trackPageview']);
+          (function() {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+          })();
+        </script>
+        <script type="text/javascript" src="/static/hyphenator.js"></script>
+        <script type="text/javascript">
+            Hyphenator.config({
+                donthyphenateclassname : 'docutils literal'
+            });
+            Hyphenator.run();
+        </script>
+
+    </body>
+</html>

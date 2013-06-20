@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title type="text">Recent Blog Posts</title>
+  <id>http://blog.dbrgn.ch/feed.atom</id>
+  <updated>2012-08-27T00:00:00Z</updated>
+  <link href="http://blog.dbrgn.ch/" />
+  <link href="http://blog.dbrgn.ch/feed.atom" rel="self" />
+  <subtitle type="text">Recent blog posts</subtitle>
+  <generator>Werkzeug</generator>
+  <entry xml:base="http://blog.dbrgn.ch/feed.atom">
+    <title type="text">Debian Squeeze Update breaks Redmine 1.1.2</title>
+    <id>http://blog.dbrgn.ch/2012/8/27/debian-update-breaks-redmine</id>
+    <updated>2012-08-27T00:00:00Z</updated>
+    <link href="http://blog.dbrgn.ch/2012/8/27/debian-update-breaks-redmine" />
+    <author>
+      <name>Danilo Bargen</name>
+    </author>
+    <content type="html">&lt;p&gt;I'm running a Debian Squeeze box with Redmine 1.1.2, Apache and Passenger. After
+a system update that upgraded the &lt;cite&gt;rubygems&lt;/cite&gt; package to version 1.8.x, Redmine
+was broken with the following error message:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+undefined method `name' for &amp;quot;rubygems-update&amp;quot;:String
+&lt;/pre&gt;
+&lt;p&gt;This is due to an incompatibility between Redmine and recent Rubygems versions.
+The problem can be fixed by downgrading &lt;cite&gt;rubygems&lt;/cite&gt; to a lower version, in my
+case 1.3.7. You can check the current version with&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="nv"&gt;$ &lt;/span&gt;gem --version
+1.8.15
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;To downgrade &lt;cite&gt;rubygems&lt;/cite&gt;, you need to make &lt;cite&gt;gem&lt;/cite&gt; install an older version of
+&lt;cite&gt;rubygems-update&lt;/cite&gt;. As root, run:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="nv"&gt;$ &lt;/span&gt;gem install rubygems-update --version&lt;span class="o"&gt;=&lt;/span&gt;1.3.7
+...
+&lt;span class="nv"&gt;$ REALLY_GEM_UPDATE_SYSTEM&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;1 gem update --system 1.3.7
+...
+&lt;span class="nv"&gt;$ &lt;/span&gt;gem --version
+1.3.7
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;That's it, after restarting Apache (or whatever your webserver is), Redmine
+should work again.&lt;/p&gt;
+&lt;p&gt;(Of course, a better alternative would be to set up a more recent version of
+Redmine on a more up-to-date operating sytem. See my
+&lt;a class="reference external" href="/2012/2/21/ubuntu-redmine-nginx-mongrel-supervisord/"&gt;Ubuntu / Redmine / Nginx / Mongrel / Supervisord&lt;/a&gt;
+blogpost for a howto on setting up Redmine on Ubuntu.)&lt;/p&gt;
+</content>
+  </entry>
+  <entry xml:base="http://blog.dbrgn.ch/feed.atom">
+    <title type="text">Ubuntu / Redmine / Nginx / Mongrel / Supervisord</title>
+    <id>http://blog.dbrgn.ch/2012/2/21/ubuntu-redmine-nginx-mongrel-supervisord</id>
+    <updated>2012-02-21T00:00:00Z</updated>
+    <link href="http://blog.dbrgn.ch/2012/2/21/ubuntu-redmine-nginx-mongrel-supervisord" />
+    <author>
+      <name>Danilo Bargen</name>
+    </author>
+    <content type="html">&lt;p&gt;This is a howto to install Redmine on Ubuntu Natty (probably works on Debian too) with Nginx,
+Mongrel and Supervisord. The listed commands usually assume root permissions.&lt;/p&gt;
+&lt;p&gt;Involved software:&lt;/p&gt;
+&lt;table class="docutils field-list" frame="void" rules="none"&gt;
+&lt;col class="field-name" /&gt;
+&lt;col class="field-body" /&gt;
+&lt;tbody valign="top"&gt;
+&lt;tr class="field"&gt;&lt;th class="field-name"&gt;Redmine:&lt;/th&gt;&lt;td class="field-body"&gt;Duh, the software you want to install :)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class="field"&gt;&lt;th class="field-name"&gt;Nginx:&lt;/th&gt;&lt;td class="field-body"&gt;A fast webserver/proxy from Russia&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class="field"&gt;&lt;th class="field-name"&gt;Mongrel:&lt;/th&gt;&lt;td class="field-body"&gt;The software used to serve redmine&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class="field"&gt;&lt;th class="field-name"&gt;Supervisor:&lt;/th&gt;&lt;td class="field-body"&gt;A supervisor daemon written in Python, it automatically restarts the Mongrel process in case it dies.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;First, add the PPA for the currently stable Nginx version (the Ubuntu version is outdated).&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="nv"&gt;$ &lt;/span&gt;add-apt-repository ppa:nginx/stable
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Then install redmine using your desired backend (e.g. &lt;tt class="docutils literal"&gt;&lt;span class="pre"&gt;redmine-sqlite&lt;/span&gt;&lt;/tt&gt;), and the supervisor and nginx
+packages.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="nv"&gt;$ &lt;/span&gt;aptitude install redmine redmine-sqlite nginx supervisor
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Install the mongrel gem.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="nv"&gt;$ &lt;/span&gt;gem install mongrel
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Set up redmine...&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="nv"&gt;$ &lt;/span&gt;&lt;span class="nb"&gt;cd&lt;/span&gt; /usr/share/redmine
+&lt;span class="nv"&gt;$ &lt;/span&gt;touch log/production.log
+&lt;span class="nv"&gt;$ &lt;/span&gt;chmod 777 log log/production.log
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Then add the mongrel initializer to redmine (see &lt;a class="reference external" href="http://www.redmine.org/boards/2/topics/24305"&gt;this bug&lt;/a&gt;):&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="nv"&gt;$ &lt;/span&gt;&lt;span class="nb"&gt;cd &lt;/span&gt;config/initializers
+&lt;span class="nv"&gt;$ &lt;/span&gt;wget &lt;span class="s1"&gt;&amp;#39;https://gist.github.com/raw/826692/cb0dcf784c30e6a6d00c631f350de99ab99e389d/mongrel.rb&amp;#39;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Configure nginx:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="nv"&gt;$ &lt;/span&gt;&lt;span class="nb"&gt;cd&lt;/span&gt; /etc/nginx/sites-enabled
+&lt;span class="nv"&gt;$ &lt;/span&gt;touch ../sites-available/redmine
+&lt;span class="nv"&gt;$ &lt;/span&gt;ln -s ../sites-available/redmine
+&lt;span class="nv"&gt;$ &lt;/span&gt;vim redmine
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Add the following configuration (adjust to your likings):&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="k"&gt;upstream&lt;/span&gt; &lt;span class="s"&gt;redmine_server&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+        &lt;span class="kn"&gt;server&lt;/span&gt; &lt;span class="n"&gt;localhost&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="mi"&gt;3000&lt;/span&gt; &lt;span class="s"&gt;fail_timeout=0&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;span class="p"&gt;}&lt;/span&gt;
+
+&lt;span class="k"&gt;server&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+        &lt;span class="kn"&gt;listen&lt;/span&gt; &lt;span class="mi"&gt;80&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+        &lt;span class="kn"&gt;server_name&lt;/span&gt; &lt;span class="s"&gt;domain.example.com&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+
+        &lt;span class="kn"&gt;root&lt;/span&gt; &lt;span class="s"&gt;/usr/share/redmine/public&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+
+        &lt;span class="kn"&gt;access_log&lt;/span&gt; &lt;span class="s"&gt;/var/log/nginx/redmine.access.log&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+        &lt;span class="kn"&gt;error_log&lt;/span&gt; &lt;span class="s"&gt;/var/log/nginx/redmine.error.log&lt;/span&gt; &lt;span class="s"&gt;info&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+
+        &lt;span class="kn"&gt;keepalive_timeout&lt;/span&gt; &lt;span class="mi"&gt;5&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+
+        &lt;span class="kn"&gt;location&lt;/span&gt; &lt;span class="s"&gt;/&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+                &lt;span class="kn"&gt;try_files&lt;/span&gt; &lt;span class="nv"&gt;$uri/index.html&lt;/span&gt; &lt;span class="nv"&gt;$uri.html&lt;/span&gt; &lt;span class="nv"&gt;$uri&lt;/span&gt; &lt;span class="s"&gt;@mongrel&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+        &lt;span class="p"&gt;}&lt;/span&gt;
+
+        &lt;span class="kn"&gt;location&lt;/span&gt; &lt;span class="s"&gt;@mongrel&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+                &lt;span class="kn"&gt;proxy_set_header&lt;/span&gt; &lt;span class="s"&gt;X-Real-IP&lt;/span&gt; &lt;span class="nv"&gt;$remote_addr&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+                &lt;span class="kn"&gt;proxy_set_header&lt;/span&gt; &lt;span class="s"&gt;X-Forwarded-For&lt;/span&gt; &lt;span class="nv"&gt;$proxy_add_x_forwarded_for&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+                &lt;span class="kn"&gt;proxy_set_header&lt;/span&gt; &lt;span class="s"&gt;Host&lt;/span&gt; &lt;span class="nv"&gt;$http_host&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+                &lt;span class="kn"&gt;proxy_redirect&lt;/span&gt; &lt;span class="no"&gt;off&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+                &lt;span class="kn"&gt;proxy_pass&lt;/span&gt; &lt;span class="s"&gt;http://redmine_server&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+        &lt;span class="p"&gt;}&lt;/span&gt;
+&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Then edit /etc/supervisord/supervisord.conf and add the following
+program definition at the end:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="k"&gt;[program:redmine]&lt;/span&gt;
+&lt;span class="na"&gt;command&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;ruby /usr/share/redmine/script/server -e production&lt;/span&gt;
+&lt;span class="na"&gt;directory&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;/usr/share/redmine/public/&lt;/span&gt;
+&lt;span class="na"&gt;user&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;www-data&lt;/span&gt;
+&lt;span class="na"&gt;autostart&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;true&lt;/span&gt;
+&lt;span class="na"&gt;autorestart&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;true&lt;/span&gt;
+&lt;span class="na"&gt;redirect_stderr&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;True&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Now restart nginx and supervisord:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="nv"&gt;$ &lt;/span&gt;/etc/init.d/supervisord stop
+&lt;span class="nv"&gt;$ &lt;/span&gt;/etc/init.d/supervisord start
+&lt;span class="nv"&gt;$ &lt;/span&gt;/etc/init.d/nginx restart
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;(The supervisord restart command is broken in current Ubuntu and Debian
+versions)&lt;/p&gt;
+&lt;p&gt;That's it, now your redmine installation should be up and running. In
+case of questions, feel free to comment.&lt;/p&gt;
+</content>
+  </entry>
+</feed>
+

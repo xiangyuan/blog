@@ -1,6 +1,8 @@
-_build
+/_build/
 *.pyc
 *.swp
 *.aux
 *.eps
 *.log
+*.pid
+/output/

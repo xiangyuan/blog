@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title type="text">Recent Blog Posts</title>
+  <id>http://blog.dbrgn.ch/feed.atom</id>
+  <updated>2010-09-04T00:00:00Z</updated>
+  <link href="http://blog.dbrgn.ch/" />
+  <link href="http://blog.dbrgn.ch/feed.atom" rel="self" />
+  <subtitle type="text">Recent blog posts</subtitle>
+  <generator>Werkzeug</generator>
+  <entry xml:base="http://blog.dbrgn.ch/feed.atom">
+    <title type="text">Der Wert von Linux</title>
+    <id>http://blog.dbrgn.ch/2008/10/22/der-wert-von-linux</id>
+    <updated>2008-10-22T00:00:00Z</updated>
+    <link href="http://blog.dbrgn.ch/2008/10/22/der-wert-von-linux" />
+    <author>
+      <name>Danilo Bargen</name>
+    </author>
+    <content type="html">&lt;p&gt;Laut Berechnungen der &lt;a class="reference external" href="http://www.linuxfoundation.org/"&gt;Linux Foundation&lt;/a&gt;
+liegt der Wert einer heutigen Linux-Distribution bei etwa 10.8 Milliarden USD.
+Als Berechnungsgrundlage wurden die Kosten einer Neuentwicklung der Distribution
+&lt;a class="reference external" href="http://fedoraproject.org/"&gt;Fedora 9&lt;/a&gt; bei heutigen Preisen gewählt. Alleine
+für die Entwicklung des Kernel würden Entwicklungskosten von 1.4 Millarden
+Dollar anfallen. Ein paar Statistiken:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Fedora 9 besteht aus 204.5 Millionen Zeilen Code in 5'547 Paketen.
+Der Entwicklungsaufwand liegt etwa bei 60'000 Personenjahren.&lt;/li&gt;
+&lt;li&gt;Der Linux Kernel enthält 6.8 Millionen Zeilen Programmcode. Hier
+wurde der Aufwand auf über 7'500 Personenjahre geschätzt.&lt;/li&gt;
+&lt;li&gt;Alleine in den letzten zwei Jahren haben über 3'200 Entwickler am
+GNU/Linux-Kernel mitgearbeitet.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Quellen&lt;/strong&gt;&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://www.linuxfoundation.org/news-media/announcements/2008/10/linux-foundation-publishes-study-estimating-value-linux"&gt;Artikel der Linux Foundation&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://www.linuxfoundation.org/publications/estimatinglinux.php"&gt;Whitepaper mit den Berechnungen&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://www.golem.de/0810/63097.html"&gt;Artikel auf golem.de&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+  </entry>
+  <entry xml:base="http://blog.dbrgn.ch/feed.atom">
+    <title type="text">The Dangers of Open Source</title>
+    <id>http://blog.dbrgn.ch/2008/10/1/the-dangers-of-open-source</id>
+    <updated>2008-10-01T00:00:00Z</updated>
+    <link href="http://blog.dbrgn.ch/2008/10/1/the-dangers-of-open-source" />
+    <author>
+      <name>Danilo Bargen</name>
+    </author>
+    <content type="html">&lt;p&gt;When you're programming open source, you're programming communism!&lt;/p&gt;
+&lt;img alt="A reminder from your friends at Microsoft: When you're programming open source, you're programming communism." src="/static/img/2008/10/1/opensource_communism.jpg" style="width: 355px; height: 475px;" /&gt;
+&lt;p&gt;Be warned!&lt;/p&gt;
+</content>
+  </entry>
+  <entry xml:base="http://blog.dbrgn.ch/feed.atom">
+    <title type="text">Why some software project websites suck and others don't</title>
+    <id>http://blog.dbrgn.ch/2010/9/4/why-some-software-project-websites-suck-and-others-dont</id>
+    <updated>2010-09-04T00:00:00Z</updated>
+    <link href="http://blog.dbrgn.ch/2010/9/4/why-some-software-project-websites-suck-and-others-dont" />
+    <author>
+      <name>Danilo Bargen</name>
+    </author>
+    <content type="html">&lt;p&gt;Today I gave some thoughts to what distinguishes a good software project website
+from a bad software project website (especially for open source projects).&lt;/p&gt;
+&lt;p&gt;I came up with a few must-have criteria for a good software project website:&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;On the very first page, state what the software does, and what the goal of the
+project is.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;More than once, I've seen project websites about a software, that provide
+downloads and how-tos and everything else, but don't even explain what the
+software does. If I hear about a software and open the website, the first thing
+I want to know is what the software can be used for. If I can't find that
+information quickly, I lose interest.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Provide Screenshots in the main navigation&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Whether you like it or not, what many users care for are screenshots.  Feature
+lists are great, but when you see some screenshots of the program in action, you
+get the general Idea how it works and how user-friendly it has been designed.
+Great features are useless if the UI sucks.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Put the download section in the main navigation&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;The second most important thing on a project website is the link to the download
+section. It should be visible on every page, and it should provide quick, easy
+download possibilities. Also, redirected downloads suck. Direct (and therefore
+&lt;cite&gt;wget&lt;/cite&gt;-able) downloadlinks are better.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Provide documentation&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;What users want and developers hate, is documentation. Great documentation can
+contribute to great success. A good example of this is the area of software
+frameworks. A lot of frameworks (like &lt;a class="reference external" href="http://codeigniter.com/user_guide/"&gt;CodeIgniter&lt;/a&gt;, &lt;a class="reference external" href="https://docs.djangoproject.com/en/1.4/"&gt;Django&lt;/a&gt; and &lt;a class="reference external" href="http://docs.jquery.com/Main_Page"&gt;jQuery&lt;/a&gt;) are highly successful - not least because
+of the great and easy-to-understand documentation. Provide good documentation
+(e.g. on &lt;a class="reference external" href="http://readthedocs.org/"&gt;ReadTheDocs&lt;/a&gt;) and don't forget to share it
+with others.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Provide a way for feedback&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Many open source projects grew over time because of user feedback. User feedback
+is important. And it needs to be quick and easy. A registration for an issue
+tracker is a no-go for me. If I have to register, I don't report. Allow
+anonymous bugreports and feature requests, and a lot more feedback will come in.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;For OSS projects: Provide easy possibilities to participate and share code&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Among software users, there are many great and capable programmers. Many of them
+have great ideas for contributions they could make. Most of them don't have the
+time and motivation to track down the owner of the source repository and to ask
+for the permission to contribute. And patches that can't be shared aren't fun.
+Provide an e-mail address to send in patches. Or even better, use a &lt;a class="reference external" href="http://en.wikipedia.org/wiki/Distributed_revision_control"&gt;distributed
+source code management system&lt;/a&gt; like &lt;a class="reference external" href="http://git-scm.com/"&gt;Git&lt;/a&gt;. And then host it on a platform like &lt;a class="reference external" href="https://github.com/"&gt;Github&lt;/a&gt;, so that users can easily contribute their changes to
+the main branch, without you having to manage tedious permissions.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Stay in touch with the users&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Communicate. And provide information on how to reach you on all available
+communication channels, like e-mail, IRC, twitter, facebook, forums etc. The
+more there are, the better. Inform the users about updates, but don't spam them
+(use newsfeeds or social networks). And answer all not-totally-stupid questions.
+If you communicate, and if your software rocks, users will turn into fans.&lt;/p&gt;
+&lt;p&gt;A majority of the mentioned issues should be known to most people releasing
+software, but apparently aren't. The project website is the first contact with
+the &amp;quot;outer world&amp;quot; and in most cases best way to promote your software. Use it,
+don't waste this potential.&lt;/p&gt;
+&lt;p&gt;There are probably several other important things to remember when creating a
+project website. The listed ones are just some important issues that came to my
+mind, the list is by no means complete.  You are free to contribute your
+experiences in the comment box.&lt;/p&gt;
+</content>
+  </entry>
+</feed>
+

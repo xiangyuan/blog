@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <title>d3.js and X-Requested-With</title>
+
+        <!-- meta -->
+        <meta name="author" content="Danilo Bargen">
+        <meta name="dc.language" content="en-US">
+        <meta name="dc.license" content="http://creativecommons.org/licenses/by-sa/3.0/">
+        <meta name="description" content="How to make AJAX detection used by Django and Flask work with d3.js.">
+        <meta name="keywords" content="ajax, d3.js, django, flask">
+        
+            <meta name="dc.date.created" content="2013-03-08">
+            <meta name="dc.date.issued" content="2013-03-08">
+        
+        <meta name="google-site-verification" content="uJWWR6d5ESb8torD0v97T_07HLMGX7VzQ-smcUTc_IQ" />
+
+        <!-- favicon -->
+        <link rel="icon" href="/favicon.ico" type="image/x-icon">
+
+        <!-- newsfeed -->
+        <link href="/feed.atom" rel="alternate" title="Feed" type="application/atom+xml">
+
+        <!-- assets -->
+        <link href="https://fonts.googleapis.com/css?family=Linden+Hill:400,400italic" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" href="/static/style.css?1371592067" type="text/css">
+            <link rel="stylesheet" href="/static/_pygments.css?1371592069" type="text/css">
+    </head>
+    <body>
+        <div id="wrapper">
+            <div id="blogtitle"><a href="/">blog.dbrgn.ch</a></div>
+            <ul id="mainnav">
+                <li><a href="/">home</a></li>
+                <li><a href="/archive/">archive</a></li>
+                <li><a href="/tags/">tags</a></li>
+                <li><a href="/blog/">about this blog</a></li>
+                <li class="last"><a href="/about/">about me</a></li>
+            </ul>
+
+            <div class="clearboth"></div>
+
+            <div id="content" class="hyphenate">
+                
+  <h1 class="title">d3.js and X-Requested-With</h1>
+
+  
+    <div class="date">
+      <p>written on Friday, March 8, 2013</p>
+    </div>
+  
+
+  <p>Most JavaScript frameworks set the <cite>X-Requested-With</cite> HTTP Header to
+<cite>XMLHttpRequest</cite> when sending non-cross-domain XHR requests. Many web
+frameworks like <a class="reference external" href="http://djangoproject.com/">Django</a> or <a class="reference external" href="http://flask.pocoo.org/">Flask</a> use this to detect AJAX requests.</p>
+<p>Because of issues with <cite>X-Requested-With</cite> and cross-domain XHR requests, d3.js
+<a class="reference external" href="https://github.com/mbostock/d3/pull/592">does not set that header by default</a>.
+Therefore Django's <cite>request.is_ajax()</cite> and Flask's <cite>request.is_xhr()</cite> break.</p>
+<p>In order to make d3 work with those AJAX detection functions, you need to
+manually add the header to the request. Instead of</p>
+<div class="highlight"><pre><span class="nx">d3</span><span class="p">.</span><span class="nx">json</span><span class="p">(</span><span class="s2">&quot;/path&quot;</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">error</span><span class="p">,</span> <span class="nx">data</span><span class="p">)</span> <span class="p">{</span>
+    <span class="c1">// Process data</span>
+<span class="p">});</span>
+</pre></div>
+<p>you would write</p>
+<div class="highlight"><pre><span class="nx">d3</span><span class="p">.</span><span class="nx">json</span><span class="p">(</span><span class="s2">&quot;/path&quot;</span><span class="p">).</span><span class="nx">header</span><span class="p">(</span><span class="s2">&quot;X-Requested-With&quot;</span><span class="p">,</span> <span class="s2">&quot;XMLHttpRequest&quot;</span><span class="p">).</span><span class="nx">get</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">error</span><span class="p">,</span> <span class="nx">data</span><span class="p">)</span> <span class="p">{</span>
+    <span class="c1">// Process data</span>
+<span class="p">});</span>
+</pre></div>
+<p><strong>Warning:</strong> Never use the <cite>X-Requested-With</cite> header as a security feature. It
+provides no security whatsoever and can always be faked.</p>
+
+
+  
+      <a href="https://flattr.com/submit/auto?user_id=danilo&url=http://blog.dbrgn.ch/2013/3/8/d3js-xhr-x-requested-with-header/&title=d3.js%20and%20X-Requested-With&description=How%20to%20make%20AJAX%20detection%20used%20by%20Django%20and%20Flask%20work%20with%20d3.js.&tags=ajax%2C%20d3.js%2C%20django%2C%20flask&category=text">
+           <img class="flattrbutton" src="/static/img/flattr-badge-large.png" alt="Flattr this!" /> 
+      </a>
+  
+
+  
+    <div class="tags">
+      <p>This entry was tagged
+      
+        <a href="/tags/ajax/">ajax</a>, 
+        <a href="/tags/d3.js/">d3.js</a>, 
+        <a href="/tags/django/">django</a> and 
+        <a href="/tags/flask/">flask</a></p>
+    </div>
+  
+
+  
+    
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'dbrgn'; // required: replace example with your forum shortname
+    
+    
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
+
+  
+
+            </div>
+        </div>
+
+        <script type="text/javascript">
+          var _gaq = _gaq || [];
+          _gaq.push(['_setAccount', 'UA-1033934-12']);
+          _gaq.push(['_trackPageview']);
+          (function() {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+          })();
+        </script>
+        <script type="text/javascript" src="/static/hyphenator.js"></script>
+        <script type="text/javascript">
+            Hyphenator.config({
+                donthyphenateclassname : 'docutils literal'
+            });
+            Hyphenator.run();
+        </script>
+
+    </body>
+</html>

@@ -1,0 +1,5 @@
+-e git+git@github.com:dbrgn/rstblog.git@integrate#egg=rstblog-dev
+-e git://github.com/mitsuhiko/jinja2.git@21a2010bf2768bc658e09666c2135063ce004efc#egg=Jinja2-dev
+Pygments==1.5
+Fabric==1.4.3
+cssmin==0.1.4

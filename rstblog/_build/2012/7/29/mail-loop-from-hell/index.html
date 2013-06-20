@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <title>Mail Loop From Hell</title>
+
+        <!-- meta -->
+        <meta name="author" content="Danilo Bargen">
+        <meta name="dc.language" content="en-US">
+        <meta name="dc.license" content="http://creativecommons.org/licenses/by-sa/3.0/">
+        <meta name="description" content="One of those awesome 90ies computer stories...">
+        <meta name="keywords" content="internet, irc, stories">
+        
+            <meta name="dc.date.created" content="2012-07-29">
+            <meta name="dc.date.issued" content="2012-07-29">
+        
+        <meta name="google-site-verification" content="uJWWR6d5ESb8torD0v97T_07HLMGX7VzQ-smcUTc_IQ" />
+
+        <!-- favicon -->
+        <link rel="icon" href="/favicon.ico" type="image/x-icon">
+
+        <!-- newsfeed -->
+        <link href="/feed.atom" rel="alternate" title="Feed" type="application/atom+xml">
+
+        <!-- assets -->
+        <link href="https://fonts.googleapis.com/css?family=Linden+Hill:400,400italic" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" href="/static/style.css?1371592067" type="text/css">
+            <link rel="stylesheet" href="/static/_pygments.css?1371592069" type="text/css">
+    </head>
+    <body>
+        <div id="wrapper">
+            <div id="blogtitle"><a href="/">blog.dbrgn.ch</a></div>
+            <ul id="mainnav">
+                <li><a href="/">home</a></li>
+                <li><a href="/archive/">archive</a></li>
+                <li><a href="/tags/">tags</a></li>
+                <li><a href="/blog/">about this blog</a></li>
+                <li class="last"><a href="/about/">about me</a></li>
+            </ul>
+
+            <div class="clearboth"></div>
+
+            <div id="content" class="hyphenate">
+                
+  <h1 class="title">Mail Loop From Hell</h1>
+
+  
+    <div class="date">
+      <p>written on Sunday, July 29, 2012</p>
+    </div>
+  
+
+  <p>Found in <cite>#django</cite> on freenode, Jul 12, 2012. All names are edited.</p>
+<pre class="literal-block">
+11:16 &lt; abrt&gt; since it's quiet in here I'll tell you a story.
+11:16 &lt; abrt&gt; back in 1992, I had just graduated university and was interning at a government facility in
+              newport news
+11:16 &lt; abrt&gt; along with some friends from college. We made $7.25/hr and were living large.
+11:16 &lt; qns&gt; hahahaha
+11:17 &lt; qns&gt; You sound like Kevin Mitinick.
+11:17 &lt; abrt&gt; we used to play practical jokes on each other all the time.
+11:17 &lt; abrt&gt; mitnick was a pussy compared to us
+11:17 &lt; qns&gt; :O
+11:17 &lt; abrt&gt; anyway, I managed to break into my friend's university UNIX account. guessed his password. easy.
+11:17 &lt; abrt&gt; how well do you know UNIX?
+11:18 &lt; qns&gt; not well yet
+11:18 &lt; abrt&gt; well, back in the day, they didn't have postfix or qmail any of these fancy mailservers
+11:18 &lt; abrt&gt; they ran sendmail
+11:18 &lt; abrt&gt; and they allowed individual .forward files
+11:19 &lt; abrt&gt; the purpose of the .forward file was to forward your email that came to your account to the
+              address in the .forward file.
+11:19 &lt; abrt&gt; anyway, after I broke into my friend Matt's account, I set up his .forward file to be
+              &quot;everyone&#64;***.edu&quot; which I knew was an alias for the entire college.
+11:19 &lt; abrt&gt; I had just learned how to forge sendmail headers and was going to send him a very embarrassing
+              email &quot;from his girlfriend&quot;
+11:20 &lt; abrt&gt; fortunately for me, I decided to do a test run at 1730 on a Friday. Assuming the test run went
+              well, the embarrassing forged email would go out the following Monday.
+11:20 &lt; abrt&gt; so I sent a &quot;this is a test&quot; to Matt.
+11:21 &lt; abrt&gt; and went home, drank some beers with Matt and Steve, and had a great weekend
+11:21 &lt; abrt&gt; Monday morning I get into the lab and everyone's quiet, sort of whispering, and looking at me
+11:21 &lt; abrt&gt; fuck me, right?
+11:21 &lt; abrt&gt; I log into the gov UNIX system - and I have 13000 emails
+11:22 &lt; abrt&gt; what I had forgotten was that &quot;everyone&#64;***.edu&quot; included Matt.
+11:22 &lt; abrt&gt; so the email would get sent to everyone, including him, then he would add 10 lines of header,
+              forward it to everyone, including him, ....
+11:22 &lt; abrt&gt; mail loop from hell.
+11:22 &lt; qns&gt; Did you get in trouble?
+11:22 &lt; abrt&gt; well, here's the thing
+11:22 &lt; abrt&gt; this was summer '92
+11:22 &lt; abrt&gt; nobody at school, right?
+11:23 &lt; abrt&gt; everyone had their email forwarded elsewhere
+11:23 &lt; abrt&gt; and the professors got jobs at places like Camp Peary, and FBI, and other research
+              organizations, ....
+11:23 &lt; qns&gt; So you help them?
+11:23 &lt; abrt&gt; and those systems couldn't handle the volume of mail, and they never thought to put the mail
+              spool on its on separate partition
+11:23 &lt; abrt&gt; so their systems crashed.
+11:24 &lt; qns&gt; haha
+11:24 &lt; qns&gt; So you triggered chaos all over.
+11:24 &lt; abrt&gt; I managed to bring down 13 CIA offices, all FBI offices east of the Mississippi, and the entire
+              Southeastern university Research Network.
+11:24 &lt; etgr&gt; You can claim to have hacked the FBI
+11:24 &lt; qns&gt; using e-mail.
+11:24 &lt; abrt&gt; along with various other systems, but those were the biggies
+11:24 &lt; qns&gt; I'd have shat myself
+11:24 &lt; abrt&gt; I pretty much did.
+11:25 &lt; abrt&gt; But back then, like possession of a fake ID, nobody really knew what to do to you for this sort
+              of thing
+11:25 &lt; abrt&gt; so I got a slap on the wrist, almost fired, and had to write a letter of apology to the head of
+              the computer lab at university
+11:25 &lt; abrt&gt; and I lost my university email account. :(
+11:26 &lt; qns&gt; hahahahaha
+11:26 &lt; abrt&gt; today I'd probably be sent to Guantanamo
+11:26 &lt; qns&gt; Or you'd mysteriously disappear.  :P
+11:26 &lt; abrt&gt; anyway, that's my story for the evening.
+11:26 &lt; qns&gt;  I need a story like that on my resume.
+11:26 &lt; abrt&gt; nah
+11:26 &lt; abrt&gt; here's the thing
+11:26 &lt; abrt&gt; that story doesn't go on a resume
+11:27 &lt; abrt&gt; but - fast forward 10 years later.
+11:27 &lt; qns&gt; Ahh
+11:27 &lt; abrt&gt; I'm getting my clearance
+11:27 &lt; abrt&gt; being interviewed by the suits from OPM
+11:27 &lt; abrt&gt; and they leave the room, come back with a folder, and say, &quot;Tell us about SURANet and the CIA
+              in 1992&quot;
+11:27 &lt; abrt&gt; THAT's when I shat myself.
+11:28 &lt; abrt&gt; BUT - good news - I got my clearance despite my history :)
+11:28 &lt; qns&gt; Were they impressed?
+11:28 &lt; abrt&gt; nah, they were laughing
+</pre>
+<p>After reading this story, I started a new list on kippt: <a class="reference external" href="https://kippt.com/dbrgn/stories-from-the-internet">Stories from the Internet</a>. Feel free to follow it, and also send me new candidates
+if you know of any :)</p>
+
+
+  
+      <a href="https://flattr.com/submit/auto?user_id=danilo&url=http://blog.dbrgn.ch/2012/7/29/mail-loop-from-hell/&title=Mail%20Loop%20From%20Hell&description=One%20of%20those%20awesome%2090ies%20computer%20stories...&tags=internet%2C%20irc%2C%20stories&category=text">
+           <img class="flattrbutton" src="/static/img/flattr-badge-large.png" alt="Flattr this!" /> 
+      </a>
+  
+
+  
+    <div class="tags">
+      <p>This entry was tagged
+      
+        <a href="/tags/internet/">internet</a>, 
+        <a href="/tags/irc/">irc</a> and 
+        <a href="/tags/stories/">stories</a></p>
+    </div>
+  
+
+  
+    
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'dbrgn'; // required: replace example with your forum shortname
+    
+    
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
+
+  
+
+            </div>
+        </div>
+
+        <script type="text/javascript">
+          var _gaq = _gaq || [];
+          _gaq.push(['_setAccount', 'UA-1033934-12']);
+          _gaq.push(['_trackPageview']);
+          (function() {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+          })();
+        </script>
+        <script type="text/javascript" src="/static/hyphenator.js"></script>
+        <script type="text/javascript">
+            Hyphenator.config({
+                donthyphenateclassname : 'docutils literal'
+            });
+            Hyphenator.run();
+        </script>
+
+    </body>
+</html>

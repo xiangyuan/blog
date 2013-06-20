@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <title>A simple LaTeX Makefile</title>
+
+        <!-- meta -->
+        <meta name="author" content="Danilo Bargen">
+        <meta name="dc.language" content="en-US">
+        <meta name="dc.license" content="http://creativecommons.org/licenses/by-sa/3.0/">
+        
+        <meta name="keywords" content="LaTeX">
+        
+            <meta name="dc.date.created" content="2011-02-22">
+            <meta name="dc.date.issued" content="2011-02-22">
+        
+        <meta name="google-site-verification" content="uJWWR6d5ESb8torD0v97T_07HLMGX7VzQ-smcUTc_IQ" />
+
+        <!-- favicon -->
+        <link rel="icon" href="/favicon.ico" type="image/x-icon">
+
+        <!-- newsfeed -->
+        <link href="/feed.atom" rel="alternate" title="Feed" type="application/atom+xml">
+
+        <!-- assets -->
+        <link href="https://fonts.googleapis.com/css?family=Linden+Hill:400,400italic" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" href="/static/style.css?1371592067" type="text/css">
+            <link rel="stylesheet" href="/static/_pygments.css?1371592069" type="text/css">
+    </head>
+    <body>
+        <div id="wrapper">
+            <div id="blogtitle"><a href="/">blog.dbrgn.ch</a></div>
+            <ul id="mainnav">
+                <li><a href="/">home</a></li>
+                <li><a href="/archive/">archive</a></li>
+                <li><a href="/tags/">tags</a></li>
+                <li><a href="/blog/">about this blog</a></li>
+                <li class="last"><a href="/about/">about me</a></li>
+            </ul>
+
+            <div class="clearboth"></div>
+
+            <div id="content" class="hyphenate">
+                
+  <h1 class="title">A simple LaTeX Makefile</h1>
+
+  
+    <div class="date">
+      <p>written on Tuesday, February 22, 2011</p>
+    </div>
+  
+
+  <p>Today I created a simple LaTeX Makefile based on <a class="reference external" href="http://www.linux-fuer-alle.de/doc_show.php?docid=92">this tutorial</a>. First of all, this is
+the first time I'm writing a Makefile, but it seems to work; if I have
+overlooked anything just point it out to me.</p>
+<div class="highlight"><pre><span class="c"># Makefile to create PDF documents from LaTeX-Files</span>
+<span class="c"># Needed software packages: pdflatex, rubber</span>
+<span class="c"># License: No copyright, just do what the heck you want with it</span>
+
+<span class="nf">all</span><span class="o">:</span> <span class="m">pdf clean</span>
+
+<span class="nf">pdf</span><span class="o">:</span>
+            <span class="k">for </span>file in <span class="nv">$$</span><span class="o">(</span>ls *tex | cut -d <span class="se">\.</span> -f 1<span class="o">)</span> ; <span class="k">do </span>make <span class="nv">$$</span>file.pdf ; <span class="k">done</span>
+
+<span class="nf">%.pdf</span><span class="o">:</span> <span class="m">%.tex</span>
+            rubber -m pdftex <span class="nv">$&lt;</span>
+
+<span class="nf">clean</span><span class="o">:</span>
+            rm -f *.toc *.aux *.log *.out
+
+<span class="nf">cleanall</span><span class="o">:</span>
+            rm -f *.toc *.pdf *.aux *.log *.out
+
+<span class="nf">.PHONY</span><span class="o">:</span> <span class="m">all pdf clean cleanall</span>
+<span class="nf">.SILENT</span><span class="o">:</span> <span class="m">pdf</span>
+
+<span class="c"># vim: set tabstop=4 shiftwidth=4 noexpandtab:</span>
+</pre></div>
+<p>This creates a PDF version of each *.tex-File in the current directory using
+<a class="reference external" href="https://launchpad.net/rubber">rubber</a>. I chose rubber over directly using
+pdflatex because it compiles the documents as many times as necessary in order
+to get all the TOCs and footnotes. Feel free to substitute it with whatever
+other command you prefer.</p>
+<p>Save the code in a file called <tt class="docutils literal">Makefile</tt> and run <tt class="docutils literal">make</tt> to get all
+*.tex-files in the current directory converted to PDF. Type <tt class="docutils literal">make file.pdf</tt>
+to convert file.tex to file.pdf. Type <tt class="docutils literal">make clean</tt> to remove all unnecessary
+*.toc, *.aux and *.log files and <tt class="docutils literal">make cleanall</tt> to remove all PDF
+documents as well.</p>
+<p>Warnings:</p>
+<ol class="arabic simple">
+<li>Don't use <tt class="docutils literal">make cleanall</tt> if you have other important PDF files in
+the current directory, they will get removed as well.</li>
+<li>Retain the tabs in the Makefile, spaces won't work</li>
+</ol>
+
+
+  
+      <a href="https://flattr.com/submit/auto?user_id=danilo&url=http://blog.dbrgn.ch/2011/2/22/a-simple-latex-makefile/&title=A%20simple%20LaTeX%20Makefile&description=None&tags=LaTeX&category=text">
+           <img class="flattrbutton" src="/static/img/flattr-badge-large.png" alt="Flattr this!" /> 
+      </a>
+  
+
+  
+    <div class="tags">
+      <p>This entry was tagged
+      
+        <a href="/tags/LaTeX/">LaTeX</a></p>
+    </div>
+  
+
+  
+    
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'dbrgn'; // required: replace example with your forum shortname
+    
+    
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
+
+  
+
+            </div>
+        </div>
+
+        <script type="text/javascript">
+          var _gaq = _gaq || [];
+          _gaq.push(['_setAccount', 'UA-1033934-12']);
+          _gaq.push(['_trackPageview']);
+          (function() {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+          })();
+        </script>
+        <script type="text/javascript" src="/static/hyphenator.js"></script>
+        <script type="text/javascript">
+            Hyphenator.config({
+                donthyphenateclassname : 'docutils literal'
+            });
+            Hyphenator.run();
+        </script>
+
+    </body>
+</html>
