@@ -14,7 +14,7 @@
         {{ article.content }}
 
         {% if not article.flattr or not article.flattr == 'no' %}
-            <a href="https://flattr.com/submit/auto?user_id={{ FLATTR_USERNAME }}&url={{ SITE_URL }}/{{ article.url }}/&title={{ article.title|striptags|urlencode }}&description={{ article.summary|striptags|urlencode }}&tags={% for tag in article.tags|sort %}{{ tag|urlencode }}{% endfor %}&category=text">
+            <a href="https://flattr.com/submit/auto?user_id={{ FLATTR_USERNAME }}&url={{ SITE_URL }}/{{ article.url }}/&title={{ article.title|striptags|urlencode }}&description={{ article.summary|striptags|urlencode }}&tags={% for tag in article.tags|sort %}{{ tag|urlencode }}{% if not loop.last %},{% endif %}{% endfor %}&category=text">
                 <img class="flattrbutton" src="{{ SITEURL }}/theme/images/flattr-badge-large.png" alt="Flattr this!" /> 
             </a>
         {% endif %}
