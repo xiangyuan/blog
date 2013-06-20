@@ -1,8 +1,7 @@
 public: yes
 tags: [bash, linux, dwm]
 language: en
-summary: |
-    How to set a random wallpaper from a directory on bash using feh.
+summary: How to set a random wallpaper from a directory on bash using feh.
 
 Set a Random Wallpaper from Bash
 ================================

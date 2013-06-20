@@ -1,8 +1,7 @@
 public: yes
 tags: [python,vim]
 language: en
-summary: |
-    How to use Jedi with the YouCompleteMe library.
+summary: How to use Jedi with the YouCompleteMe library.
 
 Using Jedi with YouCompleteMe
 =============================

@@ -1,7 +1,6 @@
 public: yes
 tags: [sysadmin, dwm]
-summary: |
-    Show notifications for irssi mentions inside a ssh screen session on dwm.
+summary: Show notifications for irssi mentions inside a ssh screen session on dwm.
 
 dwm ssh/screen/irssi notifications 
 ===================================

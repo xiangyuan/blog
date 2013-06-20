@@ -1,7 +1,6 @@
 public: yes
 tags: [internet, stories, irc]
-summary: |
-    One of those awesome 90ies computer stories...
+summary: One of those awesome 90ies computer stories...
 
 Mail Loop From Hell
 ===================

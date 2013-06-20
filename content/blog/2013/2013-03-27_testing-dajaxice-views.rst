@@ -1,8 +1,7 @@
 public: yes
 tags: [django, testing]
 language: en
-summary: |
-    How to test Dajaxice views using the Django test client.
+summary: How to test Dajaxice views using the Django test client.
 
 Testing Dajaxice Views in Django
 ================================

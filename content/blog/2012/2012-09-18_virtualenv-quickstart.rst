@@ -1,7 +1,6 @@
 public: yes
 tags: [python, pip, virtualenv]
-summary: |
-    A short virtualenv quickstart guide.
+summary: A short virtualenv quickstart guide.
 
 Virtualenv Quickstart Guide
 ===========================

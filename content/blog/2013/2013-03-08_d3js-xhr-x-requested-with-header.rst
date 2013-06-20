@@ -1,8 +1,7 @@
 public: yes
 tags: [d3.js, ajax, django, flask]
 language: en
-summary: |
-    How to make AJAX detection used by Django and Flask work with d3.js.
+summary: How to make AJAX detection used by Django and Flask work with d3.js.
 
 d3.js and X-Requested-With
 ==========================

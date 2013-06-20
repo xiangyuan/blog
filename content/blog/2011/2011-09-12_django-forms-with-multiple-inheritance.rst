@@ -1,7 +1,6 @@
 public: yes
 tags: [django]
-summary: |
-    How to validate Django forms in a DRY way using multiple inheritance.
+summary: How to validate Django forms in a DRY way using multiple inheritance.
 
 Django Forms with Multiple Inheritance
 ======================================

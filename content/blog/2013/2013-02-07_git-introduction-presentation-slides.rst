@@ -1,8 +1,7 @@
 public: yes
 tags: [git, introduction, presentations, sildes, reveal.js]
 language: en
-summary: |
-    The slides of a presentation I held about git.
+summary: The slides of a presentation I held about git.
 
 Git Introduction Presentation Slides
 ====================================

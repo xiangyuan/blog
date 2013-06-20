@@ -1,9 +1,7 @@
 public: yes
 tags: [sysadmin, firewall]
 language: en
-summary: |
-    ufw is a very easy way to configure your firewall rules, without writing
-    iptables scripts.
+summary: ufw is a very easy way to configure your firewall rules, without writing iptables scripts.
 
 ufw – A Simple iptables Frontend
 ================================

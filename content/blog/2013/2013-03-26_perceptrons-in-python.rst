@@ -1,8 +1,7 @@
 public: yes
 tags: [machine learning, ai, python]
 language: en
-summary: |
-    How to create a simple perceptron using Python and NumPy.
+summary: How to create a simple perceptron using Python and NumPy.
 
 Programming a Perceptron in Python
 ==================================

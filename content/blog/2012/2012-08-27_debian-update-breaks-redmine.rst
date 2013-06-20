@@ -1,7 +1,6 @@
 public: yes
 tags: [redmine, debian, ruby]
-summary: |
-    How to fix Redmine breakage due to updates on Debian Squeeze.
+summary: How to fix Redmine breakage due to updates on Debian Squeeze.
 
 Debian Squeeze Update breaks Redmine 1.1.2
 ==========================================

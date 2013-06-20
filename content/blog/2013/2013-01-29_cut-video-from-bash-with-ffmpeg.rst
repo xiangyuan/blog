@@ -1,8 +1,7 @@
 public: yes
 tags: [bash, linux, movie editing]
 language: en
-summary: |
-    How to cut a video in your terminal.
+summary: How to cut a video in your terminal.
 
 Cut Videos from Bash with ffmpeg
 ================================

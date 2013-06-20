@@ -1,7 +1,6 @@
 public: yes
 tags: [sysadmin, databases]
-summary: |
-    How to use the tsql command.
+summary: How to use the tsql command.
 
 Using tsql
 ==========

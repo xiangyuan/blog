@@ -1,8 +1,7 @@
 public: yes
 tags: [python]
 language: en
-summary: |
-    Python 3.4 will introduce a builtin enumeration type. But you can already
+summary: Python 3.4 will introduce a builtin enumeration type. But you can already
     start using it right now.
 
 Enums in Python

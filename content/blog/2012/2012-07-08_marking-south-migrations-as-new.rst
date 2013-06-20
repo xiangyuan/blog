@@ -1,7 +1,6 @@
 public: yes
 tags: [django, south, databases]
-summary: |
-    How to mark some South migrations as new.
+summary: How to mark some South migrations as new.
 
 Marking South migrations as new
 ===============================
