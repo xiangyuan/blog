@@ -1,10 +1,9 @@
-public: yes
-tags: [d3.js, ajax, django, flask]
-language: en
-summary: How to make AJAX detection used by Django and Flask work with d3.js.
-
 d3.js and X-Requested-With
 ==========================
+
+:tags: d3.js, ajax, django, flask
+:language: en
+:summary: How to make AJAX detection used by Django and Flask work with d3.js.
 
 Most JavaScript frameworks set the `X-Requested-With` HTTP Header to
 `XMLHttpRequest` when sending non-cross-domain XHR requests. Many web

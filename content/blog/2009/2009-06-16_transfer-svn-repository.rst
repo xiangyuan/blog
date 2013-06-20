@@ -1,8 +1,7 @@
-public: yes
-tags: [sysadmin, version control]
-
 Transfer SVN Repository
 =======================
+
+:tags: sysadmin, version control
 
 To transfer an SVN repository from one server to another one, first dump
 the repo and then load it into the new repo using ``svnadmin``.

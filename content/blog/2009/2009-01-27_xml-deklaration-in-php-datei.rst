@@ -1,9 +1,8 @@
-public: yes
-tags: [php]
-language: de
-
 XML Deklaration in PHP Datei
 ============================
+
+:tags: php
+:language: de
 
 Wer schonmal eine XML-Deklaration in einer PHP-Datei *ausserhalb* der PHP Tags (``<?php ?>``)
 gemacht hat, weiss, dass es damit Probleme geben kann. Wenn nämlich die PHP Short Tags (``<? ?>``)

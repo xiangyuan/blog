@@ -1,8 +1,7 @@
-public: yes
-tags: [sysadmin]
-
 Update file type associations under Linux
 =========================================
+
+:tags: sysadmin
 
 To update a file type (or rather a mime type) association under Linux, you can use the ``xdg-mime``
 command.

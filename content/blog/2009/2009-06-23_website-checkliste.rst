@@ -1,9 +1,8 @@
-public: yes
-tags: [webdev]
-language: de
-
 Website Checkliste
 ==================
+
+:tags: webdev
+:language: de
 
 Eine kleine, spontane Checkliste, damit man nicht nach der Fertigstellung einer Website einige
 dieser häufig übersehenen Punkte vergisst:

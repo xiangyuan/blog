@@ -1,9 +1,8 @@
-public: yes
-tags: [django]
-summary: How to sort a SphinxSearch instance.
-
 django-sphinx sorting
 =====================
+
+:tags: django
+:summary: How to sort a SphinxSearch instance.
 
 Unfortunately, the `django-sphinx <https://github.com/dcramer/django-sphinx>`_ module is not very
 thoroughly documented. One thing which I could not figure out is how to do sorting. I thought that I

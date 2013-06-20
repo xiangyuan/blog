@@ -1,8 +1,7 @@
-public: yes
-tags: [music, internet]
-
 Order confirmation - the CD Baby way
 ====================================
+
+:tags: music, internet
 
 I just received a pretty dang awesome confirmation-email for a CD order
 at `CD Baby <http://cdbaby.com/>`_, a great indie music

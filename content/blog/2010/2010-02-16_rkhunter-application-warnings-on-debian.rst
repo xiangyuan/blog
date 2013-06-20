@@ -1,8 +1,7 @@
-public: yes
-tags: [sysadmin]
-
 Rkhunter Application Warnings on Debian
 =======================================
+
+:tags: sysadmin
 
 On my (up to date) Debian Lenny installation, `rkhunter <http://rkhunter.sourceforge.net/>`_
 regularly complains that various applications are out of date. This happens if the developer has

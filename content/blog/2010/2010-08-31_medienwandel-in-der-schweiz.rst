@@ -1,9 +1,8 @@
-public: yes
-tags: [media, politics]
-language: de
-
 Medienwandel in der Schweiz
 ===========================
+
+:tags: media, politics
+:language: de
 
 Ein sehr interessantes und super gemachtes Video zum Thema "Medienwandel in der Schweiz":
 

@@ -1,9 +1,8 @@
-public: yes
-tags: [sysadmin, dwm]
-summary: My dwm configuration.
-
 dwm config - volume, battery notification, unread e-mail count & more
 =====================================================================
+
+:tags: sysadmin, dwm
+:summary: My dwm configuration.
 
 As many other `dwm <http://dwm.suckless.org/>`_ users do, I customized my
 `.xinitrc` file and the dwm status bar in to display some useful information.

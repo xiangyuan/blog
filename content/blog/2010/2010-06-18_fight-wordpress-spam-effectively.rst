@@ -1,8 +1,7 @@
-public: yes
-tags: [wordpress]
-
 Fight Wordpress spam effectively
 ================================
+
+:tags: wordpress
 
 My solution to stop wordpress comment spam is a combination of three Wordpress plugins:
 

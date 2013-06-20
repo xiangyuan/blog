@@ -1,8 +1,7 @@
-public: yes
-tags: [videos]
-
 Vimeo Picks 1
 =============
+
+:tags: videos
 
 Ich hab heut Abend wiedermal einige Zeit auf `Vimeo <http://vimeo.com/>`_ verbracht. Vimeo ist eine
 Video-Platform, die im Gegensatz zu Youtube nicht einen haufen viraler, "lustiger" Clips sammelt,

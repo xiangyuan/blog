@@ -1,8 +1,7 @@
-public: yes
-tags: [sysadmin]
-
 List Available Kernel Modules
 =============================
+
+:tags: sysadmin
 
 To list all available linux kernel modules, issue as root:
 

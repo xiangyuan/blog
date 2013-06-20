@@ -1,9 +1,8 @@
-public: yes
-tags: [videos, politics]
-language: de
-
 Doku: Militärbunker in der Schweiz
 ==================================
+
+:tags: videos, politics
+:language: de
 
 Ich bin zwar eigentlich kein grosser Fan der schweizer Armee, aber sowas
 ist schon recht genial.

@@ -1,9 +1,9 @@
-public: yes
-tags: [django, south, databases]
-summary: How to mark some South migrations as new.
-
 Marking South migrations as new
 ===============================
+
+:tags: django, south, databases
+:language: en
+:summary: How to mark some South migrations as new.
 
 Sometimes you might get to the point where you accidentally faked all `South
 <http://south.aeracode.org/>`_ migrations for a specific app using the

@@ -1,8 +1,7 @@
-public: yes
-tags: [sysadmin]
-
 Install Brother DCP-7010 under Arch Linux
 =========================================
+
+:tags: sysadmin
 
 This how-to will enable you to print and scan with a Brother DCP-7010 printer under Arch Linux. (For
 deb- and rpm-based Distributions, there are `drivers available

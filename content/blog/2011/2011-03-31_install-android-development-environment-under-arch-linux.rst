@@ -1,8 +1,7 @@
-public: yes
-tags: [sysadmin, android]
-
 Install Android Development Environment under Arch Linux
 ========================================================
+
+:tags: sysadmin, android
 
 How to install Eclipse and the Android Developer Tools under ArchLinux
 x64:

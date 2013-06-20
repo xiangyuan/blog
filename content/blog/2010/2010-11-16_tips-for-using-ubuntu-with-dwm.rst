@@ -1,8 +1,7 @@
-public: yes
-tags: [ubuntu, dwm]
-
 Tips for using Ubuntu with dwm
 ==============================
+
+:tags: ubuntu, dwm
 
 Some useful tips for using the `dwm <http://dwm.suckless.org/>`_ window manager on Ubuntu:
 

@@ -1,10 +1,9 @@
-public: yes
-tags: [git, introduction, presentations, sildes, reveal.js]
-language: en
-summary: The slides of a presentation I held about git.
-
 Git Introduction Presentation Slides
 ====================================
+
+:tags: git, introduction, presentations, sildes, reveal.js
+:language: en
+:summary: The slides of a presentation I held about git.
 
 This week, I held a short introductory presentation about `git`_ at
 `Webrepublic`_. I used the opportunity to play around with `rvl.io`_, the free

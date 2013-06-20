@@ -1,10 +1,9 @@
-public: yes
-tags: [sysadmin, php, nginx]
-language: en
-summary: Current versions of php5-fpm from dotdeb listen on a unix domain socket by default, instead of using port 9000.
-
 PHP-FPM and Nginx Upstream Configuration
 ========================================
+
+:tags: sysadmin, php, nginx
+:language: en
+:summary: Current versions of php5-fpm from dotdeb listen on a unix domain socket by default, instead of using port 9000.
 
 Most nginx_ / php-fpm_ tutorials you'll find nowadays recommend to create an
 nginx upstream configuration that listens on localhost port 9000. ::

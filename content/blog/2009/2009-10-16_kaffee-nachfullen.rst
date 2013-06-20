@@ -1,9 +1,8 @@
-public: yes
-tags: [hacking]
-language: de
-
 Kaffee Nachfüllen
 =================
+
+:tags: hacking
+:language: de
 
 Dank `rouge <http://www.rouge.ch/blog/insert-coin/>`_ bin ich auf ein
 `lustiges

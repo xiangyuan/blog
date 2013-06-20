@@ -1,10 +1,9 @@
-public: yes
-tags: [pip, python]
-language: en
-summary: Version 1.3 of pip makes it possible to list outdated packages.
-
 List Outdated Dependencies with Pip
 ===================================
+
+:tags: pip, python
+:language: en
+:summary: Version 1.3 of pip makes it possible to list outdated packages.
 
 In the past, if you wanted to review your installed pip packages to see if there
 are updates available, you either had to use tools like `pip-tools`_ or check

@@ -1,8 +1,7 @@
-public: yes
-tags: [videos]
-
 Vimeo Picks 2
 =============
+
+:tags: videos
 
 Hier die Fortsetzung der `Serie </2009/9/25/vimeo-picks-1/>`_...
 

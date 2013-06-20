@@ -1,8 +1,7 @@
-public: yes
-tags: [linux]
-
 tutorial: How to use MPX to control several mouse pointers at the same time
 ===========================================================================
+
+:tags: linux
 
 The `MPX project <http://www.x.org/wiki/Development/Documentation/MPX>`_ is a Xorg extension to
 allow several mouse pointers and keyboards in an X session to be used at the same time. This is

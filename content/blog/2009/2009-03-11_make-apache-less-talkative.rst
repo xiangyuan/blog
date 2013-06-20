@@ -1,8 +1,7 @@
-public: yes
-tags: [sysadmin]
-
 Make Apache Less Talkative
 ==========================
+
+:tags: sysadmin
 
 On a standard installation of Apache, the webserver sends a lot of information about installed
 software to the client. This would provide a hypothetical attacker with a lot of information of how

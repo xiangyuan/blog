@@ -1,9 +1,8 @@
-public: yes
-tags: [webdev, javascript]
-summary: On-Off switches with HTML, CSS and jQuery.
-
 jQuery On-Off Toggle/Switch
 ===========================
+
+:tags: webdev, javascript
+:summary: On-Off switches with HTML, CSS and jQuery.
 
 Today I was looking for a nice graphical on/off switch to replace
 checkboxes on a webpage I'm working on. I found `a beautiful

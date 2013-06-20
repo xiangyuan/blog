@@ -1,9 +1,8 @@
-public: yes
-tags: [sysadmin, dwm]
-summary: Show notifications for irssi mentions inside a ssh screen session on dwm.
-
 dwm ssh/screen/irssi notifications 
 ===================================
+
+:tags: sysadmin, dwm
+:summary: Show notifications for irssi mentions inside a ssh screen session on dwm.
 
 I always keep an irssi session open inside a screen session on my server
 via ssh. I always thought that notifications aren't possible for such a

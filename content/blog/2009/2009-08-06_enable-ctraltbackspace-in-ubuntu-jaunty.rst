@@ -1,8 +1,7 @@
-public: yes
-tags: [ubuntu]
-
 Enable Ctr+Alt+Backspace in Ubuntu Jaunty
 =========================================
+
+:tags: ubuntu
 
 To re-enable the `ctrl+alt+backspace` key combination in Ubuntu Jaunty, add this code to
 `/etc/X11/xorg.conf`:

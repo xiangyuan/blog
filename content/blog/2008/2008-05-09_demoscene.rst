@@ -1,9 +1,8 @@
-public: yes
-tags: [demoscene]
-language: de
-
 Demoscene
 =========
+
+:tags: demoscene
+:language: de
 
 Mal ein paar Sachen aus der Demoscene... Ein Arbeitskollege hat mich darauf aufmerksam gemacht.
 

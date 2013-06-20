@@ -1,8 +1,7 @@
-public: yes
-tags: [sysadmin]
-
 SMB vs NFS speed
 ================
+
+:tags: sysadmin
 
 Copying a 3.2GB MKV movie file from my local hard drive to a Synology
 NAS (100-MBit ethernet)...

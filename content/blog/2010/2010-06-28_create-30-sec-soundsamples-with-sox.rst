@@ -1,8 +1,7 @@
-public: yes
-tags: [audio]
-
 Create 30-sec soundsamples with SoX
 ===================================
+
+:tags: audio
 
 To create 30-second sound samples (e.g. for audio previews of songs) from existing tracks on
 GNU/Linux, you can use `SoX <http://linux.die.net/man/1/sox>`_.

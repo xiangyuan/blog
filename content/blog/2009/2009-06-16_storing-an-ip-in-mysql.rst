@@ -1,8 +1,7 @@
-public: yes
-tags: [databases]
-
 Storing an IP in MySQL
 ======================
+
+:tags: databases
 
 Summary
 -------

@@ -1,8 +1,7 @@
-public: yes
-tags: [ubuntu]
-
 Ubuntu Lucid - fix theme
 ========================
+
+:tags: ubuntu
 
 After upgrading to Ubuntu Lucid, I didn't like some aspects of the new theme (Ambiance). Here the
 fixes for the two of those things.

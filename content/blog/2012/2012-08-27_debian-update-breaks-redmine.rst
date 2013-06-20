@@ -1,9 +1,9 @@
-public: yes
-tags: [redmine, debian, ruby]
-summary: How to fix Redmine breakage due to updates on Debian Squeeze.
-
 Debian Squeeze Update breaks Redmine 1.1.2
 ==========================================
+
+:tags: redmine, debian, ruby
+:language: en
+:summary: How to fix Redmine breakage due to updates on Debian Squeeze.
 
 I'm running a Debian Squeeze box with Redmine 1.1.2, Apache and Passenger. After
 a system update that upgraded the `rubygems` package to version 1.8.x, Redmine

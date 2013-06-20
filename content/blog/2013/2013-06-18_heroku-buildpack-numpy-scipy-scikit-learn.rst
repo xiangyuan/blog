@@ -2,6 +2,7 @@ Heroku Buildpack for Numpy, Scipy and Scikit-Learn
 ==================================================
 
 :tags: python, heroku
+:language: en
 :summary: I created a buildpack that brings support for Numpy, Scipy and
           Scikit-learn to Heroku.
 

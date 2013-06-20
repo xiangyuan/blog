@@ -16,7 +16,7 @@ LOCALE = ['en_US']
 USE_FOLDER_AS_CATEGORY = False
 DEFAULT_CATEGORY = 'Blog'
 DEFAULT_DATE_FORMAT = '%B %d, %Y'
-FILENAME_METADATA = '(?P<date>\d{4}-\d{2}-\d{2})_(?P<slug>.*).rst'
+FILENAME_METADATA = '(?P<date>\d{4}-\d{2}-\d{2})_(?P<slug>.*)'
 
 # Jinja
 JINJA_EXTENSIONS = []
@@ -36,7 +36,7 @@ TRANSLATION_FEED_ATOM = None
 # Build process
 STATIC_PATHS = ['images', 'files']
 TYPOGRIFY = True
-SUMMARY_MAX_LENGTH = 30
+SUMMARY_MAX_LENGTH = 15
 DEFAULT_PAGINATION = 10
 DEFAULT_ORPHANS = 2
 

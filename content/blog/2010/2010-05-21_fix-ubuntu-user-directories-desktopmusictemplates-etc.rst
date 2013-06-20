@@ -1,8 +1,7 @@
-public: yes
-tags: [ubuntu]
-
 Fix Ubuntu user directories (Desktop/Music/Templates etc)
 =========================================================
+
+:tags: ubuntu
 
 If you accidentally deleted one of your Ubuntu user directories (like *Desktop*, *Music*,
 *Pictures*, *Templates* etc), you can fix them by editing the file `~/.config/user-dirs.dirs`.

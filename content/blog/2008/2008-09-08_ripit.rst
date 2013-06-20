@@ -1,9 +1,8 @@
-public: yes
-tags: [audio]
-language: de
-
 RipIT
 =====
+
+:tags: audio
+:language: de
 
 Geht es euch auch manchmal so? Ihr benutzt diverse Programme für einen
 bestimmten Zweck, und keines davon überzeugt euch. Entweder zu kompliziert, zu

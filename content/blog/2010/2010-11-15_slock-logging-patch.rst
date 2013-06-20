@@ -1,8 +1,7 @@
-public: yes
-tags: [sysadmin]
-
 Slock Logging Patch
 ===================
+
+:tags: sysadmin
 
 I love `slock <http://tools.suckless.org/slock>`_, a simple screenlocker written for `dwm
 <http://dwm.suckless.org/>`_, but I was missing some logging functionality. So I've created a small

@@ -1,9 +1,9 @@
-public: yes
-tags: [rstblog, blog, rst, python]
-summary: I just replaced Wordpress with rstblog.
-
 Goodbye Wordpress, hi rstblog!
 ==============================
+
+:tags: rstblog, blog, rst, python
+:language: en
+:summary: I just replaced Wordpress with rstblog.
 
 Since having switched from the PHP world to the Python world about 2 years ago, I thought about
 relaunching my Blog using Python instead of PHP. At first, I thought about creating an application

@@ -1,8 +1,7 @@
-public: yes
-tags: [cartoons, internet]
-
 XKCD's impact on Google searches
 ================================
+
+:tags: cartoons, internet
 
 "Autoerotic Asphyxiation"
 -------------------------

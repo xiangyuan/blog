@@ -1,9 +1,8 @@
-public: yes
-tags: [internet]
-summary: How to create a Soundcloud embed BBcode.
-
 phpBB Soundcloud Embed BBCode
 =============================
+
+:tags: internet
+:summary: How to create a Soundcloud embed BBcode.
 
 Um Soundcloud-Songs direkt in ein phpBB Forum einzubinden, einfach
 folgenden BB-Code im Backend erstellen:

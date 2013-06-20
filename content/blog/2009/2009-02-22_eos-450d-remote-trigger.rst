@@ -1,8 +1,7 @@
-public: yes
-tags: [photography, hacking]
-
 EOS 450D Remote Trigger
 =======================
+
+:tags: photography, hacking
 
 On the left side of the Canon EOS 450D (and probably on any other EOS camera), there's a connector
 for a remote shutter trigger. You can make your own remote trigger by sticking one side of a 2.5"

@@ -1,9 +1,9 @@
-public: yes
-tags: [python, pip, virtualenv]
-summary: A short virtualenv quickstart guide.
-
 Virtualenv Quickstart Guide
 ===========================
+
+:tags: python, pip, virtualenv
+:language: en
+:summary: A short virtualenv quickstart guide.
 
 I was searching for a nice `virtualenv` quickstart guide today, but couldn't find
 one that I liked. Either they were outdated and still relied on

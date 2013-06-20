@@ -1,9 +1,8 @@
-public: yes
-tags: [webdesign]
-language: de
-
 Farbschema-Generator
 ====================
+
+:tags: webdesign
+:language: de
 
 Wer häufig mit Webdesign oder sonstigen gestalterischen Aufgaben zu tun hat, sollte sich mal den
 `Color Palette Generator <http://www.degraeve.com/color-palette/>`_ anschauen. Man kann ein Bild

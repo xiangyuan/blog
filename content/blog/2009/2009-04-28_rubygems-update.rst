@@ -1,8 +1,7 @@
-public: yes
-tags: [sysadmin]
-
 RubyGems Update Problems
 ========================
+
+:tags: sysadmin
 
 Getting the following error message when trying to use `rake`?
 

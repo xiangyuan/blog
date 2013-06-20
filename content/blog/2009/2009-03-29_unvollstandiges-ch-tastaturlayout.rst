@@ -1,9 +1,8 @@
-public: yes
-tags: [gentoo]
-language: de
-
 Unvollständiges CH-Tastaturlayout
 =================================
+
+:tags: gentoo
+:language: de
 
 Seit Tagen hatte ich unter Gentoo einen nervigen Bug - das Schweizer Tastaturlayout unter Xorg
 funktionierte zwar teilweise, aber Tasten wie AltGr, die Klammern, oder die Umlaute blieben tot.

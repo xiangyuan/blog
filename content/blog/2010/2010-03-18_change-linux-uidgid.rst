@@ -1,8 +1,7 @@
-public: yes
-tags: [sysadmin]
-
 Change Linux UID/GID
 ====================
+
+:tags: sysadmin
 
 Log in with another user than the one to be edited or reboot into
 recovery mode and enter the following commands:

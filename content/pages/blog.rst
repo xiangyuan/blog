@@ -1,8 +1,7 @@
 About This Blog
 ===============
 
-public: true
-disqus: no
+:comments: yes
 
 This blog is made `using rstblog </2012/6/11/rstblog/>`_. The source code is
 `published on GitHub <https://github.com/dbrgn/blog>`_. All content on this

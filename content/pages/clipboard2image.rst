@@ -1,8 +1,7 @@
 Clipboard2Image
 ===============
 
-public: true
-disqus: yes
+:comments: yes
 
 Wer häufig beispielsweise Bilder aus Word-Dokus oder ähnlichen Quellen in
 Dateien abspeichern muss, kennt den mühsamen Workflow: *Kopieren > Win+R >

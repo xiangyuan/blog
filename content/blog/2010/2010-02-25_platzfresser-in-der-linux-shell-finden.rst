@@ -1,9 +1,8 @@
-public: yes
-tags: [sysadmin]
-language: de
-
 Platzfresser in der Linux Shell finden
 ======================================
+
+:tags: sysadmin
+:language: de
 
 Um in der Linux Shell die 10 grössten Platzfresser im aktuellen Verzeichnis zu finden, füge
 folgenden Alias deiner `~/.bashrc` hinzu:

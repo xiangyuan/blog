@@ -1,9 +1,8 @@
-public: yes
-tags: [internet]
-language: de
-
 Experts Exchange ohne Anmeldung
 ===============================
+
+:tags: internet
+:language: de
 
 Habt ihr euch auch schon über `ExpertsExchange
 <http://www.experts-exchange.com/>`_ aufgeregt, das ständig in den Google

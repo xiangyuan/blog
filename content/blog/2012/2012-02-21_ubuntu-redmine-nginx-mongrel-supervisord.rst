@@ -1,9 +1,9 @@
-public: yes
-tags: [sysadmin, nginx, redmine]
-summary: How to install Redmine on Ubuntu with Nginx, Mongrel and Supervisord.
-
 Ubuntu / Redmine / Nginx / Mongrel / Supervisord
 ================================================
+
+:tags: sysadmin, nginx, redmine
+:language: en
+:summary: How to install Redmine on Ubuntu with Nginx, Mongrel and Supervisord.
 
 This is a howto to install Redmine on Ubuntu Natty (probably works on Debian too) with Nginx,
 Mongrel and Supervisord. The listed commands usually assume root permissions.

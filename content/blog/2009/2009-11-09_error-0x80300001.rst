@@ -1,8 +1,7 @@
-public: yes
-tags: [windows]
-
 error 0x80300001
 ================
+
+:tags: windows
 
 If **error 0x80300001** occurs during XP/Vista/Windows7 installation,
 check whether the installation DVD is still in the DVD drive. Yep, i

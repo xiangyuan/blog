@@ -1,9 +1,8 @@
-public: yes
-tags: [internet, open source]
-summary: What distinguishes a good software project website from a bad software project website.
-
 Why some software project websites suck and others don't
 ========================================================
+
+:tags: internet, open source
+:summary: What distinguishes a good software project website from a bad software project website.
 
 Today I gave some thoughts to what distinguishes a good software project website
 from a bad software project website (especially for open source projects).

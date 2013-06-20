@@ -1,9 +1,9 @@
-public: yes
-tags: [internet, stories, irc]
-summary: One of those awesome 90ies computer stories...
-
 Mail Loop From Hell
 ===================
+
+:tags: internet, stories, irc
+:language: en
+:summary: One of those awesome 90ies computer stories...
 
 Found in `#django` on freenode, Jul 12, 2012. All names are edited.
 

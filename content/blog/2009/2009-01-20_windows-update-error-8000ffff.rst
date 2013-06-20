@@ -1,9 +1,8 @@
-public: yes
-tags: [windows]
-language: de
-
 Windows Update Error 8000FFFF
 =============================
+
+:tags: windows
+:language: de
 
 Nach zwei Tagen Kampf mit der Installation des neuen Visual Studio 2008 unter Windows Vista (x86)
 dachte ich mir, es wäre vielleicht mal gut wenn ich alle Updates installieren würde – vielleicht

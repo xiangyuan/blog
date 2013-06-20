@@ -1,9 +1,8 @@
-public: yes
-tags: [politics, internet, filesharing]
-language: de
-
 Prozess um 'The Pirate Bay'
 ===========================
+
+:tags: politics, internet, filesharing
+:language: de
 
 .. image:: http://blog.ich-wars-nicht.ch/wp-content/uploads/2009/02/piratebay-272x300.gif
    :alt: "The Piratebay" logo

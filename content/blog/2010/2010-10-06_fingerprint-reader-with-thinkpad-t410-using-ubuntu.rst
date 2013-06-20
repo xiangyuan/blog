@@ -1,8 +1,7 @@
-public: yes
-tags: [ubuntu]
-
 Fingerprint Reader with Thinkpad T410 using Ubuntu
 ==================================================
+
+:tags: ubuntu
 
 How to add fingerprint reader support to your Ubuntu installation (yes, it does work):
 

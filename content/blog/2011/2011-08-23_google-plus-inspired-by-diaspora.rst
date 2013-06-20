@@ -1,8 +1,7 @@
-public: yes
-tags: [social media, web design, internet]
-
 Google Plus – Inspired by Diaspora?
 ===================================
+
+:tags: social media, web design, internet
 
 After all the buzz around Google+, one of its competitors,
 `Diaspora <https://joindiaspora.com/>`_ (free and open source) was

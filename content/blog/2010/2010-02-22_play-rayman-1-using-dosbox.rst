@@ -1,8 +1,7 @@
-public: yes
-tags: [gaming]
-
 Play Rayman 1 on Linux using DosBox
 ===================================
+
+:tags: gaming
 
 .. image:: /static/img/2010/2/22/rayman1.jpg
 

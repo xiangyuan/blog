@@ -1,8 +1,7 @@
-public: yes
-tags: [gentoo]
-
 Eclipse + Xulrunner
 ===================
+
+:tags: gentoo
 
 When emerging ``eclipse-sdk-3.2.1`` under gentoo (or maybe also on other distributions), you may
 notice the following error message when trying to start it for the first time:

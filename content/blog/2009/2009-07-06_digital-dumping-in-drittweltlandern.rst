@@ -1,8 +1,7 @@
-public: yes
-tags: [politics, society, technology]
-
 Ghana: Digital Dumping Ground
 =============================
+
+:tags: politics, society, technology
 
 The effects of e-waste on the third world.
 

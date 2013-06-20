@@ -1,9 +1,8 @@
-public: yes
-tags: [vim]
-language: de
-
 Einfügen in Vim
 ===============
+
+:tags: vim
+:language: de
 
 Häufig finde ich auf einer Website Codestücke und will die in `Vim <http://vim.org/>`_ einfügen.
 Jedoch passiert es mir dann immer wieder dass es jede neue Zeile um einen Tab weiter einrückt. Die

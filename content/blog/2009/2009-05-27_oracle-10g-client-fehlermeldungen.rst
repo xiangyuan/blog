@@ -1,9 +1,8 @@
-public: yes
-tags: [sysadmin]
-language: de
-
 Oracle 10g Client Fehlermeldungen
 =================================
+
+:tags: sysadmin
+:language: de
 
 Wenn folgende Fehlermeldung beim Verbinden auf die Datenbank erscheint:
 

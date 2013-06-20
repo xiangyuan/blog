@@ -1,8 +1,7 @@
-public: yes
-tags: [php]
-
 Integrate Dokuwiki with SMF
 ===========================
+
+:tags: php
 
 I recently needed an integration of Dokuwiki with SMF (Simple Machines Forum). After some research i
 managed to get it done. Inspired by `this thread

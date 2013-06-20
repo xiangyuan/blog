@@ -1,8 +1,7 @@
-public: yes
-tags: [ubuntu]
-
 Ubuntu 9.10 "Karmic Koala" watch encrypted DVD
 ==============================================
+
+:tags: ubuntu
 
 In my Ubuntu 9.10 "Karmic Koala" installation, I wasn't able to watch a DVD, even though libdvdcss
 was installed. The player windows just closed themselves immediately after starting playback. After

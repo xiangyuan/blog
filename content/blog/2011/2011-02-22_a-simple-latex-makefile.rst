@@ -1,8 +1,7 @@
-public: yes
-tags: [LaTeX]
-
 A simple LaTeX Makefile
 =======================
+
+:tags: LaTeX
 
 Today I created a simple LaTeX Makefile based on `this tutorial
 <http://www.linux-fuer-alle.de/doc_show.php?docid=92>`_. First of all, this is

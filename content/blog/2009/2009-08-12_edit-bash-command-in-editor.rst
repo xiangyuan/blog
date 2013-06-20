@@ -1,8 +1,7 @@
-public: yes
-tags: [sysadmin]
-
 Edit Bash command in $EDITOR
 ============================
+
+:tags: sysadmin
 
 To edit the current command in Linux Bash in your default editor (``$EDITOR``), use the ``C-x C-e``
 key combination.

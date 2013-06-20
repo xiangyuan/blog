@@ -1,8 +1,7 @@
-public: yes
-tags: [open source]
-
 The Dangers of Open Source
 ==========================
+
+:tags: open source
 
 When you're programming open source, you're programming communism!
 

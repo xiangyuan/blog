@@ -1,9 +1,8 @@
-public: yes
-tags: [other]
-language: de
-
 Third Culture Kids
 ==================
+
+:tags: other
+:language: de
 
 Wenn ich nach meiner Nationalität oder Herkunft gefragt werde, gebe ich
 normalerweise der Einfachheit halber die Schweiz an. Eigentlich stimmt das aber

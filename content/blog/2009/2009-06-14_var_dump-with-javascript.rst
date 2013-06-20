@@ -1,8 +1,7 @@
-public: yes
-tags: [webdev, javascript]
-
 var_dump with JavaScript
 ========================
+
+:tags: webdev, javascript
 
 In case you miss `var_dump` or `print_r` functions in Javascript, here's a solution:
 

@@ -1,8 +1,10 @@
-public: no
-tags: [other]
-
 Anki-Deck für Esperanto
 =======================
+
+:tags: other
+:language: de
+:status: draft
+
 
 Ich habe im Anki-Wiki ein `neues Deck
 <http://ichi2.net/anki/wiki/ExtraDecks#head-41198ce77e0d7497c0cab2d30a90b440ee9e9879>`_ mit 666

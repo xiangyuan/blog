@@ -1,8 +1,7 @@
-public: yes
-tags: [videos]
-
 Slow Motion vs Timelapse
 ========================
+
+:tags: videos
 
 Slow...
 

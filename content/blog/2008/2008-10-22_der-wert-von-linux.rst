@@ -1,9 +1,8 @@
-public: yes
-tags: [linux, open source]
-language: de
-
 Der Wert von Linux
 ==================
+
+:tags: linux, open source
+:language: de
 
 Laut Berechnungen der `Linux Foundation <http://www.linuxfoundation.org/>`_
 liegt der Wert einer heutigen Linux-Distribution bei etwa 10.8 Milliarden USD.

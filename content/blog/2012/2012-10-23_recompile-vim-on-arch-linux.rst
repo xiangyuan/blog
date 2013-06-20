@@ -1,10 +1,9 @@
-public: yes
-tags: [vim, python, ruby, archlinux]
-language: en
-summary: Recompile Vim with Python and Ruby support under Arch Linux.
-
 Recompile Vim with Python/Ruby Support on Arch Linux
 ====================================================
+
+:tags: vim, python, ruby, archlinux
+:language: en
+:summary: Recompile Vim with Python and Ruby support under Arch Linux.
 
 For my `vim configuration <https://github.com/dbrgn/dotfiles>`__, I need a
 version of Vim that was built with Python and Ruby support. Unfortunately, the

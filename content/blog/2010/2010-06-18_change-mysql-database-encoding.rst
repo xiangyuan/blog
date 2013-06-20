@@ -1,8 +1,7 @@
-public: yes
-tags: [databases]
-
 Change MySQL Database Encoding
 ==============================
+
+:tags: databases
 
 To change MySQL table column encoding:
 

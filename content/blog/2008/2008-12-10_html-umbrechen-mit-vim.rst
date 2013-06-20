@@ -1,9 +1,8 @@
-public: yes
-tags: [vim]
-language: de
-
 HTML Umbrechen mit VIM
 ======================
+
+:tags: vim
+:language: de
 
 Unser CMS am Arbeitsplatz hat irgend einen Bug, der bewirkt, dass die Codeansicht von Artikeln auf
 unserer Webseite so ganz ohne Zeilenumbrüche daherkommt. Eine einzelne Zeile kann man leider nicht

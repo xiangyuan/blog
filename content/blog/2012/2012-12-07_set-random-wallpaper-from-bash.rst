@@ -1,10 +1,9 @@
-public: yes
-tags: [bash, linux, dwm]
-language: en
-summary: How to set a random wallpaper from a directory on bash using feh.
-
 Set a Random Wallpaper from Bash
 ================================
+
+:tags: bash, linux, dwm
+:language: en
+:summary: How to set a random wallpaper from a directory on bash using feh.
 
 Each time I start my X session, the desktop wallpaper is set in the `.xinitrc`
 script. Until now, it was always a single file called `~/.xwallpaper-dwm.jpg`.

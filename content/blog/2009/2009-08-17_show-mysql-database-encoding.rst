@@ -1,8 +1,7 @@
-public: yes
-tags: [databases]
-
 Show MySQL Database Encoding
 ============================
+
+:tags: databases
 
 To get the current mysql database encoding, issue the following sql
 query:

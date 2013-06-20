@@ -1,10 +1,9 @@
-public: yes
-tags: [python,vim]
-language: en
-summary: How to use Jedi with the YouCompleteMe library.
-
 Using Jedi with YouCompleteMe
 =============================
+
+:tags: python,vim
+:language: en
+:summary: How to use Jedi with the YouCompleteMe library.
 
 (In case you're not familiar with it yet, Jedi_ is an awesome autocompletion
 library for Python that tries to understand your code. There are editor plugins

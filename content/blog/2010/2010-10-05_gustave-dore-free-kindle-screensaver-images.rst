@@ -1,8 +1,7 @@
-public: yes
-tags: [hacking, kindle]
-
 Gustave Doré - Free Kindle Screensaver Images
 =============================================
+
+:tags: hacking, kindle
 
 With the `"Jailbreak" <http://www.mobileread.com/forums/showthread.php?t=88004>`_ for the Kindle 3,
 you also have the possibility to exchange the default "screensaver" images provided by Amazon.

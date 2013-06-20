@@ -1,8 +1,8 @@
-public: yes
-tags: [other, lulz]
-
 1. April 2011
 =============
+
+:tags: other
+:language: de
 
 Hier ein paar der Aprilscherze 2011:
 

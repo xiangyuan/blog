@@ -1,9 +1,8 @@
-public: yes
-tags: [tools]
-language: de
-
 file2hd.com
 ===========
+
+:tags: tools
+:language: de
 
 Einen sehr praktischen Service bietet das Onlinetool `file2hd.com
 <http://file2hd.com/>`_ an.  Einfach URL von einer Webseite in das URL Feld

@@ -1,8 +1,7 @@
-public: yes
-tags: [sysadmin, databases]
-
 Show MySQL Storage Engines
 ==========================
+
+:tags: sysadmin, databases
 
 If you have ever wanted to know the storage engine type of every table
 in one of your MySQL databases, you know how tedious that can be.

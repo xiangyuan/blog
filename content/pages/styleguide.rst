@@ -1,8 +1,6 @@
 Blog reST Styleguide
 ====================
 
-public: yes
-
 Sourcecode style
 ----------------
 

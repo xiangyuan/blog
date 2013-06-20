@@ -1,9 +1,8 @@
-public: yes
-tags: [society, literature, quotes]
-language: de
-
 Wahrheit
 ========
+
+:tags: society, literature, quotes
+:language: de
 
 .. epigraph::
 

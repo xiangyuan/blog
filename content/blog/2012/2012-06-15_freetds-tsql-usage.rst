@@ -1,9 +1,9 @@
-public: yes
-tags: [sysadmin, databases]
-summary: How to use the tsql command.
-
 Using tsql
 ==========
+
+:tags: sysadmin, databases
+:language: en
+:summary: How to use the tsql command.
 
 Today I had to connect to a MSSQL database from a Linux box. A library to do this is `FreeTDS
 <http://www.freetds.org/>`_. It also provides an interactive ``tsql`` command. Install it from your

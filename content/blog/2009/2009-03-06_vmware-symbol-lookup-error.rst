@@ -1,8 +1,7 @@
-public: yes
-tags: [gentoo]
-
 Vmware Symbol Lookup Error
 ==========================
+
+:tags: gentoo
 
 Despite the fact that the Vmware Player was working two weeks ago, today it didn't. The following
 error message was displayed:

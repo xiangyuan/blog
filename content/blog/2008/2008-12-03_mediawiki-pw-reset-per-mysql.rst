@@ -1,9 +1,8 @@
-public: yes
-tags: [sysadmin]
-language: de
-
 Mediawiki PW-Reset per MySQL
 ============================
+
+:tags: sysadmin
+:language: de
 
 Soeben musste ich mein Mediawiki Passwort resetten, hatte aber im Profil keine Mailadresse
 angegeben. Dank einem `Blogeintrag <http://e-huned.com/2006/08/15/reset-a-mediawiki-password/>`_

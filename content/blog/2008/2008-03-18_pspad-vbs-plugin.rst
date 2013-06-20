@@ -1,9 +1,8 @@
-public: yes
-tags: [windows]
-language: de
-
 PSPad VBS Plugin
 ================
+
+:tags: windows
+:language: de
 
 In der Schule arbeiten wir momentan mit VBScript. Mein bevorzugter Editor ist `PSPad
 <http://www.pspad.com/>`_ (sehr empfehlenswert, tolle FTP Funktion gesehen), jedoch sind damit die

@@ -1,8 +1,7 @@
 About me
 ========
 
-public: true
-disqus: no
+:comments: no
 
 .. image:: /static/img/me2.jpg
     :alt: Portrait picture of me

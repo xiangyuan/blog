@@ -1,8 +1,7 @@
-public: yes
-tags: [sysadmin, python]
-
 Use easy_install under Arch Linux or Ubuntu
 ===========================================
+
+:tags: sysadmin, python
 
 If you want to use Python's ``easy_install``, you need to install an
 additional package. Under Arch Linux, you need ``python2-distribute``.

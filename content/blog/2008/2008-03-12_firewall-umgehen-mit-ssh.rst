@@ -1,9 +1,8 @@
-public: yes
-tags: [internet]
-language: de
-
 Firewall umgehen mit SSH
 ========================
+
+:tags: internet
+:language: de
 
 Wer kennt das nicht? Im Büro, in der Schule, oder sonstwo sind bestimmte
 Firewallports gesperrt, und man kann diverse Dienste nicht verwenden.  Bei uns

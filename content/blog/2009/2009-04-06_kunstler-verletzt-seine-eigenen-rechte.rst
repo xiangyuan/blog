@@ -1,9 +1,8 @@
-public: yes
-tags: [law, politics]
-language: de
-
 Künstler verletzt seine eigenen Rechte
 ======================================
+
+:tags: law, politics
+:language: de
 
 Jetzt richtet sich das Urheberrecht schon gegen die Urheberrechtsinhaber
 selber... Wo soll das alles noch hinführen...

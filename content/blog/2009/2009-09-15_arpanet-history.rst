@@ -1,8 +1,7 @@
-public: yes
-tags: [internet]
-
 ARPANET History
 ===============
+
+:tags: internet
 
 .. image:: http://blog.ich-wars-nicht.ch/wp-content/uploads/2009/09/1969-300x184.jpg
     :target: http://blog.ich-wars-nicht.ch/wp-content/uploads/2009/09/1969.jpg

@@ -1,10 +1,9 @@
-public: yes
-tags: [machine learning, ai, python]
-language: en
-summary: How to create a simple perceptron using Python and NumPy.
-
 Programming a Perceptron in Python
 ==================================
+
+:tags: machine learning, ai, python
+:language: en
+:summary: How to create a simple perceptron using Python and NumPy.
 
 At HSR_, I'm currently enrolled in a course about neural networks and machine
 learning. One of the simplest forms of a neural network model is the
