@@ -1,6 +1,8 @@
 Blog reST Styleguide
 ====================
 
+:slug: styleguide
+
 Sourcecode style
 ----------------
 

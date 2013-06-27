@@ -1,0 +1,7 @@
+- links to images and files
+- custom rst content modules
+- tag cloud
+- better pagination
+- htlm5
+- responsive
+- typography details

@@ -9,7 +9,6 @@
             <div class="date">{{ article.locale_date }}</div>
             <div class="detail">
                 <header><h1>
-                    {% if article.language %}{{ article.language }}{% endif %}
                     <a href="{{ SITEURL }}/{{ article.url }}" rel="bookmark" title="Permalink to {{ article.title|striptags }}">
                         {{ article.title }}
                     </a>

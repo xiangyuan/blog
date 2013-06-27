@@ -1,6 +1,7 @@
 About This Blog
 ===============
 
+:slug: blog
 :comments: yes
 
 This blog is made `using rstblog </2012/6/11/rstblog/>`_. The source code is

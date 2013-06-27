@@ -64,9 +64,11 @@
     <div id="wrapper">
         <div id="blogtitle"><a href="{{ SITEURL }}">{{ SITENAME }}</a></div>
         <ul id="mainnav">
-            {% for page in PAGES %}
-                <li{% if loop.last %} class="last"{% endif %}><a href="{{ SITEURL }}/{{ page.url }}">{{ title }}</a></li>
-            {% endfor %}
+            <li><a href="/">home</a></li>
+            <li><a href="/archive/">archive</a></li>
+            <li><a href="/tags/">tags</a></li>
+            <li><a href="/blog/">about this blog</a></li>
+            <li class="last"><a href="/about/">about me</a></li>
         </ul>
 
         <div class="clearboth"></div>

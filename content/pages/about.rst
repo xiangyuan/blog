@@ -1,9 +1,10 @@
 About me
 ========
 
+:slug: about
 :comments: no
 
-.. image:: /images/me2.jpg
+.. image:: /static/images/me2.jpg
     :alt: Portrait picture of me
     :align: right
     :width: 144

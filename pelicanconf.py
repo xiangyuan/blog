@@ -23,7 +23,10 @@ JINJA_EXTENSIONS = []
 JINJA_FILTERS = []
 
 # Plugins
-PLUGINS = ['plugins.iframe_rst_directive', 'plugins.video_rst_directives']
+PLUGINS = [
+    'plugins.iframe_rst_directive',
+    'plugins.video_rst_directives',
+]
 
 # Markup
 MARKUP = ('rst',)
@@ -48,6 +51,8 @@ PAGE_URL = '{slug}/'
 PAGE_SAVE_AS = PAGE_URL + 'index.html'
 TAG_URL = 'tags/{slug}/'
 TAG_SAVE_AS = TAG_URL + 'index.html'
+TAGS_URL = 'tags/'
+TAGS_SAVE_AS = 'tags/index.html'
 YEAR_ARCHIVE_SAVE_AS = '{date:%Y}/index.html'
 MONTH_ARCHIVE_SAVE_AS = '{date:%Y}/{date:%-m}/index.html'
 DAY_ARCHIVE_SAVE_AS = '{date:%Y}/{date:%-m}/{date:%-d}/index.html'

@@ -1,6 +1,7 @@
 Clipboard2Image
 ===============
 
+:slug: clipboard2image
 :comments: yes
 
 Wer häufig beispielsweise Bilder aus Word-Dokus oder ähnlichen Quellen in

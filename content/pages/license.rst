@@ -1,6 +1,7 @@
 License
 =======
 
+:slug: license
 :comments: yes
 
 All content on this blog – unless stated otherwise – is under the `Creative Commons
