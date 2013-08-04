@@ -59,6 +59,7 @@ DAY_ARCHIVE_SAVE_AS = '{date:%Y}/{date:%-m}/{date:%-d}/index.html'
 PAGE_LANG_SAVE_AS = False
 ARTICLE_LANG_SAVE_AS = False
 AUTHOR_SAVE_AS = False
+AUTHORS_SAVE_AS = False
 CATEGORY_SAVE_AS = False
 
 # Theme
