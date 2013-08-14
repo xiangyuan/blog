@@ -3,7 +3,7 @@ Play Rayman 1 on Linux using DosBox
 
 :tags: gaming
 
-.. image:: /static/img/2010/2/22/rayman1.jpg
+.. image:: /images/2010/2/22/rayman1.jpg
 
 This is a tutorial to install and play Rayman 1 (the greatest jump'n'run game ever) using `DosBox
 <http://www.dosbox.com/>`_ on Ubuntu.

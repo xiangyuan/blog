@@ -70,6 +70,6 @@ The result looks correct:
     >>> c.is_valid()
     True
 
-.. image:: http://blog.ich-wars-nicht.ch/wp-content/uploads/2011/09/2011-09-12-185255_291x225_scrot.png
+.. image:: /images/2011/9/2011-09-12-185255_291x225_scrot.png
    :align: center
    :alt: Django form

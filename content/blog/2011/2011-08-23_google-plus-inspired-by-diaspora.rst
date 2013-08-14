@@ -13,19 +13,19 @@ Google+ – almost didn't note any difference concerning the layout.
 
 **Google+**
 
-.. image:: http://blog.ich-wars-nicht.ch/wp-content/uploads/2011/08/google1-1024x744.png
+.. image:: /images/2011/8/google1-1024x744.png
     :alt: Google+ Screenshot
     :width: 895
     :height: 650
-    :target: http://blog.ich-wars-nicht.ch/wp-content/uploads/2011/08/google1.png
+    :target: /images/2011/08/google1.png
 
 **Diaspora**
 
-.. image:: http://blog.ich-wars-nicht.ch/wp-content/uploads/2011/08/diaspora1-1024x613.png
+.. image:: /images/2011/8/diaspora1-1024x613.png
     :alt: Diaspora Screenshot
     :width: 895
     :height: 536
-    :target: http://blog.ich-wars-nicht.ch/wp-content/uploads/2011/08/diaspora1.png
+    :target: /images/2011/08/diaspora1.png
 
 (Sorry about forgetting to switch Diaspora to English...)
 

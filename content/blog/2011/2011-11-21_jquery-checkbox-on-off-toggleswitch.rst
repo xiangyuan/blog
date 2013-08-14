@@ -12,7 +12,7 @@ using jQuery JavaScript and CSS.
 
 This is what it looks like:
 
-.. image:: /static/img/2011/11/21/screenshot_toggles.png
+.. image:: /images/2011/11/21/screenshot_toggles.png
    :alt: Screenshot of Toggles
 
 1. HTML
@@ -57,7 +57,7 @@ and that the checkbox and the label are direct children of the
         display: none;
     }
 
-Don't forget to download the `switch.png file </static/img/2011/11/21/switch.png>`_.
+Don't forget to download the `switch.png file </images/2011/11/21/switch.png>`_.
 
 3. jQuery
 ---------

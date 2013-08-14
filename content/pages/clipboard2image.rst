@@ -39,12 +39,12 @@ Screenshots
 
 Clipboard2Image.exe:
 
-.. image:: /static/img/pages/clipboard2image_v1.4.png
+.. image:: /images/pages/clipboard2image_v1.4.png
     :alt: Screenshot Clipboard2Image
 
 c2i.exe:
 
-.. image:: /static/img/pages/c2i_v1.1.png
+.. image:: /images/pages/c2i_v1.1.png
     :alt: Screenshot c2i.exe
 
 Hinweise

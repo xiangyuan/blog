@@ -15,5 +15,5 @@ die selbe Funktionalität, aber noch mehr Möglichkeiten zur Bildauswahl.
 **Update 19.08.10:** Die nochmal weitaus bessere Applikation für Farbschemas ist `Adobe Kuler
 <http://kuler.adobe.com/>`_, siehe Screenshot:
 
-.. image:: /static/img/2008/11/20/kuler.png
+.. image:: /images/2008/11/20/kuler.png
     :alt: Adobe Kuler Screenshot

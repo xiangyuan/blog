@@ -1,4 +1,3 @@
-- links to images and files
 - custom rst content modules
 - tag cloud
 - better pagination

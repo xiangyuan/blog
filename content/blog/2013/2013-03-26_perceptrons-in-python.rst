@@ -29,7 +29,7 @@ The weighted sum *s* of these inputs is then passed through a step function *f*
 
 To make things cleaner, here's a little diagram:
 
-.. image:: /static/img/2013/3/26/perceptron.png
+.. image:: /images/2013/3/26/perceptron.png
     :alt: The mathematical model of a perceptron.
 
 
@@ -147,13 +147,13 @@ visualize the learning process:
     ylim([-1,1])
     plot(errors)
 
-.. image:: /static/img/2013/3/26/error_plot.png
+.. image:: /images/2013/3/26/error_plot.png
 
 It's easy to see that the errors stabilize around the 60th iteration. If you
 doubt that the errors are definitely eliminated, you can re-run the training
 with an iteration count of 500 or more and plot the errors:
 
-.. image:: /static/img/2013/3/26/error_plot2.png
+.. image:: /images/2013/3/26/error_plot2.png
 
 You could also try to change the training sequence in order to model an AND, NOR
 or NOT function. Note that it's not possible to model an XOR function using a

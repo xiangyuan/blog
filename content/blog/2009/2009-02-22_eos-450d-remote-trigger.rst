@@ -7,8 +7,8 @@ On the left side of the Canon EOS 450D (and probably on any other EOS camera), t
 for a remote shutter trigger. You can make your own remote trigger by sticking one side of a 2.5"
 jack-jack cable into the connector, while bridging two of the pins on the other side of the cable.
 
-.. image:: http://blog.ich-wars-nicht.ch/wp-content/uploads/2009/02/img_6945-300x172.jpg
-    :target: http://blog.ich-wars-nicht.ch/wp-content/uploads/2009/02/img_6945.jpg
+.. image:: /images/2009/2/img_6945-300x172.jpg
+    :target: /images/2009/2/img_6945.jpg
 
 By connecting pin 1 + 3, you can focus and trigger the shutter; connecting pin 2 + 3 triggers
 autofocus only. With that information, you can easily make yourself your own remote trigger, maybe

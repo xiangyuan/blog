@@ -67,16 +67,16 @@ Images, alignment
 
 - A figure may provide a caption, it should be rendered in *italic* font.
 
-- Images should be placed in a `/static/img/<year>/<month>/<day>/` folder.
+- Images should be placed in a `/images/<year>/<month>/<day>/` folder.
 
 **Example:**
 
 .. sourcecode:: rst
 
-    .. image:: /static/img/2012/6/17/spam.png
+    .. image:: /images/2012/6/17/spam.png
         :alt: Picture of a can of spam
 
-    .. figure:: /static/img/2012/6/17/ni.jpg
+    .. figure:: /images/2012/6/17/ni.jpg
         :alt: A knight who says NI!
 
         A knight who says NI!

@@ -4,7 +4,7 @@ Prozess um 'The Pirate Bay'
 :tags: politics, internet, filesharing
 :language: de
 
-.. image:: http://blog.ich-wars-nicht.ch/wp-content/uploads/2009/02/piratebay-272x300.gif
+.. image:: /images/2009/2/piratebay-272x300.gif
    :alt: "The Piratebay" logo
 
 Der Bericht über den Prozesstag 7 auf `Gulli <http://www.gulli.com/>`_ übertrifft wiedermal alles.

@@ -29,7 +29,7 @@ Stick...
 Als erstes muss man in PuTTY die Verbindungseinstellungen zum SSH Server
 festlegen.
 
-.. image:: /static/img/2008/3/12/putty_screenshot_1.png
+.. image:: /images/2008/3/12/putty_screenshot_1.png
     :alt: PuTTY Screenshot
 
 Dann müssen die verschiedenen Tunnels definiert werden. Beispiel 1: Gmail IMAP
@@ -41,7 +41,7 @@ Port einen beliebigen freien Port wählen (in meinem Beispiel Port 89). Das
 Destination-Feld bleibt leer. Die Optionen werden auf "Dynamic" und "Auto"
 gesetzt.
 
-.. image:: /static/img/2008/3/12/putty_screenshot_2.png
+.. image:: /images/2008/3/12/putty_screenshot_2.png
     :alt: PuTTY Screenshot
 
 Um die Verbindung aufzubauen muss man jetzt nur noch auf "Open" klicken und das
@@ -52,13 +52,13 @@ Jetzt müssen nur noch die Programme konfiguriert werden. Für IMAP: Unter Outlo
 in den Konteneinstellung als Postausgangs-Serverport den selben Port wie vorhin
 wählen, in meinem Beispiel 88.
 
-.. image:: /static/img/2008/3/12/outlook_screenshot_1.png
+.. image:: /images/2008/3/12/outlook_screenshot_1.png
     :alt: Outlook Konfiguration 1
 
 Dann den Postausgangsserver von `imap.gmail.com` zu `127.0.0.1` ändern (oder
 alternativ "localhost").
 
-.. image:: /static/img/2008/3/12/outlook_screenshot_1.png
+.. image:: /images/2008/3/12/outlook_screenshot_1.png
     :alt: Outlook Konfiguration 1
 
 Das wars, IMAP sollte jetzt funktionieren. Jetzt noch zu Windows Live Messenger:
@@ -68,7 +68,7 @@ Messenger neu starten, und schon funzt die ganze Sache!  Speziell in Verbindung
 mit der Transparenz-Funktion und dem Bosskey von `Messsenger Plus!
 <http://www.msgpluslive.net/>`_ enorm nützlich! ;)
 
-.. image:: /static/img/2008/3/12/livemessenger_screenshot_1.png
+.. image:: /images/2008/3/12/livemessenger_screenshot_1.png
     :alt: Live Messenger Konfiguration
 
 Ich hoffe mit diesem Post einigen Leuten helfen zu können. Für Feedback ist die
