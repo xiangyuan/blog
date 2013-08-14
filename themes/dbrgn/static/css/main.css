@@ -102,14 +102,34 @@ th {
     font-style: italic;
 }
 
+h1 {
+    font-size: 2em;
+}
+
 h1 cite {
     font-size: 26px;
     margin: 0 2px;
 }
 
+h2 {
+    margin: 0;
+}
+
+.archives h2 {
+    margin-bottom: 15px;
+}
+
+h3 {
+    margin: 0;
+}
+
 div.date {
     color: #777;
     display: inline-block;
+}
+
+div.date p {
+    margin: 0;
 }
 
 img.flattrbutton {
