@@ -12,7 +12,9 @@
         </div>
     {% endif %}
 
-    {{ article.content }}
+    <div class="clearboth">
+        {{ article.content }}
+    </div>
 
     {% if not article.flattr or not article.flattr == 'no' %}
         <a href="https://flattr.com/submit/auto?user_id={{ FLATTR_USERNAME }}&url={{ SITE_URL }}/{{ article.url }}/&title={{ article.title|striptags|urlencode }}&description={{ article.summary|striptags|urlencode }}&tags={% for tag in article.tags|sort %}{{ tag|urlencode }}{% if not loop.last %},{% endif %}{% endfor %}&category=text">
