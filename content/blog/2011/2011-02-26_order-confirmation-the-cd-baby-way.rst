@@ -4,7 +4,7 @@ Order confirmation - the CD Baby way
 :tags: music, internet
 
 I just received a pretty dang awesome confirmation-email for a CD order
-at `CD Baby <http://cdbaby.com/>`_, a great indie music
+at `CD Baby <http://www.cdbaby.com/>`_, a great indie music
 onlineshop/label:
 
     Thanks for your order with CD Baby! Your CDs have been gently taken from our

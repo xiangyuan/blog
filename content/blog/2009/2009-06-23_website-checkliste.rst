@@ -56,7 +56,7 @@ Accessibility
 Sind alle Bilder mit Alt-Tags versehen? Ist die Seite ohne JavaScript nutzbar? Wie stehts für
 Analog-Modemnutzer? Weitere Infos z.B. auf der Seite der `Web Accessibility Initiative
 <http://www.w3.org/WAI/>`_ oder auf der `Checkliste zu barrierefreien Webseiten
-<http://www.ch.ch/hilfe/01696/01698/>`_ von ch.ch.
+<https://www.ch.ch/de/accessibility/>`_ von ch.ch.
 
 Drucklayout
 ^^^^^^^^^^^

@@ -15,5 +15,5 @@ autofocus only. With that information, you can easily make yourself your own rem
 even an automatic trigger using the arduino and some sensors.
 
 For high speed photography using the arduino and an external flash, i'd recommend the approaches by
-`[nosmos.org] <http://projects.nosomos.org/arduino-controlled-flash-trigger>`_ and
+`[nosmos.org] <http://projects.nosomos.org/flash-trigger/>`_ and
 `[glacialwanderer.com] <http://www.glacialwanderer.com/hobbyrobotics/?p=11>`_.

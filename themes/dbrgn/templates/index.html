@@ -2,8 +2,7 @@
 
 {% block content %}
 
-    <section id="content">
-      {%- for article in articles_page.object_list %}
+    {%- for article in articles_page.object_list %}
 
         <article class="entry-overview">
             <div class="date">{{ article.locale_date }}</div>
@@ -18,14 +17,12 @@
                     {% for tag in article.tags|sort %}
                         <a href="{{ SITEURL }}/{{ tag.url }}">#{{ tag.name.replace(' ', '_') }}</a>
                     {% endfor %}
-                 </div>
+                </div>
             </div>
         </article>
 
-        {%- endfor %}
+      {%- endfor %}
 
-        {% include 'pagination.html' %}
-
-    </section>
+      {% include 'pagination.html' %}
 
 {% endblock %}

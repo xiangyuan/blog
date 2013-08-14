@@ -15,11 +15,11 @@ Mal ein paar Sachen aus der Demoscene... Ein Arbeitskollege hat mich darauf aufm
 :Scene.org Awards:
     `http://awards.scene.org <http://awards.scene.org>`_
 :Diskussionen Rund um die Demos:
-    `http://www.pouet.net <http://www.pouet.net>`_
+    `http://pouet.net <http://pouet.net>`_
 :Ein Verein für die Demoscene in der Schweiz:
-    `http://www.echtzeitkultur.org <http://www.echtzeitkultur.org%20>`_
+    `http://www.echtzeitkultur.org <http://www.echtzeitkultur.org/>`_
 :Eine Demoparty in der Schweiz:
-    `http://www.buenz.li <http://www.buenz.li>`_
+    `http://demodays.org/ <http://demodays.org/>`_
 
 Ich bin da selbst nicht dabei, aber es gibt da ganz faszinierende Demos darunter. Aus technischer
 Sicht ist da sicher mal `Debris

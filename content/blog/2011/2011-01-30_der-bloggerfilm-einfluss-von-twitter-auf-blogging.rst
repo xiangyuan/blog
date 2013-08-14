@@ -21,10 +21,10 @@ Statistiken
 
 Im Film wurde auch die "Abwanderung von Beiträgen zu Twitter / Facebook"
 erwähnt. Bei mir merkt man das auch stark. Ich wollte es genauer wissen und hab
-mir mal mit `Protovis <http://vis.stanford.edu/protovis/>`_ eine Statistik
+mir mal mit `Protovis <http://mbostock.github.io/protovis/>`_ eine Statistik
 erstellt. Die Statistik zeigt die Anzahl Blogeinträge pro Monat. Schön zu sehen
 ist hier, wie die Zahlen nach meinem `ersten Tweet
-<http://twitter.com/dbrgn/status/3781838673>`_ stark gesunken sind.
+<https://twitter.com/dbrgn/status/3781838673>`_ stark gesunken sind.
 
 .. figure:: /images/2011/1/screenshot_20110130_01.png
    :align: center
@@ -47,5 +47,5 @@ flexibler und schneller.
 Fazit
 -----
 
-Die Bloggerszene `ist tot <http://twitter.com/dbrgn/status/3781838673>`_, es
+Die Bloggerszene `ist tot <https://twitter.com/dbrgn/status/3781838673>`_, es
 lebe `die Bloggerszene <http://vimeo.com/17987843>`_!

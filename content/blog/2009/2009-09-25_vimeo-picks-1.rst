@@ -3,10 +3,11 @@ Vimeo Picks 1
 
 :tags: videos
 
-Ich hab heut Abend wiedermal einige Zeit auf `Vimeo <http://vimeo.com/>`_ verbracht. Vimeo ist eine
-Video-Platform, die im Gegensatz zu Youtube nicht einen haufen viraler, "lustiger" Clips sammelt,
-sondern seinen Schwerpunkt auf selbstgemachte, kreative Videos legt. Und davon gibts eine ganze
-Menge. Hier ein paar die mir gut gefallen (Tipp: Dank guter Qualität (teilweise HD) kann man den
+Ich hab heut Abend wiedermal einige Zeit auf `Vimeo <https://vimeo.com/>`_
+verbracht. Vimeo ist eine Video-Platform, die im Gegensatz zu Youtube nicht
+einen haufen viraler, "lustiger" Clips sammelt, sondern seinen Schwerpunkt auf
+selbstgemachte, kreative Videos legt. Und davon gibts eine ganze Menge. Hier ein
+paar die mir gut gefallen (Tipp: Dank guter Qualität (teilweise HD) kann man den
 Vollbildmodus nur empfehlen):
 
 .. vimeo:: 6603360

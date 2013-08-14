@@ -1,12 +1,12 @@
 Git Introduction Presentation Slides
 ====================================
 
-:tags: git, introduction, presentations, sildes, reveal.js
+:tags: git, introduction, presentations, slides, reveal.js
 :language: en
 :summary: The slides of a presentation I held about git.
 
 This week, I held a short introductory presentation about `git`_ at
-`Webrepublic`_. I used the opportunity to play around with `rvl.io`_, the free
+`Webrepublic`_. I used the opportunity to play around with `slid.es`_, the free
 online-editor to create `reveal.js`_ based presentations. Here it is:
 
 .. iframe:: http://dbrgn.ch/slides/20130207_getting_git/
@@ -26,5 +26,5 @@ directive, available `on github
 
 .. _git: http://git-scm.com/
 .. _webrepublic: http://www.webrepublic.ch/
-.. _rvl.io: http://rvl.io/
+.. _slid.es: http://slid.es/
 .. _reveal.js: http://lab.hakim.se/reveal-js/

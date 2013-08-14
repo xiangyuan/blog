@@ -17,7 +17,7 @@ Google+ – almost didn't note any difference concerning the layout.
     :alt: Google+ Screenshot
     :width: 895
     :height: 650
-    :target: /images/2011/08/google1.png
+    :target: /images/2011/8/google1.png
 
 **Diaspora**
 
@@ -25,7 +25,7 @@ Google+ – almost didn't note any difference concerning the layout.
     :alt: Diaspora Screenshot
     :width: 895
     :height: 536
-    :target: /images/2011/08/diaspora1.png
+    :target: /images/2011/8/diaspora1.png
 
 (Sorry about forgetting to switch Diaspora to English...)
 

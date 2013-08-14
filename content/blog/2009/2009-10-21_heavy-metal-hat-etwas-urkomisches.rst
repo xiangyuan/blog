@@ -15,5 +15,5 @@ Heavy Metal hat etwas urkomisches
     Begeisterung und Überschwang ausdrückt. Das hat Unterhaltungswert, man kann sich entspannen und
     sich an der Musik freuen – großartig und lächerlich zugleich.
 
-    -- `Tim Schafer <http://www.spiegel.de/netzwelt/games/0,1518,656086,00.html>`_
+    -- `Tim Schafer <http://www.spiegel.de/netzwelt/games/game-clown-tim-schafer-heavy-metal-hat-etwas-urkomisches-a-656086.html>`_
 

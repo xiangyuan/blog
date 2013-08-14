@@ -18,7 +18,7 @@ have multiple Python environments next to each other (usually one per project),
 each with its own binaries and packages.
 
 I really recommend using virtualenv for *all* Python projects. Tools like
-`virtualenvwrapper <http://www.doughellmann.com/projects/virtualenvwrapper/>`_
+`virtualenvwrapper <https://bitbucket.org/dhellmann/virtualenvwrapper>`_
 and `requirements files
 <http://www.pip-installer.org/en/latest/requirements.html>`_ make setting up a
 new virtual environment a breeze.

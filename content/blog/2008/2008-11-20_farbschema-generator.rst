@@ -13,7 +13,7 @@ dunklen Farben. Prädikat "sehr empfehlenswert".
 die selbe Funktionalität, aber noch mehr Möglichkeiten zur Bildauswahl.
 
 **Update 19.08.10:** Die nochmal weitaus bessere Applikation für Farbschemas ist `Adobe Kuler
-<http://kuler.adobe.com/>`_, siehe Screenshot:
+<https://kuler.adobe.com/>`_, siehe Screenshot:
 
 .. image:: /images/2008/11/20/kuler.png
     :alt: Adobe Kuler Screenshot

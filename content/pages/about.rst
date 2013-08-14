@@ -49,8 +49,8 @@ GPG
 .. _webrepublic: http://www.webrepublic.ch/
 .. _swiss pirate party: http://www.piratenpartei.ch/
 .. _python: http://python.org/
-.. _django: http://djangoproject.org
-.. _archlinux: http://www.archlinux.org/
+.. _django: https://www.djangoproject.org
+.. _archlinux: https://www.archlinux.org/
 .. _vim: http://www.vim.org/
 .. _git: http://git-scm.com/
 .. _github: https://github.com/

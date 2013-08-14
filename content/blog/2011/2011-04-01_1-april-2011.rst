@@ -6,7 +6,7 @@
 
 Hier ein paar der Aprilscherze 2011:
 
--  `DayDeal <http://daydeal.ch/>`__: DIY Lego-Haus
+-  `DayDeal <http://www.daydeal.ch/>`__: DIY Lego-Haus
    (`screenshot <http://i.imgur.com/527DV.png>`__)
 -  `XKCD <http://xkcd.com/>`__: Alle Comics in 3D mit Parallaxscrolling
    (`screenshot <http://i.imgur.com/YLoH2.png>`__)
@@ -19,11 +19,11 @@ Hier ein paar der Aprilscherze 2011:
    `5984 <http://tools.ietf.org/html/rfc5984>`__,
    `6214 <http://tools.ietf.org/html/rfc6214>`__ und
    `6217 <http://tools.ietf.org/html/rfc6217>`__
--  `local.ch <http://local.ch/>`__: Local has got balls today
+-  `local.ch <http://www.local.ch/>`__: Local has got balls today
    (`screenshot <http://i.imgur.com/bqF1i.png>`__)
 -  `NZZ online <http://www.nzz.ch/>`__: Wikileaks-Dokumente zu Caesars
    Ermordung
-   (`link <http://www.nzz.ch/nachrichten/kultur/medien/wikileaks-dokumente_zu_caesars_ermordung_1.8931839.html>`__)
+   (`link <http://www.nzz.ch/aktuell/feuilleton/medien/wikileaks-dokumente-zu-caesars-ermordung-1.8931839>`__)
 -  `@omgubuntu <https://twitter.com/omgubuntu>`__: Gnome 3 delay
    announcement
    (`tweet1 <https://twitter.com/omgubuntu/status/53735379156742144>`__,
@@ -31,7 +31,7 @@ Hier ein paar der Aprilscherze 2011:
 -  `memonic Blog <http://blog.memonic.com/>`__: Offline clipping for
    memonic
    (`link <http://blog.memonic.com/2011/04/01/todays-changes-offline-clipping/>`__)
--  `Tagesanzeiger online <http://tagesanzeiger.ch/>`__: Militär prüft
+-  `Tagesanzeiger online <http://www.tagesanzeiger.ch/>`__: Militär prüft
    Prime Tower auf Erdbeben- und Sturmfestigkeit
    (`link <http://www.tagesanzeiger.ch/zuerich/stadt/Militaer-prueft-Prime-Tower-auf-Erdbeben-und-Sturmfestigkeit-/story/15564992>`__)
 -  `Google Motion <http://mail.google.com/mail/help/motion.html>`__: A
@@ -51,7 +51,7 @@ Hier ein paar der Aprilscherze 2011:
    (`link <http://www.microsoft.com/germany/presseservice/news/pressemitteilung.mspx?id=533347>`__)
 -  `wuv.de <http://www.wuv.de/>`__: "Social-Media-Experte" wird
    geschützte Berufsbezeichnung
-   (`link <http://www.wuv.de/nachrichten/digital/social_media_experte_wird_geschuetzte_berufsbezeichnung>`__)
+   (`link <http://www.wuv.de/digital/social_media_experte_wird_geschuetzte_berufsbezeichnung>`__)
 -  `Stackoverflow <http://stackoverflow.com/>`__: Program is erroneously
    rejected by three C++ compilers
    (`link <http://stackoverflow.com/questions/5508110/why-is-this-program-erroneously-rejected-by-three-c-compilers>`__)

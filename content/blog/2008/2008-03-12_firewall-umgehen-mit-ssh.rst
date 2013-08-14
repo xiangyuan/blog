@@ -9,7 +9,7 @@ Firewallports gesperrt, und man kann diverse Dienste nicht verwenden.  Bei uns
 im Geschäft ist das neuerdings der Fall. Mit einer neuen Firewall wurden auch
 neue Ports gesperrt. Kein MSN mehr, kein IMAP über Port 993 (Gmail)... Das hat
 gewaltig genervt. Ich habe mich darum umgeschaut und eine Lösung gefunden: `SSH
-Tunnelling <http://de.wikipedia.org/wiki/Tunnel_(Netzwerktechnik)>`_.
+Tunnelling <https://de.wikipedia.org/wiki/Tunnel_(Rechnernetz)>`_.
 
 Als erstes braucht man Zugang zu einem beliebigen SSH Server ausserhalb der
 Firewall. Dies kann z.B.  eine Linux-Workstation mit installiertem OpenSSH

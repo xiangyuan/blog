@@ -7,7 +7,7 @@ d3.js and X-Requested-With
 
 Most JavaScript frameworks set the `X-Requested-With` HTTP Header to
 `XMLHttpRequest` when sending non-cross-domain XHR requests. Many web
-frameworks like `Django <http://djangoproject.com/>`_ or `Flask
+frameworks like `Django <https://www.djangoproject.com/>`_ or `Flask
 <http://flask.pocoo.org/>`_ use this to detect AJAX requests.
 
 Because of issues with `X-Requested-With` and cross-domain XHR requests, d3.js

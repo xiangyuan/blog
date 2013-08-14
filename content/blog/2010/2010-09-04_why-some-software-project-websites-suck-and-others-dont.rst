@@ -37,11 +37,11 @@ download possibilities. Also, redirected downloads suck. Direct (and therefore
 What users want and developers hate, is documentation. Great documentation can
 contribute to great success. A good example of this is the area of software
 frameworks. A lot of frameworks (like `CodeIgniter
-<http://codeigniter.com/user_guide/>`_, `Django
-<https://docs.djangoproject.com/en/1.4/>`_ and `jQuery
-<http://docs.jquery.com/Main_Page>`_) are highly successful - not least because
+<http://ellislab.com/codeigniter/user-guide/>`_, `Django
+<https://docs.djangoproject.com/>`_ and `jQuery
+<http://api.jquery.com/>`_) are highly successful - not least because
 of the great and easy-to-understand documentation. Provide good documentation
-(e.g. on `ReadTheDocs <http://readthedocs.org/>`_) and don't forget to share it
+(e.g. on `ReadTheDocs <https://readthedocs.org/>`_) and don't forget to share it
 with others.
 
 **Provide a way for feedback**
