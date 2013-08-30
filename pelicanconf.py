@@ -24,8 +24,8 @@ JINJA_FILTERS = []
 
 # Plugins
 PLUGINS = [
-    'plugins.iframe_rst_directive',
-    'plugins.video_rst_directives',
+    'plugins.iframe',
+    'plugins.video',
 ]
 
 # Markup
