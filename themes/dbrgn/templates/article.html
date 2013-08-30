@@ -33,4 +33,8 @@
         </div>
     {% endif %}
 
+    {% if DISQUS_SITENAME and SITEURL and article.status != "draft" %}
+        {% include 'disqus.html' %}
+    {% endif %}
+
 {% endblock %}

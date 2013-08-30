@@ -19,7 +19,7 @@ DEFAULT_DATE_FORMAT = '%B %d, %Y'
 FILENAME_METADATA = '(?P<date>\d{4}-\d{2}-\d{2})_(?P<slug>.*)'
 
 # Jinja
-JINJA_EXTENSIONS = []
+JINJA_EXTENSIONS = ['jinja2.ext.autoescape']
 JINJA_FILTERS = []
 
 # Plugins
