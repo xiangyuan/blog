@@ -1,6 +1,7 @@
-- custom rst content modules
 - tag cloud
 - better pagination
 - htlm5
 - responsive
 - typography details
+- assets plugin
+- sitemaps: special priorities for indexes

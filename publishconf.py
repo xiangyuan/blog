@@ -10,7 +10,7 @@ import sys
 sys.path.append(os.curdir)
 from pelicanconf import *
 
-SITEURL = 'http://blog.dbrgn.ch'
+SITEURL = 'http://blog2.dbrgn.ch'
 RELATIVE_URLS = False
 
 FEED_ALL_ATOM = 'feed.atom'
@@ -19,7 +19,20 @@ TRANSLATION_FEED_ATOM = None
 
 DELETE_OUTPUT_DIRECTORY = True
 
-# Following items are often useful when publishing
-
 DISQUS_SITENAME = 'dbrgn'
 GOOGLE_ANALYTICS = 'UA-1033934-12'
+
+PLUGINS.append('plugins.sitemap')
+SITEMAP = {
+    'format': 'xml',
+    'priorities': {
+        'indexes': 0.9,
+        'pages': 0.8,
+        'articles': 0.7,
+    },
+    'changefreqs': {
+        'indexes': 'daily',
+        'pages': 'monthly',
+        'articles': 'yearly',
+    }
+}
