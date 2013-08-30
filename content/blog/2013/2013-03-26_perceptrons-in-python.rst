@@ -4,6 +4,7 @@ Programming a Perceptron in Python
 :tags: machine learning, ai, python
 :language: en
 :summary: How to create a simple perceptron using Python and NumPy.
+:latex: true
 
 At HSR_, I'm currently enrolled in a course about neural networks and machine
 learning. One of the simplest forms of a neural network model is the
@@ -14,18 +15,18 @@ Background Information
 ----------------------
 
 A perceptron classifier is a simple model of a neuron. It has different inputs
-(*x1* ... *xn*) with different weights (*w1* ... *wn*). 
+($x_1$...$x_n$) with different weights ($w_1$...$w_n$). 
 
-.. math::
+.. latex::
 
-    s = \sum_{i=0}^n w_i \cdot x_i
+    $$s = \sum_{i=0}^n w_i \cdot x_i$$
 
-The weighted sum *s* of these inputs is then passed through a step function *f*
+The weighted sum $s$ of these inputs is then passed through a step function $f$
 (usually a `Heaviside step function`_).
 
-.. math::
+.. latex::
 
-    f(s) = \begin{cases} 1 & \textrm{if } s \ge 0 \\ 0 & \textrm{otherwise} \end{cases}
+    $$f(s) = \begin{cases} 1 & \textrm{if } s \ge 0 \\ 0 & \textrm{otherwise} \end{cases}$$
 
 To make things cleaner, here's a little diagram:
 

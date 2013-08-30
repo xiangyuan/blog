@@ -4,6 +4,7 @@ Goodbye Wordpress, hi rstblog!
 :tags: rstblog, blog, rst, python
 :language: en
 :summary: I just replaced Wordpress with rstblog.
+:latex: true
 
 Since having switched from the PHP world to the Python world about 2 years ago, I thought about
 relaunching my Blog using Python instead of PHP. At first, I thought about creating an application
@@ -37,9 +38,9 @@ You can also embed syntax highlighted code using `pygments <http://pygments.org/
 
 And `LaTeX <http://www.latex-project.org/>`_ formulas:
 
-.. math::
+.. latex::
 
-    f(x) = a_0 + \sum_{n=1}^{\infty}\left(a_n \cos \frac{n \pi x}{L} + b_n \sin \frac{n \pi x}{L}\right)
+    $$f(x) = a_0 + \sum_{n=1}^{\infty}\left(a_n \cos \frac{n \pi x}{L} + b_n \sin \frac{n \pi x}{L}\right)$$
 
 There's even more to like. If you want to know more, take a look at the
 `repository and the sourcecode <https://github.com/mitsuhiko/rstblog>`_. That's

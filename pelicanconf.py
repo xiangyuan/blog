@@ -24,6 +24,7 @@ JINJA_FILTERS = []
 
 # Plugins
 PLUGINS = [
+    'plugins.latex',
     'plugins.iframe',
     'plugins.video',
 ]
@@ -38,7 +39,7 @@ TRANSLATION_FEED_ATOM = None
 
 # Build process
 STATIC_PATHS = ['images', 'files']
-TYPOGRIFY = True
+TYPOGRIFY = False  # TODO blocked by pelican issue #980
 SUMMARY_MAX_LENGTH = 15
 DEFAULT_PAGINATION = 10
 DEFAULT_ORPHANS = 2
@@ -71,3 +72,6 @@ FLATTR_USERNAME = 'danilo'
 FAVICON = 'favicon.ico'
 BLOG_LICENSE = 'http://creativecommons.org/licenses/by-sa/3.0/'
 GOOGLE_SITE_VERIFICATION = 'uJWWR6d5ESb8torD0v97T_07HLMGX7VzQ-smcUTc_IQ'
+
+# Latex plugin
+LATEX = 'article'
