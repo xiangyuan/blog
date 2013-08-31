@@ -66,9 +66,15 @@ For an existing app::
 If you have any questions or problems, feel free to leave a comment or `open an
 issue on Github <https://github.com/dbrgn/heroku-buildpack-python-sklearn/issues>`__.
 
+**Update 8/4/13:** It is important that you only use versions of Numpy and Scipy
+that are available as precompiled binaries. For list of available versions, see
+the `npscipy-binaries repo`_.
+
+
 .. _webrepublic: https://www.webrepublic.ch/
 .. _scikit-learn: http://scikit-learn.org/stable/
 .. _wyn/heroku-buildpack-python: https://github.com/wyn/heroku-buildpack-python
 .. _toontimbermont/heroku-buildpack-python: https://github.com/ToonTimbermont/heroku-buildpack-python
 .. _precompiled binaries by wyn: https://github.com/wyn/npscipy-binaries
 .. _anaconda buildpack: https://github.com/kennethreitz/anaconda-buildpack
+.. _npscipy-binaries repo: https://github.com/dbrgn/npscipy-binaries
