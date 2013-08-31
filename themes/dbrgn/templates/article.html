@@ -8,7 +8,9 @@
 
     {% if article.date %}
         <div class="date">
-            <p>written on {{ article.date|strftime("%A, %B %d, %Y") }}</p>
+            <p>written on {{ article.date|strftime("%A, %B %d, %Y") }}
+            by <a rel="author" href="/about/">Danilo Bargen</a></p>
+            <p class="hidden"><a href="https://plus.google.com/107821756387719288540/?rel=author">My Profile on Google+</a></p>
         </div>
     {% endif %}
 
