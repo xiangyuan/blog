@@ -206,27 +206,3 @@ a, a:visited {
     float: left;
     margin-right: 10px;
 }
-
-/* Media queries */
-
-@media only screen and (max-width: 600px or max-device-width: 600px) {
-    body, #wrapper {
-        max-width: 600px;
-    }
-    #mainnav {
-        float: left;
-        clear: both;;
-    }
-}
-
-@media only screen and (max-width: 500px or max-device-width: 500px) {
-    body, #wrapper {
-        max-width: 500px;
-    }
-    p {
-        line-height: 1.7em;
-    }
-    .blog-archive li {
-        margin-bottom: 15px;
-    }
-}
