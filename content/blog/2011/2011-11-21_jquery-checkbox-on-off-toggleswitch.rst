@@ -48,10 +48,10 @@ and that the checkbox and the label are direct children of the
         display: none;
     }
     label.switch-toggle.on {
-        background-position: 0px 12px;
+        background-position: 0 12px;
     }
     label.switch-toggle.off {
-        background-position: 0px 0px;
+        background-position: 0 0;
     }
     label.switch-toggle.hidden {
         display: none;
