@@ -23,21 +23,24 @@ PUBCONFFILE = os.path.join(BASEDIR, 'publishconf.py')
 PORT = 8000
 
 env.hosts = ['dbrgn.ch']
-env.path = '/var/www/blog2/'
+env.path = '/var/www/blog/'
 
 
 def push():
     local('git push')
 
 
+def clean():
+    """Remove output directory."""
+    local('rm -rf {}'.format(OUTPUTDIR))
+
+
 def build(target='publish'):
+    """Build HTML."""
+    clean()
     CONFFILE = DEVCONFFILE if target == 'local' else PUBCONFFILE
-    commands = [
-        'rm -rf {}'.format(OUTPUTDIR),
-        '{} --verbose {} -o {} -s {} {}'.format(PELICAN, INPUTDIR, OUTPUTDIR,
-                                                CONFFILE, PELICANOPTS),
-    ]
-    local(' && '.join(commands))
+    command = '{} --verbose {} -o {} -s {} {}'
+    local(command.format(PELICAN, INPUTDIR, OUTPUTDIR, CONFFILE, PELICANOPTS))
 
 
 def serve():
