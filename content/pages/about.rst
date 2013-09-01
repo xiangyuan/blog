@@ -14,7 +14,8 @@ Hi. I'm Danilo Bargen. I'm 22 years old, live in Switzerland and study computer
 science at `HSR Rapperswil`_. Besides that, I currently work part-time as a
 software engineer at `Webrepublic`_. I'm `a third culture kid
 </2009/4/14/third-culture-kids/>`_ from Peru. I `paraglide
-<http://en.wikipedia.org/wiki/Paragliding>`_. I'm active on `Kiva
+<https://www.youtube.com/watch?v=v23JYGUZm5Q>`_ and sometimes `hike
+<http://www.hikr.org/user/dbrgn/tour/>`_. I'm active on `Kiva
 <http://www.kiva.org/invitedby/danilo1664>`_. I like `Python`_, `Django`_,
 `ArchLinux`_, `Vim`_, `Git`_, `Github`_ and `Free Software`_.
 
