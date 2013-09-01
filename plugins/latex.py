@@ -47,7 +47,7 @@ class LatexBlock(Directive):
         self.assert_has_content()
         # join lines, separate blocks
         content = '\n'.join(self.content)
-        return [nodes.raw('', '<div class="docutils literal">{}</div>'.format(content), format='html')]
+        return [nodes.raw('', '<div class="docutils">{}</div>'.format(content), format='html')]
 
 
 def add_latex(gen, metadata):
