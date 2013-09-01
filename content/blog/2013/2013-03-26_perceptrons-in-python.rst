@@ -56,10 +56,10 @@ this function ``unit_step``.
 Next we need to map the possible input to the expected output. The first two
 entries of the NumPy array in each tuple are the two input values. The second
 element of the tuple is the expected result. And the third entry of the array is
-a "dummy" input which – if I understood it correctly, please correct me if this
-is wrong – is needed to make a nonzero threshold possible. Its value is always
-1. More about this can be found in
-`this paper <http://www.cs.cmu.edu/~avrim/ML09/lect0126.pdf>`__. 
+a "dummy" input (also called the bias) which is needed to move the threshold
+(also known as the decision boundary) up or down as needed by the step function.
+Its value is always 1, so that its influence on the result can be controlled by
+its weight.
 
 .. sourcecode:: python
 
