@@ -26,9 +26,9 @@ PLUGINS.append('plugins.sitemap')
 SITEMAP = {
     'format': 'xml',
     'priorities': {
-        'indexes': 0.9,
+        'indexes': 0.7,
         'pages': 0.8,
-        'articles': 0.7,
+        'articles': 0.8,
     },
     'changefreqs': {
         'indexes': 'daily',
