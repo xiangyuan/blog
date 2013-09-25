@@ -47,7 +47,8 @@ Another change I made was that the dependencies can be stated in
 
 You can find the buildpack at
 https://github.com/dbrgn/heroku-buildpack-python-sklearn. All the changes
-against the official Heroku buildpack have been condensed in a `single commit
+against the official Heroku buildpack at the time of this writing have been
+condensed in a `single commit
 <https://github.com/dbrgn/heroku-buildpack-python-sklearn/commit/87cf7b24a358b916deaf26b784ea95be42590efe>`__.
 
 
