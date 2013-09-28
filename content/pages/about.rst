@@ -44,7 +44,7 @@ GPG
 ---
 
 :Public Key: `F2F3A5FA <http://dbrgn.ch/F2F3A5FA.asc>`_
-:Fingerprint: EA45 6E8B AF01 0942 9583 EED8 3578 F667 F2F3 A5FA0
+:Fingerprint: EA45 6E8B AF01 0942 9583 EED8 3578 F667 F2F3 A5FA
 
 .. _hsr rapperswil: http://hsr.ch/
 .. _webrepublic: http://www.webrepublic.ch/
