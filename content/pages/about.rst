@@ -23,7 +23,7 @@ Contact
 -------
 
 :Email: gezuru@gmail.com
-:Jabber: danilo\@ich-wars-nicht.ch
+:Jabber: danilo\@jabber.dbrgn.ch
 :Skype: danilobargen
 :IRC: dbrgn on #freenode
 
