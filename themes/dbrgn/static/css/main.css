@@ -170,6 +170,10 @@ a, a:visited {
     margin: 0;
 }
 
+.entry-overview h2 {
+    padding: 0;
+}
+
 .entry-overview .summary p {
     margin: 0;
 }
