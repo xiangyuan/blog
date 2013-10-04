@@ -42,6 +42,7 @@ body {
 
 #content p {
     text-align: justify;
+    margin-top: 0;
 }
 
 div.highlight, pre.literal-block {
@@ -113,6 +114,7 @@ h1 cite {
 
 h2 {
     margin: 0;
+    padding: 15px 0 20px;
 }
 
 .archives h2 {
@@ -129,7 +131,7 @@ div.date {
 }
 
 div.date p {
-    margin: 0;
+    margin: 0 0 15px;
 }
 
 img.flattrbutton {
