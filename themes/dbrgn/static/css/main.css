@@ -45,16 +45,16 @@ body {
     margin-top: 0;
 }
 
-div.highlight, pre.literal-block {
-    background-color: #f4f4f4;
-    border: 1px solid #ddd;
-    margin-bottom: 10px;
-}
-
 div.highlight pre, pre.literal-block {
     margin: 5px;
     font-family: 'Consolas', 'Menlo', 'Deja Vu Sans Mono', 'Bitstream Vera Sans Mono', monospace;
     font-size: 14px;
+}
+
+div.highlight, pre.literal-block {
+    background-color: #f4f4f4;
+    border: 1px solid #ddd;
+    margin-bottom: 20px;
 }
 
 pre.literal-block {
