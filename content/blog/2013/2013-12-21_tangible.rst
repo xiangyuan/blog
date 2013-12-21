@@ -15,12 +15,12 @@ to convert a purely digital model to a tangible, physical object. The missing
 piece in the process of making data tangible is the conversion of data to a
 digital 3D model.
 
-With my student research project thesis at HSR, I tried to solve that problem by
-providing an easy to use software library with "batteries included" that can
-convert arbitrary numeric data to 3D models. The library – named Tangible – is
-written in Python and provides a set of predeﬁned but customizable shapes, a few
-tools to preprocess data and a backend implementation for OpenSCAD, an open
-source programmatic CAD software.
+With my student research project thesis at `HSR <http://hsr.ch/>`_, I tried to
+solve that problem by providing an easy to use software library with "batteries
+included" that can convert arbitrary numeric data to 3D models. The library –
+named Tangible – is written in Python and provides a set of predeﬁned but
+customizable shapes, a few tools to preprocess data and a backend implementation
+for OpenSCAD, an open source programmatic CAD software.
 
 Tangible is implemented as a cross-compiler with a simple abstract syntax tree
 (AST), a set of predeﬁned shapes that build on top of the AST and an interface
