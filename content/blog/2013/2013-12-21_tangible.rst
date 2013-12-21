@@ -1,0 +1,46 @@
+Tangible – convert data into tangible 3D models
+===============================================
+
+:tags: python, tangible, 3dprinting
+:language: en
+:summary: Tangible is a Python library to convert data into tangible 3D models.
+
+In the past, making data tangible was a complicated, manual process. Digital 3D
+representations of complex data have been around for quite a while, but they
+were always conﬁned to the digital world. Mostly because it was impractical to
+convert a digital model to a physical representation.
+
+With the advent of cheap, affordable 3D printers, this changed. It is now easy
+to convert a purely digital model to a tangible, physical object. The missing
+piece in the process of making data tangible is the conversion of data to a
+digital 3D model.
+
+With my student research project thesis at HSR, I tried to solve that problem by
+providing an easy to use software library with "batteries included" that can
+convert arbitrary numeric data to 3D models. The library – named Tangible – is
+written in Python and provides a set of predeﬁned but customizable shapes, a few
+tools to preprocess data and a backend implementation for OpenSCAD, an open
+source programmatic CAD software.
+
+Tangible is implemented as a cross-compiler with a simple abstract syntax tree
+(AST), a set of predeﬁned shapes that build on top of the AST and an interface
+that allows the creation of different code generation backends.
+
+The library is ready to use, well tested and thoroughly documented. It has been
+released under an open source license and is available online at
+https://github.com/dbrgn/tangible.
+
+.. image:: https://raw.github.com/dbrgn/tangible/master/example1.jpg
+    :alt: Printed 3D statistics
+    :align: center
+
+More links:
+
+- Github project: https://github.com/dbrgn/tangible
+- Docs: https://tangible.readthedocs.org/
+- My thesis: http://dbrgn.ch/sa-thesis.pdf
+
+I'm very happy about any feedback. If you find bugs or want more features, open
+an issue or file a pull request `on Github <https://github.com/dbrgn/tangible>`_.
+If you have any other feedback, you can reach me as
+`@dbrgn on twitter <https://twitter.com/dbrgn>`_.
