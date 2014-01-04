@@ -10,8 +10,8 @@ this blog, unless stated otherwise, is licensed under the `CC BY-SA 3.0 license
 <http://blog.dbrgn.ch/license/>`_.
 
 In contrast, the blog theme is not available for copying / direct use. You may
-use it as a starting point, but I ask you that you change it so that it looks
-different.
+use it as a starting point (with attribution), but I ask you that you change it
+so that it looks different.
 
 The same counts for the favicon. It's simple, but it serves identification /
 recognition purposes. Therefore, please make your own.
