@@ -4,7 +4,7 @@ Improving Firefox SSL/TLS Security
 :tags: firefox, tls, security
 :language: en
 :summary: How to improve Firefox SSL/TLS security by enabling TLS 1.2 and
-          disabling insecure cyphersuites.
+          disabling insecure ciphersuites.
 
 Even though Firefox supports TLS 1.2 `since version 24
 <https://support.mozilla.org/de/questions/959936#answer-453166>`__, it is not
