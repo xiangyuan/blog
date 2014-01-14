@@ -47,6 +47,7 @@ body {
 
 #content .article-content img {
     margin-bottom: 22px !important;
+    max-width: 100%;
 }
 
 div.highlight pre, pre.literal-block {
@@ -219,4 +220,40 @@ a, a:visited {
 
 .hidden {
     display: none;
+}
+
+@media screen and (max-width: 850px) {
+    /* Don't float navigation below 850px. */
+    #blogtitle {
+        float: none;
+    }
+    #mainnav {
+        float: none;
+    }
+
+    /* Change separators. */
+    #mainnav li:before {
+        content: '';
+    }
+    #mainnav li:after {
+        content: '\00A0\00B7';
+    }
+    #mainnav li.last:after {
+        content: '';
+    }
+}
+
+@media screen and (max-width: 600px) {
+    /* Justified text gets uglier below this size. */
+    #content p {
+        text-align: left;
+    }
+
+    /* Don't right-float footer. */
+    img.flattrbutton {
+        float: none;
+    }
+    div.tags p {
+        float: none;
+    }
 }

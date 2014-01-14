@@ -51,7 +51,7 @@ def serve():
     # Start SimpleHTTPServer
     os.chdir(OUTPUTDIR)
     handler = SimpleHTTPServer.SimpleHTTPRequestHandler
-    httpd = TestServer(('', PORT), handler)
+    httpd = TestServer(('192.168.2.238', PORT), handler)
     httpd.allow_reuse_address = True
     print('Serving at port {}'.format(PORT))
     httpd.serve_forever()
