@@ -22,7 +22,7 @@ software engineer at `Webrepublic`_. I'm `a third culture kid
 Contact
 -------
 
-:Email: gezuru@gmail.com
+:Email: mail@dbrgn.ch
 :Jabber: danilo\@jabber.dbrgn.ch
 :Skype: danilobargen
 :IRC: dbrgn on #freenode
